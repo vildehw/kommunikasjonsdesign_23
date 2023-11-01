@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dagligvarebutikker i Halden</title>
+    <!-- INCLUDE LEAFLET CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <!-- INCLUDE LEAFLET SCRIPT LIBRARY -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style> 
+
+        html {
+            scroll-behavior: smooth; 
+            background-color: #0c1821; 
+            color: #000;
+        } 
+
+        .art{
+            height: 100vh; 
+            max-width: 500px; 
+            padding: 1rem; 
+            margin: 0 auto; 
+            color: #fff; 
+            
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        div, article, section {
+            box-sizing: border-box;
+        }   
+
+        #changingBg{
+            background-size: cover; 
+            background-position: center center; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+        } 
+
+        .scrollContainer1 {
+            width: 100vw; 
+            min-height: 60vh; 
+            overflow: hidden;  
+            background-image: url("hus.JPEG");
+            transition: background-image 2s;
+        }  
+        
+        #scrollHeader{
+            margin: 30vh auto 70vh auto; 
+            max-width: 50rem; 
+            padding: 1rem;  
+            background: rgba(12, 24, 33, 0.8); 
+            color: #fff;
+        }
+
+        .scrollText {
+            margin: 70vh auto; 
+            max-width: 50rem; 
+            padding: 1rem; 
+            background: rgba(12, 24, 33, 0.8); 
+            color: #fff;
+        }   
+
+        
+
+        #mapContainer {
+           /* width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            position: fixed;
+            top: 0;
+            left: 0; */  
+
+
+            width: 100vw;
+            height: 100vh;
+            position: sticky;
+            top: 0; 
+
+        }
+
+        #scrollContainer {
+            width: 100vw;
+            min-height: 80vh;
+            z-index: 5;
+            padding-bottom: 50vh;
+            display: block;    
+            background-color: aliceblue;
+            overflow: hidden;
+        }
+
+        .scrollBox {
+            position: relative;
+            display: block;
+            margin: 60vh auto 60vh auto;
+            z-index: 10;
+            width: 90vw;
+            max-width: 400px;
+            
+            
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px #ccc; 
+
+
+            
+            
+            /**
+            height: auto; 
+            display: flex;  
+            flex-wrap: wrap;
+            **/
+            color: #fff;   
+            border-radius: 15px;  
+            
+            background: rgba(12, 24, 33, 0.85); 
+            box-shadow: 0 3px 10px #0D1B2A;
+        }   
+
+        article h3{
+            padding: .5rem;
+            border-bottom: 3px solid red; 
+            display: inline-block;
+        }
+
+
+        @media only screen and (min-width: 800px) {
+            
+            #start, #r1000t, #r1000br, #end{
+                /*venstre*/ 
+                margin: 60vh 0 60vh 2rem;
+            } 
+
+            #r1000b, #r1000s, #r1000r{
+                /*høyre*/ 
+                margin: 60vh 2rem 60vh auto;  
+                
+            } 
+        }
+    </style>
+</head>
+<body>  
+    <header> 
+        <section id="changingBg" class="scrollContainer1"> 
+
+            <div  id="scrollHeader" class="scrollText">
+            <h1>kart og greier og sånt</h1> 
+            </div>
+            <div id="txt1" class="scrollText">
+                <p>vi må finne en font som er bedre enn denne </p> 
+            </div>
+            
+            <div id="txt2" class="scrollText">
+                <p>lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p> 
+            </div>
+            
+        </section>
+        
+    </header>
+    <article class="art"> 
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </article> 
+    
+    <div id="mapContainer"></div>
+    <section id="scrollContainer"> 
+        <article class="scrollBox" id="start">
+            <h3>The grocery stores of Halden</h3>
+            <p>Scroll down to get a full overview of all the grocery stores in Halden.</p>
+        </article>
+        <article class="scrollBox" id="r1000b"> 
+            <h3>2001-2003</h3>
+            <p>Rema 1000 Busterudparken</p>
+        </article>
+        <article class="scrollBox" id="r1000t"> 
+            <h3>2003-2005</h3>
+            <p>Rema 1000 Tistedal</p>
+        </article>
+        <article class="scrollBox" id="r1000s"> 
+            <h3>2005-2007</h3>
+            <p>Rema 1000 Svinesundsparken</p>
+        </article>
+        <article class="scrollBox" id="r1000br"> 
+            <h3>2007-2009</h3>
+            <p>Rema 1000 Brødløs</p>
+        </article>
+        <article class="scrollBox" id="r1000r"> 
+            <h3>2009-20011</h3>
+            <p>Rema 1000 Risum</p>
+        </article>
+        <article class="scrollBox" id="end">
+            <p>This is a brief example of combining the visualization templates and map templates using Leaflet for moving the focal point and zoom of a map depending on what information is in the viewport.</p>
+        </article>
+    </section> 
+
+   
+    <article class="art">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </article>
+    
+    <script>
+        //INITIATE MAP
+        const centerLat = 59.1294
+        const centerLong = 11.3537
+        //let map = L.map('map').setView([centerLat, centerLong], 13);
+        let map = L.map('mapContainer', {
+            center: [centerLat, centerLong],
+            zoom: 13,
+            scrollWheelZoom: false
+        })
+        //SET MAP CONSTRUCTOR
+        L.tileLayer('https://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart_graatone&zoom={z}&x={x}&y={y}', {
+            attribution: '<a href="http://www.kartverket.no/">Kartverket</a>'
+        }).addTo(map) 
+
+        /*L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);*/
+
+        //PLACES
+        const places = [
+            {name: "Rema 1000 Risum", lat: 59.1186, long: 11.4092},
+            {name: "Rema 1000 Busterudgata", lat: 59.1261, long: 11.3858},
+            {name: "Rema 1000 Tistedal", lat: 59.1258, long: 11.4450},
+            {name: "Rema 1000 Brødløs", lat: 59.1291, long: 11.3796},
+            {name: "Rema 1000 Svinesundsparken", lat: 59.1282, long: 11.2745}
+        ]
+
+        const geojson = 
+        {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            11.4092,
+            59.1186
+          ],
+          [
+            11.3858,
+            59.1261
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            11.3858,
+            59.1261
+          ],
+          [
+            11.4450,
+            59.1258
+          ]
+        ],
+        "type": "LineString"
+      }
+    }, 
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            11.4450,
+            59.1258
+          ],
+          [
+            11.3796,
+            59.1291
+          ]
+        ],
+        "type": "LineString"
+      }
+    }, 
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            11.3796,
+            59.1291
+          ],
+          [
+            11.2745,
+            59.1282
+          ]
+        ],
+        "type": "LineString"
+      }
+    },
+   
+  ]
+}
+        
+        
+        const geoJsonStyle = {
+            "color": "#b61010",
+            "weight": 3,
+            "opacity": 0.5
+        }
+        //add GeoJson to map
+        L.geoJSON(geojson, {
+            style: geoJsonStyle,
+            //Adding popups to geometric shapes from GeoJson
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup(feature.properties.popupContent)
+            }
+        }).addTo(map)
+
+
+
+
+
+        //Function to check if element is in viewport
+        function isInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                (rect.top <= 0 && rect.bottom >= 0) || 
+                (rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth))
+            );
+        }  
+
+        //Change background header 
+
+        document.addEventListener('scroll', function () {
+                if (isInViewport(document.getElementById("scrollHeader"))){
+                    document.getElementById("changingBg").style.backgroundImage = "url(hus.JPEG)"
+                } 
+                if(isInViewport(document.getElementById("txt1"))) {
+                    document.getElementById("changingBg").style.backgroundImage = "url(vann.JPEG)"
+                } 
+                if(isInViewport(document.getElementById("txt2"))) {
+                    document.getElementById("changingBg").style.backgroundImage = "url(hus.JPEG)"
+                }
+
+            }, {
+                passive: true
+            });
+
+        //SET MARKERS MAP
+        //create custom icon:
+        const remaIcon = L.icon({
+            iconUrl: 'rema1000symbol.png',
+            iconSize: [40,40],
+            iconAnchor: [20,20],
+            popupAnchor: [0, -20]
+        })
+        places.map((place) => {
+            L.marker([place.lat, place.long], {icon: remaIcon}).addTo(map).bindPopup(place.name)
+        })
+        //SCRIPT FOR CHANGING MAP LOCATION
+        document.addEventListener('scroll', function () {
+            if(isInViewport(document.getElementById("start"))) {
+                map.flyTo([centerLat, centerLong], 13)
+            }
+            if(isInViewport(document.getElementById("r1000b"))) {
+                map.flyTo([59.1261,11.3858], 17)
+            }
+            if(isInViewport(document.getElementById("r1000s"))) {
+                map.flyTo([59.1282, 11.2745], 17)
+            }
+            if(isInViewport(document.getElementById("r1000t"))) {
+                map.flyTo([59.1258, 11.4450], 17)
+            }
+            if(isInViewport(document.getElementById("r1000br"))) {
+                map.flyTo([59.1291, 11.3796], 17)
+            }
+            if(isInViewport(document.getElementById("r1000r"))) {
+                map.flyTo([59.1186, 11.4092], 17)
+            }
+            if(isInViewport(document.getElementById("end"))) {
+                map.flyTo([centerLat, centerLong], 13)
+            }
+        }, {
+            passive: true
+        }); 
+
+       
+    </script>
+</body>
+</html>
