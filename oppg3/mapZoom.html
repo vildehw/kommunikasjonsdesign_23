@@ -24,10 +24,10 @@
         } 
 
         .art{
-            height: 100vh; 
+            min-height: 100vh; 
             max-width: 500px; 
             padding: 1rem; 
-            margin: 3rem auto 0 auto; 
+            margin: 3rem auto 3rem auto; 
             color: #fff;  
             
             
@@ -66,22 +66,27 @@
         
         #scrollHeader{
             margin: 65vh auto 70vh auto; 
-            max-width: 30rem;
-            padding: .5rem;  
-            background: rgba(12, 24, 33, 0.8); 
+            max-width: fit-content; 
             color: #fff; 
             text-align: center; 
-            font-size: 24px; 
-            box-shadow: 0px 17px 90px 25px rgba(12, 24, 33);
+            font-size: 24px;   
+            background-color: rgba(12, 24, 33, 0.8);
+            box-shadow: 0px 0px 20px 35px rgba(12, 24, 33, 0.8);
+            
         }
 
         .scrollText {
             margin: 70vh auto; 
-            max-width: 50rem; 
-            padding: 1rem; 
-            background: rgba(12, 24, 33, 0.8); 
-            color: #fff;
-        }   
+            max-width: fit-content;
+            padding: 1rem;  
+            color: #fff; 
+            background-color: rgba(12, 24, 33, 0.8);
+            box-shadow: 0px 0px 20px 35px rgba(12, 24, 33, 0.8);
+        }    
+
+        #scrollHeader h1, .scrollText p{
+            max-width: 500px;
+        }
 
         
 
@@ -166,10 +171,12 @@
         <section id="changingBg" class="scrollContainer1"> 
 
             <div  id="scrollHeader">
-            <h1>kart og sånt</h1> 
+            <h1>Kart & Noe Greier</h1> 
             </div>
             <div id="txt1" class="scrollText">
-                <p>lorem ipums ipsum lorem </p> 
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p> 
             </div>
             
             <div id="txt2" class="scrollText">
