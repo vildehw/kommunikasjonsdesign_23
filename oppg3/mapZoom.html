@@ -11,21 +11,36 @@
     <!-- INCLUDE LEAFLET SCRIPT LIBRARY -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <style> 
+        
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,400;1,600&family=Rubik:wght@400;600;700&display=swap');
+
 
         html {
             scroll-behavior: smooth; 
             background-color: #0c1821; 
-            color: #000;
+            color: #fff; 
+            font-family: 'Open Sans', sans-serif;  
+            line-height: 1.5;
         } 
 
         .art{
             height: 100vh; 
             max-width: 500px; 
             padding: 1rem; 
-            margin: 0 auto; 
-            color: #fff; 
+            margin: 3rem auto 0 auto; 
+            color: #fff;  
             
+            
+            
+        }  
+
+        .art #sitat{
+            font-style: italic;
+            font-size: 26px;
         }
+
+
+
         body {
             margin: 0;
             padding: 0;
@@ -50,11 +65,14 @@
         }  
         
         #scrollHeader{
-            margin: 30vh auto 70vh auto; 
-            max-width: 50rem; 
-            padding: 1rem;  
+            margin: 65vh auto 70vh auto; 
+            max-width: 30rem;
+            padding: .5rem;  
             background: rgba(12, 24, 33, 0.8); 
-            color: #fff;
+            color: #fff; 
+            text-align: center; 
+            font-size: 24px; 
+            box-shadow: 0px 17px 90px 25px rgba(12, 24, 33);
         }
 
         .scrollText {
@@ -122,7 +140,7 @@
         }   
 
         article h3{
-            padding: .5rem;
+            padding-bottom: .5rem;
             border-bottom: 3px solid red; 
             display: inline-block;
         }
@@ -147,11 +165,11 @@
     <header> 
         <section id="changingBg" class="scrollContainer1"> 
 
-            <div  id="scrollHeader" class="scrollText">
-            <h1>kart og greier og sånt</h1> 
+            <div  id="scrollHeader">
+            <h1>kart og sånt</h1> 
             </div>
             <div id="txt1" class="scrollText">
-                <p>vi må finne en font som er bedre enn denne </p> 
+                <p>lorem ipums ipsum lorem </p> 
             </div>
             
             <div id="txt2" class="scrollText">
@@ -164,7 +182,13 @@
     <article class="art"> 
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        </p> 
+        <p id="sitat">
+            "lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
+        </p> 
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p> 
     </article> 
     
     <div id="mapContainer"></div>
