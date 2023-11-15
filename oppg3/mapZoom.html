@@ -57,7 +57,7 @@
         } 
 
         .scrollContainer1 {
-            width: 100vw; 
+            width: 100%; 
             min-height: 60vh; 
             overflow: hidden;  
             background-image: url("hus.JPEG");
@@ -87,8 +87,15 @@
         #scrollHeader h1, .scrollText p{
             max-width: 500px;
         }
-
-        
+        #scrollContainer {
+            width: 100%;
+            min-height: 80vh;
+            z-index: 5;
+            padding-bottom: 50vh;
+            display: block;    
+            background-color: aliceblue;
+            overflow: hidden;
+        }
 
         #mapContainer {
            /* width: 100vw;
@@ -99,22 +106,14 @@
             left: 0; */  
 
 
-            width: 100vw;
+            width: 100%;
             height: 100vh;
             position: sticky;
             top: 0; 
 
         }
 
-        #scrollContainer {
-            width: 100vw;
-            min-height: 80vh;
-            z-index: 5;
-            padding-bottom: 50vh;
-            display: block;    
-            background-color: aliceblue;
-            overflow: hidden;
-        }
+       
 
         .scrollBox {
             position: relative;
@@ -129,8 +128,6 @@
             border-radius: 10px;
             box-shadow: 2px 2px 2px #ccc; 
 
-
-            
             
             /**
             height: auto; 
@@ -171,7 +168,7 @@
         <section id="changingBg" class="scrollContainer1"> 
 
             <div  id="scrollHeader">
-            <h1>Kart & Noe Greier</h1> 
+            <h1>Overskrift</h1> 
             </div>
             <div id="txt1" class="scrollText">
                 <p>
@@ -198,8 +195,10 @@
         </p> 
     </article> 
     
-    <div id="mapContainer"></div>
-    <section id="scrollContainer"> 
+    <div id="mapScroll"> 
+        <div id="mapContainer"></div>
+    <section id="scrollContainer">  
+        
         <article class="scrollBox" id="start">
             <h3>The grocery stores of Halden</h3>
             <p>Scroll down to get a full overview of all the grocery stores in Halden.</p>
@@ -227,7 +226,8 @@
         <article class="scrollBox" id="end">
             <p>This is a brief example of combining the visualization templates and map templates using Leaflet for moving the focal point and zoom of a map depending on what information is in the viewport.</p>
         </article>
-    </section> 
+    </section>  
+</div>
 
    
     <article class="art">

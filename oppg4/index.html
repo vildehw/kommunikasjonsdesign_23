@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oppgave 4</title> 
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+   <!-- INCLUDE LEAFLET SCRIPT LIBRARY -->
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+   <header class="video-header"> 
+      <div id="videoContainer">
+      <video id="background-video" autoplay loop muted poster="hus.JPEG"> 
+         <!--playsinline ?-->
+         <source src="hovedhus2.mp4" type="video/mp4">
+      </video>   
+      <h1 id="tittel">overskrift</h1>
+      <h2 id="undertittel">Lorem Ipsum</h2>
+   </div>
+      
+    </header>   
+    <main> 
+      <!--
+         <img id="hest" src="hest.png">-->
+    <article> 
+      <p>
+         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+      </p>  
+    </article> 
+      
+     
+
+      <button type="button" id="faktabutton" onclick="visBoks()">
+         Klikk for tidslinje over noe
+       </button>
+       <section id="faktaboks">
+        <div class="timeline">
+            <div class="container left">
+              <div class="content">
+                <h2>2017</h2>
+                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+              </div>
+            </div>
+            <div class="container right">
+              <div class="content">
+                <h2>2016</h2>
+                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+              </div>
+            </div>
+            <div class="container left">
+              <div class="content">
+                <h2>2015</h2>
+                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+              </div>
+            </div>
+            <div class="container right">
+              <div class="content">
+                <h2>2012</h2>
+                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+              </div>
+            </div>
+            <div class="container left">
+              <div class="content">
+                <h2>2011</h2>
+                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+              </div>
+            </div>
+            <div class="container right">
+              <div class="content">
+                <h2>2007</h2>
+                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+              </div>
+            </div>
+          </div>
+       </section> 
+
+       <article> 
+        <p>
+           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </p> 
+      </article>  
+      <div id="mapContainer"></div>
+
+   </main> 
+   <script>
+      
+
+ //INITIATE MAP
+        const centerLat = 59.2523923
+        const centerLong = 10.7986503
+        //let map = L.map('map').setView([centerLat, centerLong], 13);
+       /* let map = L.map('mapContainer', {
+            center: [centerLat, centerLong],
+            zoom: 10,
+            scrollWheelZoom: false,
+            interactive: true
+        })*/
+        //SET MAP CONSTRUCTOR
+        /*L.tileLayer('https://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart_graatone&zoom={z}&x={x}&y={y}', {
+            attribution: '<a href="http://www.kartverket.no/">Kartverket</a>'
+        }).addTo(map) */
+/*
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { 
+
+            maxZoom: 46, minZoom: 7,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+      */  
+      var map = L.map('mapContainer', {
+        minZoom: 1,
+        maxZoom: 3,
+        center: [0, 0],
+        zoom: 1,
+        crs: L.CRS.Simple
+      });
+
+        var w = 1000;
+        var h = 1000;
+        var url = 'map2.png';
+        var southWest = map.unproject([ 0, h], map.getMaxZoom()-1);
+        var northEast = map.unproject([ w, 0], map.getMaxZoom()-1);
+        var bounds = new L.LatLngBounds( southWest, northEast);
+
+        L.imageOverlay( url, bounds).addTo(map);
+
+        map.setMaxBounds(bounds);
+
+
+/*
+        var imageUrl = 'map2.png',
+       imageBounds = [[59.25391379679315, 10.797237818503786], [59.254396, 10.797226]];
+        L.imageOverlay(imageUrl).addTo(map);
+
+*/   
+
+function visBoks() { 
+  const faktabutton = document.getElementById("faktabutton");
+  const faktaboks = document.getElementById("faktaboks");
+  if (faktaboks.style.display === "none") {
+    faktaboks.style.display = "block";
+    faktabutton.innerHTML = "Lukk tidslinje over noe";
+  } else {
+    faktaboks.style.display = "none";
+    faktabutton.innerHTML = "Klikk for tidslinje over noe 2";
+  }
+}
+
+
+
+
+function isInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+
+                );
+            } 
+/*
+            document.addEventListener('scroll', function () {
+                if (isInViewport(document.getElementById("winner1"))){
+                    document.getElementById("scrollSection").style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Lewis_Hamilton_at_Rivage%2C_Spa_Francorchamps_Circuit%2C_Spa%2C_Belgium.jpg/640px-Lewis_Hamilton_at_Rivage%2C_Spa_Francorchamps_Circuit%2C_Spa%2C_Belgium.jpg)"
+                } 
+                if(isInViewport(document.getElementById("winner2"))) {
+                    document.getElementById("scrollSection").style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/MichaelSchumacherHO2005.jpg/640px-MichaelSchumacherHO2005.jpg)"
+                } 
+                if(isInViewport(document.getElementById("winner3"))) {
+                    document.getElementById("scrollSection").style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Sebastian_Vettel%2C_F1_British_Grand_Prix_2021.jpg/640px-Sebastian_Vettel%2C_F1_British_Grand_Prix_2021.jpg)"
+                }
+
+            }, {
+                passive: true
+            }); 
+            */
+
+   </script>
+</body>
+</html>
