@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dagligvarebutikker i Halden</title>
+    <title>Lise Holman</title>
     <!-- INCLUDE LEAFLET CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -14,11 +14,21 @@
         
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,400;1,600&family=Rubik:wght@400;600;700&display=swap');
 
+        :root {
+        --darkblue: #363B45; 
+        /*0c1821*/
+        --white: #fff;  
+        --red: rgba(182, 16, 16, 0.9); 
+        --blue: #535C6E; 
+        --lightblue: #6E778A; 
+        --grey: #706C6D;  
+        --black: #000;  
+        --bgColor: rgba(54, 59, 69, 0.9); 
+        } 
 
         html {
             scroll-behavior: smooth; 
-            background-color: #0c1821; 
-            color: #fff; 
+            background-color: var(--white); 
             font-family: 'Open Sans', sans-serif;  
             line-height: 1.5;
         } 
@@ -28,10 +38,7 @@
             max-width: 500px; 
             padding: 1rem; 
             margin: 3rem auto 3rem auto; 
-            color: #fff;  
-            
-            
-            
+            color: var(--black);  
         }  
 
         .art #sitat{
@@ -39,12 +46,11 @@
             font-size: 26px;
         }
 
-
-
         body {
             margin: 0;
             padding: 0;
         }
+
         div, article, section {
             box-sizing: border-box;
         }   
@@ -60,18 +66,43 @@
             width: 100%; 
             min-height: 60vh; 
             overflow: hidden;  
-            background-image: url("hus.JPEG");
+            background-image: url("Cis05.JPG");
             transition: background-image 2s;
         }  
         
         #scrollHeader{
             margin: 65vh auto 70vh auto; 
             max-width: fit-content; 
+            text-align: center; 
+            font-size: 24px;   
+            background-color: var(--bgColor); 
+            color: var(--white);  
+        }
+
+        .scrollText {
+            margin: 80vh auto; 
+            max-width: fit-content;
+            padding: 1rem;  
+            background-color: var(--bgColor);  
+            color: var(--white);
+            border: 2px;
+           
+        }    
+
+        #scrollHeader h1, .scrollText p{
+            max-width: 500px;
+        } 
+
+
+        /* 
+        #scrollHeader{
+            margin: 65vh auto 70vh auto; 
+            max-width: fit-content; 
             color: #fff; 
             text-align: center; 
             font-size: 24px;   
-            background-color: rgba(12, 24, 33, 0.8);
-            box-shadow: 0px 0px 20px 35px rgba(12, 24, 33, 0.8);
+            background-color: var(--bgColor);
+            box-shadow: 0px 0px 20px 35px var(--bgColor);
             
         }
 
@@ -80,12 +111,19 @@
             max-width: fit-content;
             padding: 1rem;  
             color: #fff; 
-            background-color: rgba(12, 24, 33, 0.8);
-            box-shadow: 0px 0px 20px 35px rgba(12, 24, 33, 0.8);
+            background-color: var(--bgColor);
+            box-shadow: 0px 0px 20px 35px var(--bgColor);
         }    
 
         #scrollHeader h1, .scrollText p{
             max-width: 500px;
+        }
+
+        */ 
+
+        #mapHeader{
+            text-align: center; 
+            font-size: 24px;
         }
         #scrollContainer {
             width: 100%;
@@ -93,72 +131,48 @@
             z-index: 5;
             padding-bottom: 50vh;
             display: block;    
-            background-color: aliceblue;
             overflow: hidden;
         }
 
         #mapContainer {
-           /* width: 100vw;
-            height: 100vh;
-            z-index: 1;
-            position: fixed;
-            top: 0;
-            left: 0; */  
-
-
             width: 100%;
             height: 100vh;
             position: sticky;
             top: 0; 
-
         }
-
-       
 
         .scrollBox {
             position: relative;
             display: block;
-            margin: 60vh auto 60vh auto;
+            margin: 80vh auto 80vh auto;
             z-index: 10;
             width: 90vw;
             max-width: 400px;
             
             
-            padding: 1rem;
-            border-radius: 10px;
-            box-shadow: 2px 2px 2px #ccc; 
-
-            
-            /**
-            height: auto; 
-            display: flex;  
-            flex-wrap: wrap;
-            **/
+            padding: 0 0 1rem 1rem;
             color: #fff;   
             border-radius: 15px;  
-            
-            background: rgba(12, 24, 33, 0.85); 
-            box-shadow: 0 3px 10px #0D1B2A;
+            background: var(--bgColor); 
+            box-shadow: 0 3px 10px var(--bgColor);
         }   
 
         article h3{
             padding-bottom: .5rem;
-            border-bottom: 3px solid red; 
+            border-bottom: 3px solid var(--red); 
             display: inline-block;
         }
 
 
         @media only screen and (min-width: 800px) {
-            
-            #start, #r1000t, #r1000br, #end{
+            #start, #p2, #p4, #p6, #p8, #p10, #p12, #p14, #end{
                 /*venstre*/ 
-                margin: 60vh 0 60vh 2rem;
+                margin: 0 0 80vh 2rem;
             } 
 
-            #r1000b, #r1000s, #r1000r{
+            #p1, #p3, #p5, #p7, #p9, #p11, #p13, #p15{
                 /*høyre*/ 
-                margin: 60vh 2rem 60vh auto;  
-                
+                margin: 0 2rem 80vh auto;     
             } 
         }
     </style>
@@ -168,11 +182,11 @@
         <section id="changingBg" class="scrollContainer1"> 
 
             <div  id="scrollHeader">
-            <h1>Overskrift</h1> 
+            <h1>Overskrift overskrift overskrift overskrift</h1> 
             </div>
             <div id="txt1" class="scrollText">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
                 </p> 
             </div>
             
@@ -195,7 +209,8 @@
         </p> 
     </article> 
     
-    <div id="mapScroll"> 
+    <div id="mapScroll">  
+        <h2 id="mapHeader">Kart og tidslinje over prosjekter</h2>
         <div id="mapContainer"></div>
     <section id="scrollContainer">  
         
@@ -203,25 +218,66 @@
             <h3>The grocery stores of Halden</h3>
             <p>Scroll down to get a full overview of all the grocery stores in Halden.</p>
         </article>
-        <article class="scrollBox" id="r1000b"> 
-            <h3>2001-2003</h3>
-            <p>Rema 1000 Busterudparken</p>
+        <article class="scrollBox" id="p1"> 
+            <h3>1998</h3>
+            <p>Do Re Mi barnehage Greåker</p> 
+            <img src="Cis12.jpg">
         </article>
-        <article class="scrollBox" id="r1000t"> 
-            <h3>2003-2005</h3>
-            <p>Rema 1000 Tistedal</p>
+        <article class="scrollBox" id="p2"> 
+            <h3>2003</h3>
+            <p>Do Re Mi barnehage Fredrikstad</p>
         </article>
-        <article class="scrollBox" id="r1000s"> 
-            <h3>2005-2007</h3>
-            <p>Rema 1000 Svinesundsparken</p>
+        <article class="scrollBox" id="p3"> 
+            <h3>2005</h3>
+            <p>Do Re Mi barnehage Sør-Afrika</p>
         </article>
-        <article class="scrollBox" id="r1000br"> 
-            <h3>2007-2009</h3>
-            <p>Rema 1000 Brødløs</p>
+        <article class="scrollBox" id="p4"> 
+            <h3>2006</h3>
+            <p>Hinkenhopp barnehage Greåker</p>
         </article>
-        <article class="scrollBox" id="r1000r"> 
-            <h3>2009-20011</h3>
-            <p>Rema 1000 Risum</p>
+        <article class="scrollBox" id="p5"> 
+            <h3>2007</h3>
+            <p>Do Re Mi barnehage Begby</p>
+        </article> 
+        <article class="scrollBox" id="p6"> 
+            <h3>2009</h3>
+            <p>Do Re Mi barnehage Halden</p>
+        </article> 
+        <article class="scrollBox" id="p7"> 
+            <h3>2010</h3>
+            <p>Do Re Mi barnehage Våler</p>
+        </article> 
+        <article class="scrollBox" id="p8"> 
+            <h3>2011</h3>
+            <p>Barnas Kulturhus Fredrikstad</p>
+        </article> 
+        <article class="scrollBox" id="p9"> 
+            <h3>2012</h3>
+            <p>Childrens international school Fredrikstad</p>
+        </article> 
+        <article class="scrollBox" id="p10"> 
+            <h3>2015</h3>
+            <p>Childrens international school Moss</p>
+        </article> 
+        <article class="scrollBox" id="p11"> 
+            <h3>2018</h3>
+            <p>Dibber International, Sollentuna</p>
+        </article> 
+        <article class="scrollBox" id="p12"> 
+            <h3>2018</h3>
+            <p>Dibber international, Rydebak</p>
+        </article> 
+        <article class="scrollBox" id="p13"> 
+            <h3>2019</h3>
+            <p>Children's international school Sarpsborg</p>
+        </article> 
+        <article class="scrollBox" id="p14"> 
+            <h3>2019</h3>
+            <p>Philini Instituttet Privatist skole</p>
+        </article> 
+        <article class="scrollBox" id="p15"> 
+            <h3>2022</h3>
+            <p>Christianslund barnehage Fredrikstad</p>
         </article>
         <article class="scrollBox" id="end">
             <p>This is a brief example of combining the visualization templates and map templates using Leaflet for moving the focal point and zoom of a map depending on what information is in the viewport.</p>
@@ -236,52 +292,101 @@
         </p>
     </article>
     
-    <script>
+    <script> 
+
+
         //INITIATE MAP
-        const centerLat = 59.1294
-        const centerLong = 11.3537
-        //let map = L.map('map').setView([centerLat, centerLong], 13);
+        const centerLat = 59.2798008
+        const centerLong = 10.9654856
         let map = L.map('mapContainer', {
             center: [centerLat, centerLong],
             zoom: 13,
             scrollWheelZoom: false
         })
-        //SET MAP CONSTRUCTOR
+        //SET MAP CONSTRUCTOR  
+        
+        
         L.tileLayer('https://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart_graatone&zoom={z}&x={x}&y={y}', {
-            attribution: '<a href="http://www.kartverket.no/">Kartverket</a>'
+            attribution: '<a href="http://www.kartverket.no/">Kartverket</a>' //ikoner??
         }).addTo(map) 
-
-        /*L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        /*
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);*/
-
+        }).addTo(map);
+        */
         //PLACES
         const places = [
-            {name: "Rema 1000 Risum", lat: 59.1186, long: 11.4092},
-            {name: "Rema 1000 Busterudgata", lat: 59.1261, long: 11.3858},
-            {name: "Rema 1000 Tistedal", lat: 59.1258, long: 11.4450},
-            {name: "Rema 1000 Brødløs", lat: 59.1291, long: 11.3796},
-            {name: "Rema 1000 Svinesundsparken", lat: 59.1282, long: 11.2745}
-        ]
+            {name: "Do Re Mi barnehage Greåker", year: "2016", lat: 59.2668582, long: 11.032472},
+            {name: "Do Re Mi barnehage Fredrikstad", year: "2016", lat: 59.2264158, long: 10.9197372},
+            {name: "Do Re Mi barnehage Sør-Afrika", year: "2016", lat: 27.8913726, long: 29.9306531},
+            {name: "Hinkenhopp barnehage Greåker", year: "2016", lat: 59.2758145, long: 11.0394061}, 
+            {name: "Do Re Mi barnehage Begby", year: "2016", lat: 59.1282, long: 11.2745}, 
+            {name: "Do Re Mi barnehage Halden", year: "2016", lat: 59.1119083, long: 11.2713187}, 
+            {name: "Do Re Mi barnehage Våler", year: "2016", lat: 59.4957588, long: 10.8487267}, 
+            {name: "Barnas Kulturhus Fredrikstad", year: "2016", lat: 59.2019594, long: 10.9597785}, 
+            {name: "Children's international school Fredrikstad", year: "2016", lat: 59.2019594, long: 10.9597785}, 
+            {name: "Children's international school Moss", year: "2016", lat: 59.440338, long: 10.6695922},
+            {name: "Dibber International Sollentuna", year: "2016", lat: 59.4455791, long: 17.7549159}, 
+            {name: "Dibber International Rydebak", year: "2016", lat: 55.9654904, long: 12.7516411}, 
+            {name: "Children's international school Sarpsborg", year: "2016", lat: 59.2921097, long: 11.0930798}, 
+            {name: "Philini Instituttet Privatist skole", year: "2016", lat: 59.2921097, long: 11.0930798}, 
+            {name: "Christianslund Barnehage Fredrikstad", year: "2016", lat: 59.228028, long: 10.9248422}, 
+            
+        ] 
+
+         //Function to check if element is in viewport
+         function isInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                (rect.top <= 0 && rect.bottom >= 0) || 
+                (rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth))
+            );
+        }  
+        
+        const geojson = {
+            type: "FeatureCollection", 
+            //map laget med hjelp fra chatgpt
+            features: places.map((place, index, array) => {
+                
+            const nextPlace = array[index + 1];
+            //console.log(nextPlace)
+            const coordinates = nextPlace
+            ? [
+                [place.long, place.lat],
+                [nextPlace.long, nextPlace.lat]
+            ]
+            : [
+                [place.long, place.lat]
+              ];
+                return { 
+                type: "Feature",
+                properties: {},
+                geometry: {
+                    coordinates: coordinates,
+                    type: "LineString"
+                }
+                };
+            })
+        };  
+
+        //console.log(geojson)
+        /*
 
         const geojson = 
         {
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "coordinates": [
-          [
-            11.4092,
-            59.1186
-          ],
-          [
-            11.3858,
-            59.1261
-          ]
+        "type": "FeatureCollection",
+        "features": [
+            {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+                "coordinates": [
+          [places[0].long, places[0].lat],
+          [places[1].long, places[1].lat]
         ],
         "type": "LineString"
       }
@@ -291,14 +396,8 @@
       "properties": {},
       "geometry": {
         "coordinates": [
-          [
-            11.3858,
-            59.1261
-          ],
-          [
-            11.4450,
-            59.1258
-          ]
+        [places[1].long, places[1].lat],
+          [places[2].long, places[2].lat]
         ],
         "type": "LineString"
       }
@@ -308,14 +407,8 @@
       "properties": {},
       "geometry": {
         "coordinates": [
-          [
-            11.4450,
-            59.1258
-          ],
-          [
-            11.3796,
-            59.1291
-          ]
+        [places[2].long, places[2].lat],
+          [places[3].long, places[3].lat]
         ],
         "type": "LineString"
       }
@@ -325,21 +418,26 @@
       "properties": {},
       "geometry": {
         "coordinates": [
-          [
-            11.3796,
-            59.1291
-          ],
-          [
-            11.2745,
-            59.1282
-          ]
+        [places[3].long, places[3].lat],
+          [places[4].long, places[4].lat]
+        ],
+        "type": "LineString"
+      }
+    }, 
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+        [places[4].long, places[4].lat],
+          [places[5].long, places[5].lat]
         ],
         "type": "LineString"
       }
     },
    
   ]
-}
+}*/
         
         
         const geoJsonStyle = {
@@ -356,30 +454,98 @@
             }
         }).addTo(map)
 
+        
+        //SET MARKERS MAP
+        //create custom icon:
+        const circleIcon = L.icon({
+            iconUrl: 'circle.png',
+            iconSize: [30,30],
+            iconAnchor: [15,15],
+            popupAnchor: [0, -20]
+        })
+        const dotIcon = L.icon({
+            iconUrl: 'dot.png',
+            iconSize: [30,30],
+            iconAnchor: [15,15],
+            popupAnchor: [0, -20]
+        }) 
+        const markerIcon = L.icon({
+            iconUrl: 'marker.png',
+            iconSize: [40,40],
+            iconAnchor: [20,40],
+            popupAnchor: [0, -20]
+        })
 
 
 
-
-        //Function to check if element is in viewport
-        function isInViewport(el) {
-            const rect = el.getBoundingClientRect();
-            return (
-                (rect.top <= 0 && rect.bottom >= 0) || 
-                (rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth))
-            );
-        }  
-
-        //Change background header 
-
+        places.map((place) => {
+            L.marker([place.lat, place.long], {icon: markerIcon}).addTo(map).bindPopup(place.name)
+        })
+        //SCRIPT FOR CHANGING MAP LOCATION
         document.addEventListener('scroll', function () {
+            if(isInViewport(document.getElementById("start"))) {
+                map.flyTo([centerLat, centerLong], 10)
+            }
+            if(isInViewport(document.getElementById("p1"))) {
+                map.flyTo([places[0].lat, places[0].long], 17)
+            }
+            if(isInViewport(document.getElementById("p2"))) {
+                map.flyTo([places[1].lat, places[1].long], 17)
+            }
+            if(isInViewport(document.getElementById("p3"))) {
+                map.flyTo([places[2].lat, places[2].long], 17)
+            }
+            if(isInViewport(document.getElementById("p4"))) {
+                map.flyTo([places[3].lat, places[3].long], 17)
+            }
+            if(isInViewport(document.getElementById("p5"))) {
+                map.flyTo([places[4].lat, places[4].long], 17)
+            } 
+            if(isInViewport(document.getElementById("p6"))) {
+                map.flyTo([places[5].lat, places[5].long], 17)
+            } 
+            if(isInViewport(document.getElementById("p7"))) {
+                map.flyTo([places[6].lat, places[6].long], 17)
+            } 
+            if(isInViewport(document.getElementById("p8"))) {
+                map.flyTo([places[7].lat, places[7].long], 17)
+            } 
+            if(isInViewport(document.getElementById("p9"))) {
+                map.flyTo([places[8].lat, places[8].long], 17)
+            } 
+            if(isInViewport(document.getElementById("p10"))) {
+                map.flyTo([places[9].lat, places[9].long], 17)
+            } 
+            if(isInViewport(document.getElementById("p11"))) {
+                map.flyTo([places[10].lat, places[10].long], 17)
+            } 
+            if(isInViewport(document.getElementById("p12"))) {
+                map.flyTo([places[11].lat, places[11].long], 17)
+            } 
+            if(isInViewport(document.getElementById("p13"))) {
+                map.flyTo([places[12].lat, places[12].long], 17)
+            } 
+            if(isInViewport(document.getElementById("p14"))) {
+                map.flyTo([places[13].lat, places[13].long], 17)
+            } 
+            if(isInViewport(document.getElementById("p15"))) {
+                map.flyTo([places[14].lat, places[14].long], 17)
+            } 
+            if(isInViewport(document.getElementById("end"))) {
+                map.flyTo([centerLat, centerLong], 13)
+            }
+        }, {
+            passive: true
+        });  
+
+         //Change background header 
+        
+         document.addEventListener('scroll', function () {
                 if (isInViewport(document.getElementById("scrollHeader"))){
-                    document.getElementById("changingBg").style.backgroundImage = "url(hus.JPEG)"
+                    document.getElementById("changingBg").style.backgroundImage = "url(Cis05.JPG)"
                 } 
                 if(isInViewport(document.getElementById("txt1"))) {
-                    document.getElementById("changingBg").style.backgroundImage = "url(vann.JPEG)"
+                    document.getElementById("changingBg").style.backgroundImage = "url(Cis12.JPG)"
                 } 
                 if(isInViewport(document.getElementById("txt2"))) {
                     document.getElementById("changingBg").style.backgroundImage = "url(hus.JPEG)"
@@ -387,45 +553,8 @@
 
             }, {
                 passive: true
-            });
-
-        //SET MARKERS MAP
-        //create custom icon:
-        const remaIcon = L.icon({
-            iconUrl: 'rema1000symbol.png',
-            iconSize: [40,40],
-            iconAnchor: [20,20],
-            popupAnchor: [0, -20]
-        })
-        places.map((place) => {
-            L.marker([place.lat, place.long], {icon: remaIcon}).addTo(map).bindPopup(place.name)
-        })
-        //SCRIPT FOR CHANGING MAP LOCATION
-        document.addEventListener('scroll', function () {
-            if(isInViewport(document.getElementById("start"))) {
-                map.flyTo([centerLat, centerLong], 13)
-            }
-            if(isInViewport(document.getElementById("r1000b"))) {
-                map.flyTo([59.1261,11.3858], 17)
-            }
-            if(isInViewport(document.getElementById("r1000s"))) {
-                map.flyTo([59.1282, 11.2745], 17)
-            }
-            if(isInViewport(document.getElementById("r1000t"))) {
-                map.flyTo([59.1258, 11.4450], 17)
-            }
-            if(isInViewport(document.getElementById("r1000br"))) {
-                map.flyTo([59.1291, 11.3796], 17)
-            }
-            if(isInViewport(document.getElementById("r1000r"))) {
-                map.flyTo([59.1186, 11.4092], 17)
-            }
-            if(isInViewport(document.getElementById("end"))) {
-                map.flyTo([centerLat, centerLong], 13)
-            }
-        }, {
-            passive: true
-        }); 
+            }); 
+            
 
        
     </script>
