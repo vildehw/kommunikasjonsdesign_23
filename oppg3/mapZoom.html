@@ -34,8 +34,7 @@
         } 
 
         .art{
-            min-height: 100vh; 
-            max-width: 500px; 
+            max-width: 600px; 
             padding: 1rem; 
             margin: 3rem auto 3rem auto; 
             color: var(--black);  
@@ -149,21 +148,34 @@
             width: 90vw;
             max-width: 400px;
             
+            padding-left: 0;
             
-            padding: 0 0 1rem 1rem;
-            color: #fff;   
+            color: var(--white);   
             border-radius: 15px;  
             background: var(--bgColor); 
-            box-shadow: 0 3px 10px var(--bgColor);
-        }   
+            /*box-shadow: 0 3px 10px var(--bgColor);*/
+        }    
 
+        .scrollBox img{
+            width: 100%; 
+            border-radius: 0 0 15px 15px;  
+            vertical-align: bottom;
+        } 
+       
         article h3{
-            padding-bottom: .5rem;
             border-bottom: 3px solid var(--red); 
-            display: inline-block;
+            display: inline-block; 
+            padding: 0 .4rem; 
+            margin-bottom: 0;
+        } 
+
+        .scrollDiv{
+            padding: 0 1rem; 
+            display: inline-block
         }
+        
 
-
+    
         @media only screen and (min-width: 800px) {
             #start, #p2, #p4, #p6, #p8, #p10, #p12, #p14, #end{
                 /*venstre*/ 
@@ -174,7 +186,17 @@
                 /*høyre*/ 
                 margin: 0 2rem 80vh auto;     
             } 
-        }
+        } 
+
+        .scrollBox{
+            max-width: 500px;
+        } 
+
+        @media only screen and (min-width: 1200px){
+            .scrollBox{
+            max-width: 560px;
+        } 
+    }
     </style>
 </head>
 <body>  
@@ -214,73 +236,107 @@
         <div id="mapContainer"></div>
     <section id="scrollContainer">  
         
-        <article class="scrollBox" id="start">
+        <article class="scrollBox" id="start"> 
+            <div class="scrollDiv">
             <h3>The grocery stores of Halden</h3>
-            <p>Scroll down to get a full overview of all the grocery stores in Halden.</p>
+            <p>Scroll down to get a full overview of all the grocery stores in Halden.</p> 
+            </div>
         </article>
-        <article class="scrollBox" id="p1"> 
+        <article class="scrollBox" id="p1">  
+            <div class="scrollDiv">
             <h3>1998</h3>
-            <p>Do Re Mi barnehage Greåker</p> 
+            <p>Do Re Mi barnehage Greåker</p>  
+            </div>
             <img src="Cis12.jpg">
         </article>
-        <article class="scrollBox" id="p2"> 
+        <article class="scrollBox" id="p2">  
+            <div class="scrollDiv">
             <h3>2003</h3>
-            <p>Do Re Mi barnehage Fredrikstad</p>
+            <p>Do Re Mi barnehage Fredrikstad</p> 
+            </div>
         </article>
-        <article class="scrollBox" id="p3"> 
+        <article class="scrollBox" id="p3">  
+            <div class="scrollDiv">
             <h3>2005</h3>
-            <p>Do Re Mi barnehage Sør-Afrika</p>
+            <p>Do Re Mi barnehage Sør-Afrika</p> 
+            </div>
         </article>
-        <article class="scrollBox" id="p4"> 
+        <article class="scrollBox" id="p4">  
+            <div class="scrollDiv">
             <h3>2006</h3>
-            <p>Hinkenhopp barnehage Greåker</p>
+            <p>Hinkenhopp barnehage Greåker</p> 
+            </div>
         </article>
-        <article class="scrollBox" id="p5"> 
+        <article class="scrollBox" id="p5">  
+            <div class="scrollDiv">
             <h3>2007</h3>
-            <p>Do Re Mi barnehage Begby</p>
+            <p>Do Re Mi barnehage Begby</p> 
+            </div>
         </article> 
-        <article class="scrollBox" id="p6"> 
+        <article class="scrollBox" id="p6">  
+            <div class="scrollDiv">
             <h3>2009</h3>
-            <p>Do Re Mi barnehage Halden</p>
+            <p>Do Re Mi barnehage Halden</p> 
+            </div>
         </article> 
-        <article class="scrollBox" id="p7"> 
+        <article class="scrollBox" id="p7">  
+            <div class="scrollDiv">
             <h3>2010</h3>
-            <p>Do Re Mi barnehage Våler</p>
+            <p>Do Re Mi barnehage Våler</p> 
+            </div>
         </article> 
-        <article class="scrollBox" id="p8"> 
+        <article class="scrollBox" id="p8">  
+            <div class="scrollDiv">
             <h3>2011</h3>
-            <p>Barnas Kulturhus Fredrikstad</p>
+            <p>Barnas Kulturhus Fredrikstad</p> 
+            </div>
         </article> 
-        <article class="scrollBox" id="p9"> 
+        <article class="scrollBox" id="p9">  
+            <div class="scrollDiv">
             <h3>2012</h3>
-            <p>Childrens international school Fredrikstad</p>
+            <p>Childrens international school Fredrikstad</p> 
+            </div>
         </article> 
-        <article class="scrollBox" id="p10"> 
+        <article class="scrollBox" id="p10">  
+            <div class="scrollDiv">
             <h3>2015</h3>
-            <p>Childrens international school Moss</p>
+            <p>Childrens international school Moss</p> 
+            </div>
         </article> 
-        <article class="scrollBox" id="p11"> 
+        <article class="scrollBox" id="p11">  
+            <div class="scrollDiv">
             <h3>2018</h3>
-            <p>Dibber International, Sollentuna</p>
+            <p>Dibber International, Sollentuna</p> 
+            </div>
         </article> 
-        <article class="scrollBox" id="p12"> 
+        <article class="scrollBox" id="p12">  
+            <div class="scrollDiv">
             <h3>2018</h3>
-            <p>Dibber international, Rydebak</p>
+            <p>Dibber international, Rydebak</p> 
+            </div>
         </article> 
-        <article class="scrollBox" id="p13"> 
+        <article class="scrollBox" id="p13">  
+            <div class="scrollDiv">
             <h3>2019</h3>
-            <p>Children's international school Sarpsborg</p>
+            <p>Children's international school Sarpsborg</p> 
+            </div>
         </article> 
-        <article class="scrollBox" id="p14"> 
+        <article class="scrollBox" id="p14">  
+            <div class="scrollDiv">
             <h3>2019</h3>
-            <p>Philini Instituttet Privatist skole</p>
+            <p>Philini Instituttet Privatist skole</p> 
+            </div>
         </article> 
-        <article class="scrollBox" id="p15"> 
+        <article class="scrollBox" id="p15">  
+            <div class="scrollDiv">
             <h3>2022</h3>
-            <p>Christianslund barnehage Fredrikstad</p>
+            <p>Christianslund barnehage Fredrikstad</p> 
+            </div>
         </article>
-        <article class="scrollBox" id="end">
-            <p>This is a brief example of combining the visualization templates and map templates using Leaflet for moving the focal point and zoom of a map depending on what information is in the viewport.</p>
+        <article class="scrollBox" id="end"> 
+            <div class="scrollDiv">
+            <p>This is a brief example of combining the visualization templates and map templates using Leaflet for moving the focal point and zoom of a map depending on what information is in the viewport.</p> 
+            </div>
         </article>
     </section>  
 </div>
