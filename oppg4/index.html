@@ -4,12 +4,353 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>oppgave 4</title> 
-    <link rel="stylesheet" type="text/css" href="style.css"> 
+   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
    <!-- INCLUDE LEAFLET SCRIPT LIBRARY -->
-   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> 
+   <style>
+    
+
+:root {
+    --darkblue: #0c1821; 
+    --white: #fff;  
+    --red: rgba(182, 16, 16, 0.9); 
+    --blue: #535C6E; 
+    --lightblue: #6E778A; 
+    --grey: #706C6D;  
+    --black: #000;  
+    --bgColor: rgba(54, 59, 69, 0.9); 
+    } 
+
+
+*{
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    
+}  
+
+body{
+  background-color: var(--darkblue); 
+    color: var(--white); 
+}
+
+
+#videoContainer{
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+#background-video {
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;  
+    z-index: -1;
+
+  } 
+  
+
+  @media (max-width: 750px) {
+    #background-video{ display: none; }
+    #videoContainer{ 
+        position: relative;
+        background-image: url('hovedhus3.JPEG'); 
+        background-size: cover; 
+        background-position: center;
+        background-repeat: no-repeat;  
+        height: 100vh; 
+        
+    }
+}
+
+
+  #tittel, #undertittel {
+    color: white;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    text-align: center;  
+    margin: 0 auto;
+    
+  } 
+
+  #tittel{
+    margin-top: 65vh; 
+    font-size: 4rem;
+  }
+  
+  
+  main {
+   
+    
+  }    
+
+  article{
+    max-width: 600px; 
+    margin: 2rem auto;
+  } 
+
+  #navSection { 
+    display: inline-block;
+    width: 100%;  
+    display: grid; 
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    place-items: center;
+    margin: .5rem 0;
+    
+  } 
+  #navSection img{
+    width: 70%;  
+  } 
+
+  #navSection img:hover{
+    -webkit-transform: scale(1.2);
+-ms-transform: scale(1.2);
+transform: scale(1.2);
+transition: 1s ease;
+  } 
+
+ nav{  
+  
+  width: 100%; 
+  position: sticky; 
+  top: 0; 
+  z-index: 100;
+} 
+
+nav ul{ 
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));   
+  width: 100%;
+  place-items: center;
+    
+    background-color: #0D1B2A; 
+    list-style-type: none;
+    text-decoration: none; 
+    margin: 0; 
+}    
+
+nav ul li{
+  display: inline;
+}
+
+li a {
+    display: block;
+    color: #E0E1DD;
+    text-align: center; 
+    font-size: 1.4rem;
+    padding: 1rem 1.6rem;
+    text-decoration: none; 
+} 
+
+li a:hover {
+    background-color: #1B263B; 
+    text-decoration: underline;
+}
+
+
+
+
+  #hest{
+    width: 100%; 
+    height: 100vh;
+  } 
+
+  
+
+
+  #changingBg{
+    background-size: cover; 
+    background-position: center bottom; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+} 
+
+.scrollContainer1 {
+    width: 100%; 
+    min-height: 60vh; 
+    overflow: hidden;  
+    background-image: url("closeup.jpg");
+    transition: background-image 2s;
+}  
+
+
+.scrollText {
+    margin: 70vh auto; 
+    max-width: fit-content;
+    padding: 1rem;  
+    color: #fff; 
+    background-color: rgba(12, 24, 33, 0.8);
+    box-shadow: 0px 0px 20px 35px rgba(12, 24, 33, 0.8);
+  }  
+  
+  #scrollHeader h1, .scrollText p{
+    max-width: 500px;
+    }
+
+
+  button{
+    border: none;  
+    border-radius: 2px;
+    border: 1.5px solid #0D1B2A;
+    background: #0D1B2A; 
+    color: #E0E1DD;
+    padding: 0.8rem;  
+    font-size: 0.9rem; 
+    margin-top: .2rem;  
+    display: flex;  
+    margin: 3rem auto;
+  }     
+
+  #mapContainer{
+    width: 50%;
+    height: 50vh;
+    margin: 5rem auto;    
+    z-index: 50;   
+  }
+
+
+/*timeline styling*/
+
+#faktaboks{ 
+    display: none;
+    margin-bottom: 10vh;
+  }
+
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px; 
+    margin-bottom: 10rem; /*!!!*/
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+    }
+  
+  /* Full-width containers */
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+  /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+  /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+      left: 15px;
+    }
+  
+  /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+  } 
+
+
+   </style>
 </head>
 <body>
    <header class="video-header"> 
@@ -21,19 +362,35 @@
       <h1 id="tittel">overskrift</h1>
       <h2 id="undertittel">Lorem Ipsum</h2>
    </div>
-      
     </header>   
     <main>   
       <article> 
         <p>
            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
         </p> 
-      </article>  
-      <section id="changingBg" class="scrollContainer1"> 
+      </article>   
 
-        <div  id="scrollHeader">
-        <h1>Overskrift</h1> 
-        </div>
+      <section id="navSection">
+        <img src="mapkopi.png">
+        <img src="mapkopi.png"> 
+        <img src="mapkopi.png"> 
+      </section> 
+        <nav> 
+        <ul>
+          <li><a href="#">Birte</a></li> 
+          <li><a href="#">Historie</a></li> 
+          <li><a href="#">Noe mer</a></li> 
+        </ul>
+        </nav>
+      
+        <article> 
+          <p>
+             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+          </p> 
+        </article>
+
+
+      <section id="changingBg" class="scrollContainer1"> 
         <div id="txt1" class="scrollText">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -42,16 +399,19 @@
         
         <div id="txt2" class="scrollText">
             <p>lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p> 
-        </div>
+        </div> 
+        <div id="txt3" class="scrollText">
+          <p>lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p> 
+      </div>
         
-    </section>
+      </section>
       <!--
          <img id="hest" src="hest.png">-->
-    <article> 
+     <article> 
       <p>
          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
       </p>  
-    </article> 
+      </article> 
       
      
 
@@ -104,7 +464,19 @@
            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
         </p> 
       </article>  
-      <div id="mapContainer"></div>
+      <div id="mapContainer"></div> 
+
+      <article> 
+        <p>
+           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </p> 
+      </article> 
+
+      <article> 
+        <p>
+           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </p> 
+      </article>
 
    </main> 
    <script>
@@ -132,25 +504,25 @@
         }).addTo(map);
 
       */  
-      var map = L.map('mapContainer', {
+      let map = L.map('mapContainer', {
         minZoom: 1,
-        maxZoom: 3,
-        center: [0, 0],
-        zoom: 1,
-        crs: L.CRS.Simple
+        maxZoom: 5,
+        center: [500, 500],
+        zoom: 2,
+        crs: L.CRS.Simple, 
+        scrollWheelZoom: false
       });
 
-        var w = 1000;
-        var h = 1000;
-        var url = 'mapkopi.png';
-        var southWest = map.unproject([ 0, h], map.getMaxZoom()-1);
-        var northEast = map.unproject([ w, 0], map.getMaxZoom()-1);
-        var bounds = new L.LatLngBounds( southWest, northEast);
+        const w = 1000;
+        const h = 1000;
+        const url = 'mapkopi.png';
+        const southWest = map.unproject([ 0, h], map.getMaxZoom()-1);
+        const northEast = map.unproject([ w, 0], map.getMaxZoom()-1);
+        const bounds = new L.LatLngBounds( southWest, northEast);
 
         L.imageOverlay( url, bounds).addTo(map);
 
         map.setMaxBounds(bounds);
-
 
 /*
         var imageUrl = 'map2.png',
@@ -159,15 +531,35 @@
 
 */   
 
+
+const places = [
+            {name: "Do Re Mi barnehage Greåker", year: "2016", lat: 10, long: 10},
+            {name: "Do Re Mi barnehage Fredrikstad", year: "2016", lat: 3, long: 3},
+            {name: "Do Re Mi barnehage Sør-Afrika", year: "2016", lat: 5, long: 5}, 
+    ]
+
+
+    const markerIcon = L.icon({
+            iconUrl: 'marker.png',
+            iconSize: [40,40],
+            iconAnchor: [20,40],
+            popupAnchor: [0, -20]
+        })
+
+        places.map((place) => {
+            L.marker([place.lat, place.long], {icon: markerIcon}).addTo(map).bindPopup(place.name)
+        }) 
+
+
 function visBoks() { 
   const faktabutton = document.getElementById("faktabutton");
   const faktaboks = document.getElementById("faktaboks");
-  if (faktaboks.style.display === "none") {
+  if (faktaboks.style.display === "none" || faktaboks.style.display === "") {
     faktaboks.style.display = "block";
     faktabutton.innerHTML = "Lukk tidslinje over noe";
   } else {
     faktaboks.style.display = "none";
-    faktabutton.innerHTML = "Klikk for tidslinje over noe 2";
+    faktabutton.innerHTML = "Klikk for tidslinje over noe";
   }
 }
 
@@ -185,14 +577,15 @@ function isInViewport(el) {
                 );
             } 
             document.addEventListener('scroll', function () {
-                if (isInViewport(document.getElementById("scrollHeader"))){
-                    document.getElementById("changingBg").style.backgroundImage = "url(hest.png)"
-                } 
+                
                 if(isInViewport(document.getElementById("txt1"))) {
-                    document.getElementById("changingBg").style.backgroundImage = "url(map2.png))"
+                    document.getElementById("changingBg").style.backgroundImage = "url(closeup.jpg)"
                 } 
                 if(isInViewport(document.getElementById("txt2"))) {
-                    document.getElementById("changingBg").style.backgroundImage = "url(hus.JPEG)"
+                    document.getElementById("changingBg").style.backgroundImage = "url(1closeup.jpg)"
+                } 
+                if(isInViewport(document.getElementById("txt3"))) {
+                    document.getElementById("changingBg").style.backgroundImage = "url(2closeup.jpg)"
                 }
 
             }, {

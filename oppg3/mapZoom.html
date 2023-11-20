@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lise Holman</title>
+    <title>Lise Holman</title>  
+    <!--Icon library-->
+    <script src="https://kit.fontawesome.com/00ad7a4967.js" crossorigin="anonymous"></script>
     <!-- INCLUDE LEAFLET CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -30,7 +32,8 @@
             scroll-behavior: smooth; 
             background-color: var(--white); 
             font-family: 'Open Sans', sans-serif;  
-            line-height: 1.5;
+            line-height: 1.5; 
+            box-sizing: border-box;
         } 
 
         .art{
@@ -174,7 +177,21 @@
             display: inline-block
         }
         
-
+        #topBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            border: 2px solid var(--red);
+            background-color: var(--red);
+            color: var(--white);
+            padding: 0 17px 5px 17px;
+            border-radius: 50%;
+            font-size: 32px;
+            text-decoration: none;
+            
+        }
+        
     
         @media only screen and (min-width: 800px) {
             #start, #p2, #p4, #p6, #p8, #p10, #p12, #p14, #end{
@@ -185,18 +202,34 @@
             #p1, #p3, #p5, #p7, #p9, #p11, #p13, #p15{
                 /*høyre*/ 
                 margin: 0 2rem 80vh auto;     
+            }  
+            .scrollBox{
+            max-width: 500px; 
+
+            } 
+            #topBtn{
+                right: 40px; 
+                bottom: 40px;
             } 
         } 
 
-        .scrollBox{
-            max-width: 500px;
-        } 
+        
 
         @media only screen and (min-width: 1200px){
             .scrollBox{
-            max-width: 560px;
-        } 
-    }
+            max-width: 560px; 
+            } 
+            #topBtn{
+                right: 100px; 
+                bottom: 50px;
+            }
+            #topBtn:hover {
+                color: var(--red); 
+                background-color: var(--white);
+            }
+        }  
+
+    
     </style>
 </head>
 <body>  
@@ -216,10 +249,15 @@
                 <p>lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p> 
             </div>
             
-        </section>
+        </section> 
         
-    </header>
-    <article class="art"> 
+    </header> 
+    <main> 
+       
+        <a href="#scrollHeader" id="topBtn">🠙</a>  
+    
+    <article class="art">  
+        
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p> 
@@ -346,7 +384,8 @@
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
-    </article>
+    </article> 
+</main>
     
     <script> 
 
@@ -611,7 +650,8 @@
                 passive: true
             }); 
             
-
+            
+            
        
     </script>
 </body>
