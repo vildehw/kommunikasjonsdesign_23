@@ -9,7 +9,8 @@
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
     <!-- INCLUDE LEAFLET SCRIPT LIBRARY -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> 
+    <script src="./leaflet-grayscale-master/TileLayer.Grayscale.js"></script>
     <style> 
         
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,400;1,600&family=Rubik:wght@400;600;700&display=swap');
@@ -72,16 +73,16 @@
             max-width: fit-content; 
             text-align: center; 
             font-size: 24px;   
-            background-color: var(--bgColor); 
-            color: var(--white);  
+            background-color: var(--white); 
+             
         }
 
         .scrollText {
             margin: 80vh auto; 
             max-width: fit-content;
             padding: 1rem;  
-            background-color: var(--bgColor);  
-            color: var(--white);
+            background-color: var(--white);  
+            
             border: 2px; 
             font-size: 22px;
         }    
@@ -273,7 +274,7 @@
                 <article class="scrollBox" id="start"> 
                     <div class="scrollDiv">
                         <h3>Lise Holmans Prosjekter</h3>
-                        <p>Scroll ned for en full oversikt over Lise Holmans prosjekter. Kartet viser hvor disse er ognår de ble igangsatt</p> 
+                        <p>Scroll ned for en full oversikt over Lise Holmans prosjekter. Kartet viser hvor og når disse ble startet.</p> 
                     </div>
                 </article>
                 <article class="scrollBox" id="p1">  
@@ -419,20 +420,23 @@ function showContent() {
         const centerLong = 10.9654856
         let map = L.map('mapContainer', {
             center: [centerLat, centerLong],
-            zoom: 13,
-            scrollWheelZoom: false
+            zoom: 10,
+            scrollWheelZoom: false, 
+            
         })
         //SET MAP CONSTRUCTOR  
-        
+        /*
         L.tileLayer('https://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart_graatone&zoom={z}&x={x}&y={y}', {
             attribution: '<a href="http://www.kartverket.no/">Kartverket</a>' //ikoner??
-        }).addTo(map) 
-        /*
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
+        }).addTo(map)*/ 
+        
+        
+        L.tileLayer.grayscale('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19, 
+            fadeAnimation: false,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
-        */
+        
 
 
         //PLACES
@@ -531,13 +535,13 @@ function showContent() {
                 map.flyTo([centerLat, centerLong], 10)
             }
             if(isInViewport(document.getElementById("p1"))) {
-                map.flyTo([places[0].lat, places[0].long], 17)
+                map.flyTo([places[0].lat, places[0].long], 16)
             }
             if(isInViewport(document.getElementById("p2"))) {
-                map.flyTo([places[1].lat, places[1].long], 17)
+                map.flyTo([places[1].lat, places[1].long], 16)
             }
             if(isInViewport(document.getElementById("p3"))) {
-                map.flyTo([places[2].lat, places[2].long], 17)
+                map.flyTo([places[2].lat, places[2].long], 8)
             }
             if(isInViewport(document.getElementById("p4"))) {
                 map.flyTo([places[3].lat, places[3].long], 17)
@@ -561,10 +565,10 @@ function showContent() {
                 map.flyTo([places[9].lat, places[9].long], 17)
             } 
             if(isInViewport(document.getElementById("p11"))) {
-                map.flyTo([places[10].lat, places[10].long], 17)
+                map.flyTo([places[10].lat, places[10].long], 13)
             } 
             if(isInViewport(document.getElementById("p12"))) {
-                map.flyTo([places[11].lat, places[11].long], 17)
+                map.flyTo([places[11].lat, places[11].long], 13)
             } 
             if(isInViewport(document.getElementById("p13"))) {
                 map.flyTo([places[12].lat, places[12].long], 17)

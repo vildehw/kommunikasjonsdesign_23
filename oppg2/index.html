@@ -3,27 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
+    <title>Oppgave 2</title>  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <style>
-
-        article{
-            width: 200px; 
-            height: 200px; 
-            border: solid black 2px; 
-            animation: background-fade 10s timing-function delay iteration-count direction fill-mode;
+        article{ 
+            display: block;
+            width: 100%; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 6rem;
         } 
+        article img{
+            width: 40%; 
+            height: auto;
+        } 
+        article p{
+            width: 30%;
+        }  
 
-        @keyframes background-fade { 
-            99.9%{
+        #bgDiv{  
 
-            }
+            width: 100%; 
             
+            min-height: 90vh; 
+
+            background-image: url(birtheiramme-01.png); 
+            background-size: cover;  
+            background-position: center center; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+        }  
+
+        #nyDiv {
+    width: 50%;
+    position: relative;
+}
+
+#nyDiv img {
+    width: 100%;
+    height: auto;
+}
+
+#myChart {
+    width: 100%;
+    max-width: 400px;
+    max-height: 600px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    z-index: 2; /* Increase the z-index to ensure it's above the image */
+}
+
+
+
+        @media screen and (min-width: 800px){
+            #bgDiv{
+                width: 50%;
+            }
         }
     </style>
 </head>
-<body>
+<body> 
+    
+    <article> 
+        
+        <img src="birtheiramme-01.png">
+        <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </p> 
+        
+    </article> 
     <article>
+        <img src="birtheiramme-01.png"> 
+        <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </p>  
+    </article>   
+    <div id="nyDiv"> 
+        <img src="birtheiramme-01.png">  
+        <canvas id="myChart"></canvas>
 
-    </article>
+    </div> 
+    <div id="bgDiv">
+        <p>dette er en div</p>
+    
+    <div> 
+   
+        
+      </div> 
+    </div>  
+    <article>
+        <img src="birtheiramme-01.png"> 
+        <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </p>  
+    </article> 
+    
+      
+          
+    
+        <script>
+            const ctx = document.getElementById('myChart');
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderWidth: 1
+                }]
+                },
+                options: {
+                scales: {
+                    y: {
+                    beginAtZero: true
+                    }
+                }
+                }
+            });
+</script>
+
+    
+    
 </body>
 </html>
