@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lise Holman</title>  
-    <!--Icon library-->
-    <script src="https://kit.fontawesome.com/00ad7a4967.js" crossorigin="anonymous"></script>
+    <title>Lise Holman</title> 
     <!-- INCLUDE LEAFLET CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -17,13 +15,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,400;1,600&family=Rubik:wght@400;600;700&display=swap');
 
         :root {
-        --darkblue: #363B45; 
-        /*0c1821*/
         --white: #fff;  
         --red: rgba(182, 16, 16, 0.9); 
-        --blue: #535C6E; 
-        --lightblue: #6E778A; 
-        --grey: #706C6D;  
         --black: #000;  
         --bgColor: rgba(54, 59, 69, 0.9); 
         } 
@@ -40,7 +33,7 @@
             max-width: 600px; 
             padding: 1rem; 
             margin: 3rem auto 3rem auto; 
-            color: var(--black);  
+            color: var(--black);   
         }  
 
         .art #sitat{
@@ -50,7 +43,8 @@
 
         body {
             margin: 0;
-            padding: 0;
+            padding: 0; 
+            font-size: 18px;
         }
 
         div, article, section {
@@ -73,7 +67,8 @@
         }  
         
         #scrollHeader{
-            margin: 65vh auto 70vh auto; 
+            margin: 65vh auto 70vh auto;   
+            padding: 1px 30px;
             max-width: fit-content; 
             text-align: center; 
             font-size: 24px;   
@@ -87,47 +82,19 @@
             padding: 1rem;  
             background-color: var(--bgColor);  
             color: var(--white);
-            border: 2px;
-           
+            border: 2px; 
+            font-size: 22px;
         }    
 
         #scrollHeader h1, .scrollText p{
             max-width: 500px;
         } 
 
-
-        /* 
-        #scrollHeader{
-            margin: 65vh auto 70vh auto; 
-            max-width: fit-content; 
-            color: #fff; 
-            text-align: center; 
-            font-size: 24px;   
-            background-color: var(--bgColor);
-            box-shadow: 0px 0px 20px 35px var(--bgColor);
-            
-        }
-
-        .scrollText {
-            margin: 70vh auto; 
-            max-width: fit-content;
-            padding: 1rem;  
-            color: #fff; 
-            background-color: var(--bgColor);
-            box-shadow: 0px 0px 20px 35px var(--bgColor);
-        }    
-
-        #scrollHeader h1, .scrollText p{
-            max-width: 500px;
-        }
-
-        */ 
-
         #mapHeader{
             text-align: center; 
             font-size: 24px;
         }
-        #scrollContainer {
+        #scrollContainer2{
             width: 100%;
             min-height: 80vh;
             z-index: 5;
@@ -150,13 +117,10 @@
             z-index: 10;
             width: 90vw;
             max-width: 400px;
-            
             padding-left: 0;
-            
             color: var(--white);   
             border-radius: 15px;  
             background: var(--bgColor); 
-            /*box-shadow: 0 3px 10px var(--bgColor);*/
         }    
 
         .scrollBox img{
@@ -189,12 +153,34 @@
             border-radius: 50%;
             font-size: 32px;
             text-decoration: none;
-            
         }
+         
+
         
+        #kilder{  
+            display: none;
+            width: 80%;
+            margin: 0 auto;
+            box-shadow: 0 0px 10px #BABABA;
+            padding: 1rem;
+            margin-bottom: 3rem; 
+            border-radius: 10px;
+         }
+  
+
+        #kildeBtn{ 
+            display: block;
+            cursor: pointer;
+            margin: 2rem auto;
+            font-size: 1rem;
+            padding: 1.2rem 2rem;
+            background-color: #DBDBDB;
+            border: none; 
+        }
     
-        @media only screen and (min-width: 800px) {
-            #start, #p2, #p4, #p6, #p8, #p10, #p12, #p14, #end{
+        @media only screen and (min-width: 800px) { 
+            
+            #p2, #p4, #p6, #p8, #p10, #p12, #p14{
                 /*venstre*/ 
                 margin: 0 0 80vh 2rem;
             } 
@@ -203,6 +189,7 @@
                 /*høyre*/ 
                 margin: 0 2rem 80vh auto;     
             }  
+             
             .scrollBox{
             max-width: 500px; 
 
@@ -211,11 +198,14 @@
                 right: 40px; 
                 bottom: 40px;
             } 
+            #kilder {
+                width: 50%;
+            }
         } 
 
-        
 
-        @media only screen and (min-width: 1200px){
+        @media only screen and (min-width: 1200px){ 
+
             .scrollBox{
             max-width: 560px; 
             } 
@@ -226,10 +216,16 @@
             #topBtn:hover {
                 color: var(--red); 
                 background-color: var(--white);
+            } 
+            #kilder {
+                width: 40%;
             }
         }  
 
     
+
+  
+
     </style>
 </head>
 <body>  
@@ -237,157 +233,185 @@
         <section id="changingBg" class="scrollContainer1"> 
 
             <div  id="scrollHeader">
-            <h1>Overskrift overskrift overskrift overskrift</h1> 
+                <h1>Den utrettelige gründeren</h1> 
             </div>
             <div id="txt1" class="scrollText">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+                    -	Noen mennesker har mer energi enn en hel barnehage til sammen. Lise Holman er en sånn person. 
                 </p> 
             </div>
-            
-            <div id="txt2" class="scrollText">
-                <p>lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p> 
-            </div>
-            
         </section> 
-        
-    </header> 
+    </header>  
+
     <main> 
-       
         <a href="#" id="topBtn">🠙</a>  
     
-    <article class="art">  
-        
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p> 
-        <p id="sitat">
-            "lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
-        </p> 
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p> 
-    </article> 
+        <article class="art">  
+            <p>
+                Da hennes sønn skulle begynne i barnehagen på 90-tallet, observerte hun hvordan dette kun var en oppbevaringsplass for barn, ikke et sted for læring og utvikling. Hun ønsket ikke å klage, så hun startet like greit sin egen barnehage. Med bakgrunn fra musikklinja og jobb i den franske skolen, kastet hun seg ut i det, og startet opp sin første Do Re Mi-barnehage med, fokus på språk og musikk. 
+            </p>  
+            <p>
+                For å finansiere det hele, valgte hun å pantsette det flotteste hun eide, flygelet sitt. Slik fikk hun råd til aksjekapitalen. I 2003 ble hennes mann Fredrik med på notene, og sammen har de utviklet et lite eventyr innen gründervirksomhet, - alltid med musikk og språk i fokus. Fra barnehager i nærområdet Østfold, gikk ferden til Sør-Afrika, hvor Fredrik og broren Håvard brettet opp ermene og satte spaden i jorda. En afrikansk Do Re Mi barnehage ble født. 
+            </p> 
+            <p id="sitat">
+                «Læring og lek går hånd i hånd. Jeg så behovet for mer opplegg for barn i ung alder, og hvordan de tidlig kan bli gode i språk. Jeg visste også at et musikalsk instrument er med på å utvikle den kreative delen av hjernen». 
+            </p> 
+            <p>
+                Siden har det gått slag i slag. Seks barnehager senere, begynte foreldrene fra barnehagen å klage på den offentlige skolen. Etter årene med kreativ utfoldelse og læring i Do Re Mi-barnehagene, kjedet barna seg i på skolen, hvor de ikke ble utfordret på samme måte. Samvittighetsfull og driftig som hun er, kastet hun seg ut i et nytt prosjekt; CIS. Children’s International School er Lise og Fredriks fortsettelse av barnehagene, med 1.-10. klasse i mye av det samme konseptet - språk og musikk. CIS er også en IB-skole, som innebærer å gjøre elevene gode på kritisk tenkning, undersøkelser og presentasjoner allerede fra 1. klasse, - noe mange elever ikke opplever før på høyere utdanning. 
+            </p>  
+            <p>
+                Popup (bare et forslag, at man kan trykke på IB-skole, så kommer en liten infoboks opp?)
+                IB-skole - international baccalaureate. En internasjonal skolelinje som finnes i mer enn 100 land. Det er et mer krevende studie, og all undervisning foregår på engelsk. Det legges vekt på faglig og personlig utvikling.
+            </p>
+        </article>  
     
-    <div id="mapScroll">  
-        <h2 id="mapHeader">Kart og tidslinje over prosjekter</h2>
-        <div id="mapContainer"></div>
-    <section id="scrollContainer">  
-        
-        <article class="scrollBox" id="start"> 
-            <div class="scrollDiv">
-            <h3>The grocery stores of Halden</h3>
-            <p>Scroll down to get a full overview of all the grocery stores in Halden.</p> 
-            </div>
-        </article>
-        <article class="scrollBox" id="p1">  
-            <div class="scrollDiv">
-            <h3>1998</h3>
-            <p>Do Re Mi barnehage Greåker</p>  
-            </div>
-            <img src="Cis12.jpg">
-        </article>
-        <article class="scrollBox" id="p2">  
-            <div class="scrollDiv">
-            <h3>2003</h3>
-            <p>Do Re Mi barnehage Fredrikstad</p> 
-            </div>
-        </article>
-        <article class="scrollBox" id="p3">  
-            <div class="scrollDiv">
-            <h3>2005</h3>
-            <p>Do Re Mi barnehage Sør-Afrika</p> 
-            </div>
-        </article>
-        <article class="scrollBox" id="p4">  
-            <div class="scrollDiv">
-            <h3>2006</h3>
-            <p>Hinkenhopp barnehage Greåker</p> 
-            </div>
-        </article>
-        <article class="scrollBox" id="p5">  
-            <div class="scrollDiv">
-            <h3>2007</h3>
-            <p>Do Re Mi barnehage Begby</p> 
-            </div>
-        </article> 
-        <article class="scrollBox" id="p6">  
-            <div class="scrollDiv">
-            <h3>2009</h3>
-            <p>Do Re Mi barnehage Halden</p> 
-            </div>
-        </article> 
-        <article class="scrollBox" id="p7">  
-            <div class="scrollDiv">
-            <h3>2010</h3>
-            <p>Do Re Mi barnehage Våler</p> 
-            </div>
-        </article> 
-        <article class="scrollBox" id="p8">  
-            <div class="scrollDiv">
-            <h3>2011</h3>
-            <p>Barnas Kulturhus Fredrikstad</p> 
-            </div>
-        </article> 
-        <article class="scrollBox" id="p9">  
-            <div class="scrollDiv">
-            <h3>2012</h3>
-            <p>Childrens international school Fredrikstad</p> 
-            </div>
-        </article> 
-        <article class="scrollBox" id="p10">  
-            <div class="scrollDiv">
-            <h3>2015</h3>
-            <p>Childrens international school Moss</p> 
-            </div>
-        </article> 
-        <article class="scrollBox" id="p11">  
-            <div class="scrollDiv">
-            <h3>2018</h3>
-            <p>Dibber International, Sollentuna</p> 
-            </div>
-        </article> 
-        <article class="scrollBox" id="p12">  
-            <div class="scrollDiv">
-            <h3>2018</h3>
-            <p>Dibber international, Rydebak</p> 
-            </div>
-        </article> 
-        <article class="scrollBox" id="p13">  
-            <div class="scrollDiv">
-            <h3>2019</h3>
-            <p>Children's international school Sarpsborg</p> 
-            </div>
-        </article> 
-        <article class="scrollBox" id="p14">  
-            <div class="scrollDiv">
-            <h3>2019</h3>
-            <p>Philini Instituttet Privatist skole</p> 
-            </div>
-        </article> 
-        <article class="scrollBox" id="p15">  
-            <div class="scrollDiv">
-            <h3>2022</h3>
-            <p>Christianslund barnehage Fredrikstad</p> 
-            </div>
-        </article>
-        <article class="scrollBox" id="end"> 
-            <div class="scrollDiv">
-            <p>This is a brief example of combining the visualization templates and map templates using Leaflet for moving the focal point and zoom of a map depending on what information is in the viewport.</p> 
-            </div>
-        </article>
-    </section>  
-</div>
+        <div id="mapScroll">  
+            <h2 id="mapHeader">Kart og tidslinje over prosjekter</h2>
+            <div id="mapContainer"></div>
+            <section id="scrollContainer2">  
+            
+                <article class="scrollBox" id="start"> 
+                    <div class="scrollDiv">
+                        <h3>Lise Holmans Prosjekter</h3>
+                        <p>Scroll ned for en full oversikt over Lise Holmans prosjekter. Kartet viser hvor disse er ognår de ble igangsatt</p> 
+                    </div>
+                </article>
+                <article class="scrollBox" id="p1">  
+                    <div class="scrollDiv">
+                        <h3>1998</h3>
+                        <p>Do Re Mi barnehage Greåker</p>  
+                    </div>
+                    <img src="Cis12.jpg" alt="Cis skole">
+                </article>
+                <article class="scrollBox" id="p2">  
+                    <div class="scrollDiv">
+                        <h3>2003</h3>
+                        <p>Do Re Mi barnehage Fredrikstad</p> 
+                    </div>
+                </article>
+                <article class="scrollBox" id="p3">  
+                    <div class="scrollDiv">
+                        <h3>2005</h3>
+                        <p>Do Re Mi barnehage Sør-Afrika</p> 
+                    </div>
+                </article>
+                <article class="scrollBox" id="p4">  
+                    <div class="scrollDiv">
+                        <h3>2006</h3>
+                        <p>Hinkenhopp barnehage Greåker</p> 
+                    </div>
+                </article>
+                <article class="scrollBox" id="p5">  
+                    <div class="scrollDiv">
+                        <h3>2007</h3>
+                        <p>Do Re Mi barnehage Begby</p> 
+                    </div>
+                </article> 
+                <article class="scrollBox" id="p6">  
+                    <div class="scrollDiv">
+                        <h3>2009</h3>
+                        <p>Do Re Mi barnehage Halden</p> 
+                    </div>
+                </article> 
+                <article class="scrollBox" id="p7">  
+                    <div class="scrollDiv">
+                        <h3>2010</h3>
+                        <p>Do Re Mi barnehage Våler</p> 
+                    </div>
+                </article> 
+                <article class="scrollBox" id="p8">  
+                    <div class="scrollDiv">
+                        <h3>2011</h3>
+                        <p>Barnas Kulturhus Fredrikstad</p> 
+                    </div>
+                </article> 
+                <article class="scrollBox" id="p9">  
+                    <div class="scrollDiv">
+                        <h3>2012</h3>
+                        <p>Childrens international school Fredrikstad</p> 
+                    </div>
+                </article> 
+                <article class="scrollBox" id="p10">  
+                    <div class="scrollDiv">
+                        <h3>2015</h3>
+                        <p>Childrens international school Moss</p> 
+                    </div>
+                </article> 
+                <article class="scrollBox" id="p11">  
+                    <div class="scrollDiv">
+                        <h3>2018</h3>
+                        <p>Dibber International, Sollentuna</p> 
+                    </div>
+                </article> 
+                <article class="scrollBox" id="p12">  
+                    <div class="scrollDiv">
+                        <h3>2018</h3>
+                        <p>Dibber international, Rydebak</p> 
+                    </div>
+                </article> 
+                <article class="scrollBox" id="p13">  
+                    <div class="scrollDiv">
+                        <h3>2019</h3>
+                        <p>Children's international school Sarpsborg</p> 
+                    </div>
+                </article> 
+                <article class="scrollBox" id="p14">  
+                    <div class="scrollDiv">
+                        <h3>2019</h3>
+                        <p>Philini Instituttet Privatist skole</p> 
+                    </div>
+                </article> 
+                <article class="scrollBox" id="p15">  
+                    <div class="scrollDiv">
+                        <h3>2022</h3>
+                        <p>Christianslund barnehage Fredrikstad</p> 
+                    </div>
+                </article>
+                <article class="scrollBox" id="end"> 
+                    <div class="scrollDiv">
+                        <p>This is a brief example of combining the visualization templates and map templates using Leaflet for moving the focal point and zoom of a map depending on what information is in the viewport.</p> 
+                    </div>
+                </article>
+            </section>  
+        </div>
+        <article class="art">
+            <p>
+                I 2022 ble ringen sluttet. «Jeg trodde aldri vi skulle starte barnehage igjen, men så fikk jeg barnebarn da». Slik kom Christianslund barnehage til livs, en barnehage Lise er veldig stolt av.
+            </p> 
+            <p>
+                «Blir du aldri lei av alle prosjektene?» - spør vi litt undrende. 
+            </p> 
+            <p>
+                «Jeg blir nok aldri ferdig å skape, og er heller ikke den som setter meg ned med strikketøyet. Vi vil nok fortsette å jobbe med prosjekter, så får vi se om det blir i Norge eller i utlandet» - sier hun lurt.  
+            </p>
+        </article>  
+        <button type="button" id="kildeBtn" onclick="showContent()">
+            Vis kilder brukt i denne artikkelen
+        </button>
+        <section id="kilder">
+            <h3>Bilder</h3> 
+            <p>Bilder er fra..</p> 
 
-   
-    <article class="art">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-    </article> 
-</main>
-    
-    <script> 
+        </section>
+    </main>
+    <script>   
+
+
+  
+
+
+
+function showContent() { 
+  const faktabutton = document.getElementById("kildeBtn");
+  const faktaboks = document.getElementById("kilder");
+  if (faktaboks.style.display === "none" || faktaboks.style.display === "") {
+    faktaboks.style.display = "block";
+    faktabutton.innerHTML = "Lukk kilder brukt i artikkelen";
+  } else {
+    faktaboks.style.display = "none";
+    faktabutton.innerHTML = "Vis kilder brukt i artikkelen";
+  }
+}
 
 
         //INITIATE MAP
@@ -400,7 +424,6 @@
         })
         //SET MAP CONSTRUCTOR  
         
-        
         L.tileLayer('https://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart_graatone&zoom={z}&x={x}&y={y}', {
             attribution: '<a href="http://www.kartverket.no/">Kartverket</a>' //ikoner??
         }).addTo(map) 
@@ -410,6 +433,8 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
         */
+
+
         //PLACES
         const places = [
             {name: "Do Re Mi barnehage Greåker", year: "2016", lat: 59.2668582, long: 11.032472},
@@ -444,6 +469,7 @@
         
         const geojson = {
             type: "FeatureCollection", 
+
             //map laget med hjelp fra chatgpt
             features: places.map((place, index, array) => {
                 
@@ -469,77 +495,14 @@
         };  
 
         //console.log(geojson)
-        /*
 
-        const geojson = 
-        {
-        "type": "FeatureCollection",
-        "features": [
-            {
-            "type": "Feature",
-            "properties": {},
-            "geometry": {
-                "coordinates": [
-          [places[0].long, places[0].lat],
-          [places[1].long, places[1].lat]
-        ],
-        "type": "LineString"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "coordinates": [
-        [places[1].long, places[1].lat],
-          [places[2].long, places[2].lat]
-        ],
-        "type": "LineString"
-      }
-    }, 
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "coordinates": [
-        [places[2].long, places[2].lat],
-          [places[3].long, places[3].lat]
-        ],
-        "type": "LineString"
-      }
-    }, 
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "coordinates": [
-        [places[3].long, places[3].lat],
-          [places[4].long, places[4].lat]
-        ],
-        "type": "LineString"
-      }
-    }, 
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "coordinates": [
-        [places[4].long, places[4].lat],
-          [places[5].long, places[5].lat]
-        ],
-        "type": "LineString"
-      }
-    },
-   
-  ]
-}*/
-        
         
         const geoJsonStyle = {
             "color": "#b61010",
             "weight": 3,
             "opacity": 0.5
         }
+
         //add GeoJson to map
         L.geoJSON(geojson, {
             style: geoJsonStyle,
@@ -551,19 +514,6 @@
 
         
         //SET MARKERS MAP
-        //create custom icon:
-        const circleIcon = L.icon({
-            iconUrl: 'circle.png',
-            iconSize: [30,30],
-            iconAnchor: [15,15],
-            popupAnchor: [0, -20]
-        })
-        const dotIcon = L.icon({
-            iconUrl: 'dot.png',
-            iconSize: [30,30],
-            iconAnchor: [15,15],
-            popupAnchor: [0, -20]
-        }) 
         const markerIcon = L.icon({
             iconUrl: 'marker.png',
             iconSize: [40,40],
@@ -626,32 +576,24 @@
                 map.flyTo([places[14].lat, places[14].long], 17)
             } 
             if(isInViewport(document.getElementById("end"))) {
-                map.flyTo([centerLat, centerLong], 13)
+                map.flyTo([centerLat, centerLong], 10)
             }
         }, {
             passive: true
         });  
 
+
          //Change background header 
-        
          document.addEventListener('scroll', function () {
                 if (isInViewport(document.getElementById("scrollHeader"))){
                     document.getElementById("changingBg").style.backgroundImage = "url(Cis05.JPG)"
                 } 
                 if(isInViewport(document.getElementById("txt1"))) {
                     document.getElementById("changingBg").style.backgroundImage = "url(Cis12.JPG)"
-                } 
-                if(isInViewport(document.getElementById("txt2"))) {
-                    document.getElementById("changingBg").style.backgroundImage = "url(hus.JPEG)"
                 }
-
             }, {
                 passive: true
             }); 
-            
-            
-            
-       
     </script>
 </body>
 </html>

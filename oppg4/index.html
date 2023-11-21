@@ -17,7 +17,7 @@
     --darkblue: #0c1821; 
     --white: #fff;  
     --red: rgba(182, 16, 16, 0.9); 
-    --blue: #535C6E; 
+    --blue: #1C455E; 
     --lightblue: #6E778A; 
     --grey: #98989A;  
     --black: #000;  
@@ -55,10 +55,22 @@ body{
     z-index: -1;
 
   } 
-  
+  #videoBtn{ 
+    position: absolute; 
+    bottom: 1rem; 
+    right: 5rem;
+    padding: 25px 15px; 
+    border-radius: 50%; 
+    font-size: 18px; 
+    background-color: var(--darkblue);
+  } 
+  #videoBtn:hover{
+    background-color: var(--blue);
+  }
 
   @media (max-width: 750px) {
-    #background-video{ display: none; }
+    #background-video{ display: none; } 
+    #videoBtn{display: none;}
     #videoContainer{ 
         position: relative;
         background-image: url('hovedhus3.JPEG'); 
@@ -163,7 +175,7 @@ li a:hover {
 
   #changingBg{
     background-size: cover; 
-    background-position: center bottom; 
+    background-position: center top; 
     background-repeat: no-repeat; 
     background-attachment: fixed;
 } 
@@ -355,7 +367,6 @@ li a:hover {
   } 
 
   #navSection img:hover{
-    
     transform: scale(1.1);
     transition: 1s ease;
   } 
@@ -370,7 +381,7 @@ li a:hover {
          <!--playsinline ?-->
          <source src="headerVid.MOV" type="video/mp4">
       </video>    
-      <button id="videoBtn" onclick="pauseVid()">pause</button>
+      <button id="videoBtn" onclick="pauseVid()">Pause</button>
       <h1 id="tittel">overskrift</h1>
       <h2 id="undertittel">Lorem Ipsum</h2>
    </div>
@@ -493,7 +504,7 @@ li a:hover {
    </main> 
    <script>
       
-      
+      //kilde brukt til pauseknapp https://www.w3schools.com/tags/av_met_pause.asp
       function pauseVid() {  
         const video = document.getElementById("background-video");  
         const videoBtn =  document.getElementById("videoBtn");
@@ -502,9 +513,10 @@ li a:hover {
         videoBtn.innerHTML = "Pause";
       } else {
         video.pause();
-        videoBtn.innerHTML = "Paused";
+        videoBtn.innerHTML = "Start";
       }
-      } 
+      }  
+      
 
  //INITIATE MAP
         const centerLat = 59.2523923
