@@ -254,7 +254,7 @@
     </header> 
     <main> 
        
-        <a href="#scrollHeader" id="topBtn">🠙</a>  
+        <a href="#" id="topBtn">🠙</a>  
     
     <article class="art">  
         
@@ -571,11 +571,10 @@
             popupAnchor: [0, -20]
         })
 
-
-
         places.map((place) => {
             L.marker([place.lat, place.long], {icon: markerIcon}).addTo(map).bindPopup(place.name)
-        })
+        }) 
+
         //SCRIPT FOR CHANGING MAP LOCATION
         document.addEventListener('scroll', function () {
             if(isInViewport(document.getElementById("start"))) {
