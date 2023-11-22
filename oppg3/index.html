@@ -187,18 +187,21 @@
             padding: 1.2rem 2rem;
             background-color: #DBDBDB;
             border: none; 
-        }
-    
-        @media only screen and (min-width: 870px) {  
+        } 
 
-            body{
+        @media only screen and (min-width: 500px) {  
+        body{
                 font-size: 20px;
             } 
 
             .art #sitat, .art #ingress{
                 font-size: 26px;
             }
-            
+        }   
+    
+        @media only screen and (min-width: 870px) {  
+
+           
             #p2, #p4, #p6, #p8, #p10, #p12, #p14{
                 /*venstre*/ 
                 margin: 0 0 80vh 2rem;
@@ -420,69 +423,20 @@
     </main>
     <script>   
 
+        function showContent() { 
+        const kildeBtn = document.getElementById("kildeBtn");
+        const kilder = document.getElementById("kilder");
+        if (kilder.style.display === "none" || kilder.style.display === "") {
+            kilder.style.display = "block";
+            kildeBtn.innerHTML = "Lukk kilder brukt i artikkelen";
+        } else {
+            kilder.style.display = "none";
+            kildeBtn.innerHTML = "Vis kilder brukt i artikkelen";
+        }
+        } 
 
-  
-
-
-
-function showContent() { 
-  const faktabutton = document.getElementById("kildeBtn");
-  const faktaboks = document.getElementById("kilder");
-  if (faktaboks.style.display === "none" || faktaboks.style.display === "") {
-    faktaboks.style.display = "block";
-    faktabutton.innerHTML = "Lukk kilder brukt i artikkelen";
-  } else {
-    faktaboks.style.display = "none";
-    faktabutton.innerHTML = "Vis kilder brukt i artikkelen";
-  }
-}
-
-
-        //INITIATE MAP
-        const centerLat = 59.2798008
-        const centerLong = 10.9654856
-        let map = L.map('mapContainer', {
-            center: [centerLat, centerLong],
-            zoom: 10,
-            scrollWheelZoom: false, 
-            
-        })
-        //SET MAP CONSTRUCTOR  
-        /*
-        L.tileLayer('https://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart_graatone&zoom={z}&x={x}&y={y}', {
-            attribution: '<a href="http://www.kartverket.no/">Kartverket</a>' //ikoner??
-        }).addTo(map)*/ 
-        
-        
-        L.tileLayer.grayscale('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19, 
-            fadeAnimation: false,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-        
-
-
-        //PLACES
-        const places = [
-            {name: "Do Re Mi barnehage Greåker", year: "2016", lat: 59.2668223, long: 11.0324908},
-            {name: "Do Re Mi barnehage Fredrikstad", year: "2016", lat: 59.2264130, long: 10.9223920},
-            {name: "Do Re Mi barnehage Sør-Afrika", year: "2016", lat: -27.8656, long: 31.5168},
-            {name: "Hinkenhopp barnehage Greåker", year: "2016", lat: 59.2758532, long: 11.0420155}, 
-            {name: "Do Re Mi barnehage Begby", year: "2016", lat: 59.2114230, long: 10.9957750}, 
-            {name: "Do Re Mi barnehage Halden", year: "2016", lat: 59.1119070, long: 11.2739750}, 
-            {name: "Do Re Mi barnehage Våler", year: "2016", lat: 59.4956511, long: 10.8512358}, 
-            {name: "Barnas Kulturhus Fredrikstad", year: "2016", lat: 59.2019505, long: 10.9624076}, 
-            {name: "Children's international school Fredrikstad", year: "2016", lat: 59.2019505, long: 10.9624076}, 
-            {name: "Children's international school Moss", year: "2016", lat: 59.4403410, long: 10.6695940},
-            {name: "Dibber International Sollentuna", year: "2016", lat: 59.4534257, long: 17.9232969}, 
-            {name: "Dibber International Rydebak", year: "2016", lat: 55.9620312, long: 12.7801931}, 
-            {name: "Children's international school Sarpsborg", year: "2016", lat: 59.2921041, long: 11.0957227}, 
-            {name: "Philini Instituttet Privatist skole", year: "2016", lat: 59.2921041, long: 11.0957227}, 
-            {name: "Christianslund Barnehage Fredrikstad", year: "2016", lat: 59.2280253, long: 10.9273878}, 
-            
-        ] 
-
-         //Function to check if element is in viewport
+        //Function to check if element is in viewport  
+        //hentet fra forelesnignmateriell
          function isInViewport(el) {
             const rect = el.getBoundingClientRect();
             return (
@@ -492,12 +446,66 @@ function showContent() {
                 rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
                 rect.right <= (window.innerWidth || document.documentElement.clientWidth))
             );
-        }  
+        }   
+
+        //Change background header  
+        //hentet fra forelesnignmateriell
+        document.addEventListener('scroll', function () {
+                if (isInViewport(document.getElementById("scrollHeader"))){
+                    document.getElementById("changingBg").style.backgroundImage = "url(skoleNY_1.jpg)"
+                } 
+                if(isInViewport(document.getElementById("txt1"))) {
+                    document.getElementById("changingBg").style.backgroundImage = "url(Cis12.JPG)"
+                }
+            }, {
+                passive: true
+            }); 
+
         
+        
+        //Kode for kart er hentet fra forelesningmateriell
+
+        //INITIATE MAP
+        const centerLat = 59.2798008
+        const centerLong = 10.9654856
+        let map = L.map('mapContainer', {
+            center: [centerLat, centerLong],
+            zoom: 10,
+            scrollWheelZoom: false, 
+        }) 
+
+        //SET MAP CONSTRUCTOR   
+        //Plugin for grayscale er hentet fra https://github.com/Zverik/leaflet-grayscale
+        L.tileLayer.grayscale('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19, 
+            fadeAnimation: false,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <a href="https://freeicons.io/web-application-v.1-3/pin-web-app-gps-location-marker-icon-104645">| Ikon: freeicons</a>'
+        }).addTo(map);
+        
+        //PLACES
+        const places = [
+            {name: "Do Re Mi barnehage Greåker", year: "1998", lat: 59.2668223, long: 11.0324908},
+            {name: "Do Re Mi barnehage Fredrikstad", year: "2003", lat: 59.2264130, long: 10.9223920},
+            {name: "Do Re Mi barnehage Sør-Afrika", year: "2005", lat: -27.8656, long: 31.5168},
+            {name: "Hinkenhopp barnehage Greåker", year: "2006", lat: 59.2758532, long: 11.0420155}, 
+            {name: "Do Re Mi barnehage Begby", year: "2007", lat: 59.2114230, long: 10.9957750}, 
+            {name: "Do Re Mi barnehage Halden", year: "2009", lat: 59.1119070, long: 11.2739750}, 
+            {name: "Do Re Mi barnehage Våler", year: "2010", lat: 59.4956511, long: 10.8512358}, 
+            {name: "Barnas Kulturhus Fredrikstad", year: "2011", lat: 59.2019505, long: 10.9624076}, 
+            {name: "Children's international school Fredrikstad", year: "2012", lat: 59.2019505, long: 10.9624076}, 
+            {name: "Children's international school Moss", year: "2015", lat: 59.4403410, long: 10.6695940},
+            {name: "Dibber International Sollentuna", year: "2018", lat: 59.4534257, long: 17.9232969}, 
+            {name: "Dibber International Rydebak", year: "2018", lat: 55.9620312, long: 12.7801931}, 
+            {name: "Children's international school Sarpsborg", year: "2019", lat: 59.2921041, long: 11.0957227}, 
+            {name: "Philini Instituttet Privatist skole", year: "2019", lat: 59.2921041, long: 11.0957227}, 
+            {name: "Christianslund Barnehage Fredrikstad", year: "2022", lat: 59.2280253, long: 10.9273878},   
+        ] 
+
         const geojson = {
             type: "FeatureCollection", 
-
             //map laget med hjelp fra chatgpt
+            //henter koordinater fra places og skriver ut geoJson objekter for å tegne linjer mellom punkter på kart 
+            //gjør at man slipper å skrive mye repeterende kode 
             features: places.map((place, index, array) => {
                 
             const nextPlace = array[index + 1];
@@ -520,10 +528,8 @@ function showContent() {
                 };
             })
         };  
-
         //console.log(geojson)
 
-        
         const geoJsonStyle = {
             "color": "#b61010",
             "weight": 3,
@@ -540,7 +546,8 @@ function showContent() {
         }).addTo(map)
 
         
-        //SET MARKERS MAP
+        //SET MARKERS MAP 
+        //ikon hentet fra https://freeicons.io/web-application-v.1-3/pin-web-app-gps-location-marker-icon-104645
         const markerIcon = L.icon({
             iconUrl: 'marker.png',
             iconSize: [40,40],
@@ -549,7 +556,7 @@ function showContent() {
         })
 
         places.map((place) => {
-            L.marker([place.lat, place.long], {icon: markerIcon}).addTo(map).bindPopup(place.name)
+            L.marker([place.lat, place.long], {icon: markerIcon}).addTo(map).bindPopup(`${place.name} startet opp i ${place.year}`)
         }) 
 
         //SCRIPT FOR CHANGING MAP LOCATION
@@ -605,19 +612,6 @@ function showContent() {
         }, {
             passive: true
         });  
-
-
-         //Change background header 
-         document.addEventListener('scroll', function () {
-                if (isInViewport(document.getElementById("scrollHeader"))){
-                    document.getElementById("changingBg").style.backgroundImage = "url(skoleNY_1.jpg)"
-                } 
-                if(isInViewport(document.getElementById("txt1"))) {
-                    document.getElementById("changingBg").style.backgroundImage = "url(Cis12.JPG)"
-                }
-            }, {
-                passive: true
-            }); 
     </script>
 </body>
 </html>
