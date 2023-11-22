@@ -34,21 +34,27 @@
             max-width: 600px; 
             padding: 1rem; 
             margin: 3rem auto 3rem auto; 
-            color: var(--black);   
+            color: var(--black);    
+            
         }  
 
         .art #sitat{
             font-style: italic;
-            font-size: 26px;
+            font-size: 22px; 
+            
+        }
+        .art img{
+            width: 100%; 
+            max-width: 600px;
         }
 
         body {
             margin: 0;
             padding: 0; 
-            font-size: 20px;
+            font-size: 18px;
         } 
         #ingress{
-            font-size: 26px;
+            font-size: 22px;   
         }
 
         div, article, section {
@@ -66,7 +72,7 @@
             width: 100%; 
             min-height: 60vh; 
             overflow: hidden;  
-            background-image: url("Cis05.JPG");
+            background-image: url("skoleNY_1.jpg");
             transition: background-image 2s;
         }  
         
@@ -76,9 +82,9 @@
             max-width: fit-content; 
             text-align: center; 
             font-size: 24px;   
-            background-color: var(--white); 
-             
-        }
+            font-weight: bold; 
+            background-color: var(--white);  
+        } 
 
         .scrollText {
             margin: 80vh auto; 
@@ -124,13 +130,16 @@
             padding-left: 0;
             color: var(--white);   
             border-radius: 15px;  
-            background: var(--bgColor); 
+            background: var(--bgColor);  
+            overflow: hidden;
         }    
 
         .scrollBox img{
-            width: 100%; 
+            width: 100%;  
+            height: auto;
             border-radius: 0 0 15px 15px;  
-            vertical-align: bottom;
+            vertical-align: bottom; 
+            
         } 
        
         article h3{
@@ -159,8 +168,6 @@
             text-decoration: none;
         }
          
-
-        
         #kilder{  
             display: none;
             width: 80%;
@@ -182,7 +189,15 @@
             border: none; 
         }
     
-        @media only screen and (min-width: 800px) { 
+        @media only screen and (min-width: 870px) {  
+
+            body{
+                font-size: 20px;
+            } 
+
+            .art #sitat, .art #ingress{
+                font-size: 26px;
+            }
             
             #p2, #p4, #p6, #p8, #p10, #p12, #p14{
                 /*venstre*/ 
@@ -195,7 +210,7 @@
             }  
              
             .scrollBox{
-            max-width: 500px; 
+            max-width: 400px; 
 
             } 
             #topBtn{
@@ -208,7 +223,7 @@
         } 
 
 
-        @media only screen and (min-width: 1200px){ 
+        @media only screen and (min-width: 1200px){  
 
             .scrollBox{
             max-width: 560px; 
@@ -225,11 +240,6 @@
                 width: 40%;
             }
         }  
-
-    
-
-  
-
     </style>
 </head>
 <body>  
@@ -454,21 +464,21 @@ function showContent() {
 
         //PLACES
         const places = [
-            {name: "Do Re Mi barnehage Greåker", year: "2016", lat: 59.2668582, long: 11.032472},
-            {name: "Do Re Mi barnehage Fredrikstad", year: "2016", lat: 59.2264158, long: 10.9197372},
-            {name: "Do Re Mi barnehage Sør-Afrika", year: "2016", lat: 27.8913726, long: 29.9306531},
-            {name: "Hinkenhopp barnehage Greåker", year: "2016", lat: 59.2758145, long: 11.0394061}, 
-            {name: "Do Re Mi barnehage Begby", year: "2016", lat: 59.1282, long: 11.2745}, 
-            {name: "Do Re Mi barnehage Halden", year: "2016", lat: 59.1119083, long: 11.2713187}, 
-            {name: "Do Re Mi barnehage Våler", year: "2016", lat: 59.4957588, long: 10.8487267}, 
-            {name: "Barnas Kulturhus Fredrikstad", year: "2016", lat: 59.2019594, long: 10.9597785}, 
-            {name: "Children's international school Fredrikstad", year: "2016", lat: 59.2019594, long: 10.9597785}, 
-            {name: "Children's international school Moss", year: "2016", lat: 59.440338, long: 10.6695922},
-            {name: "Dibber International Sollentuna", year: "2016", lat: 59.4455791, long: 17.7549159}, 
-            {name: "Dibber International Rydebak", year: "2016", lat: 55.9654904, long: 12.7516411}, 
-            {name: "Children's international school Sarpsborg", year: "2016", lat: 59.2921097, long: 11.0930798}, 
-            {name: "Philini Instituttet Privatist skole", year: "2016", lat: 59.2921097, long: 11.0930798}, 
-            {name: "Christianslund Barnehage Fredrikstad", year: "2016", lat: 59.228028, long: 10.9248422}, 
+            {name: "Do Re Mi barnehage Greåker", year: "2016", lat: 59.2668223, long: 11.0324908},
+            {name: "Do Re Mi barnehage Fredrikstad", year: "2016", lat: 59.2264130, long: 10.9223920},
+            {name: "Do Re Mi barnehage Sør-Afrika", year: "2016", lat: -27.8656, long: 31.5168},
+            {name: "Hinkenhopp barnehage Greåker", year: "2016", lat: 59.2758532, long: 11.0420155}, 
+            {name: "Do Re Mi barnehage Begby", year: "2016", lat: 59.2114230, long: 10.9957750}, 
+            {name: "Do Re Mi barnehage Halden", year: "2016", lat: 59.1119070, long: 11.2739750}, 
+            {name: "Do Re Mi barnehage Våler", year: "2016", lat: 59.4956511, long: 10.8512358}, 
+            {name: "Barnas Kulturhus Fredrikstad", year: "2016", lat: 59.2019505, long: 10.9624076}, 
+            {name: "Children's international school Fredrikstad", year: "2016", lat: 59.2019505, long: 10.9624076}, 
+            {name: "Children's international school Moss", year: "2016", lat: 59.4403410, long: 10.6695940},
+            {name: "Dibber International Sollentuna", year: "2016", lat: 59.4534257, long: 17.9232969}, 
+            {name: "Dibber International Rydebak", year: "2016", lat: 55.9620312, long: 12.7801931}, 
+            {name: "Children's international school Sarpsborg", year: "2016", lat: 59.2921041, long: 11.0957227}, 
+            {name: "Philini Instituttet Privatist skole", year: "2016", lat: 59.2921041, long: 11.0957227}, 
+            {name: "Christianslund Barnehage Fredrikstad", year: "2016", lat: 59.2280253, long: 10.9273878}, 
             
         ] 
 
