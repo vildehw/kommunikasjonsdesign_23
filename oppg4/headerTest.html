@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <style> 
+
+
+#background-video {
+    object-fit: cover;
+    position: relative; 
+    top: 0;
+    width: 100vw;
+    height: 100vh;  
+    z-index: -1; 
+} 
+
+@media (max-width: 800px) {
+    #background-video{ display: none; } 
+    #videoBtn{display: none;}
+    #changingBg{ 
+        background-image: url('elingaardnatt.png'); 
+        background-size: cover; 
+        background-position: center;
+        background-repeat: no-repeat;  
+        min-height: 100vh;   
+        width: 100%;
+    }
+} 
+
+        #changingBg{ 
+            background-size: cover; 
+            background-position: center center; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+        } 
+
+        .scrollContainer1 {
+            width: 100%; 
+            min-height: 60vh; 
+            overflow: hidden;  
+            transition: background-image 2s;
+        }  
+        
+        #scrollHeader{
+            margin: 65vh auto 70vh auto;   
+            padding: 1px 30px;
+            max-width: fit-content; 
+            text-align: center; 
+            font-size: 24px;   
+            font-weight: bold; 
+            background-color: var(--white);  
+        } 
+
+        .scrollText {
+            margin: 80vh auto; 
+            max-width: fit-content;
+            padding: 1rem;  
+            background-color: var(--white);  
+            border: 2px; 
+            font-size: 22px;
+        }     
+        #jada{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body> 
+
+    <header> 
+        <section id="changingBg" class="scrollContainer1">  
+
+        <div id="jada">
+            <video id="background-video" autoplay loop muted poster="elingaardnatt.png"> 
+                <source src="headerVid.MOV" type="video/mp4">
+             </video>
+
+            <div  id="scrollHeader">
+                <h1>Den utrettelige gründeren</h1> 
+            </div>
+            <div id="txt1" class="scrollText">
+                <p>
+                    -	Noen mennesker har mer energi enn en hel barnehage til sammen. Lise Holman er en sånn person. 
+                </p> 
+            </div> 
+        </div>
+        </section> 
+    </header>   
+
+    <article>
+        <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+         </p>  
+         <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+         </p>  
+         <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+         </p> 
+    </article>
+    
+</body>
+</html>
