@@ -48,13 +48,27 @@
 }
 
 #myChart {
-    width: 100%;
+    width: 100%;  
     max-width: 400px;
-    max-height: 600px;
     position: absolute;
     top: 20%;
-    left: 20%;
+    left: 0;
     z-index: 2; /* Increase the z-index to ensure it's above the image */
+} 
+
+#myChart{
+    .grid {
+ display: grid;
+ gap: 1em;
+ grid-template-rows: min-content minmax(0, 1fr) min-content;
+ grid-template-columns: 1fr minmax(0, 3fr);
+ grid-template-areas: "a h"
+                      "a c"
+                      "a f";
+ height: calc(100vh - 2em);
+ width: calc(100vw - 2em); /* not necessary, but just to be explicit */
+ margin: 1em;
+}
 }
 
 
@@ -96,11 +110,19 @@
       </div> 
     </div>  
     <article>
-        <img src="birtheiramme-01.png"> 
+        <img src="birtheiramme-01.png">  
+        <iframe title="Andel av befolkningen som bruker tradisjonelle medier" aria-label="Column Chart" id="datawrapper-chart-wEH0M" src="https://datawrapper.dwcdn.net/wEH0M/1/" scrolling="no" frameborder="0" style="border: none;" width="400" height="600" data-external="1"></iframe>
         <p>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
         </p>  
-    </article> 
+    </article>   
+    <div id="nyDiv">
+        <img src="birtheiramme-01.png">  
+        <iframe title="Andel av befolkningen som bruker tradisjonelle medier" aria-label="Column Chart" id="myChart" src="https://datawrapper.dwcdn.net/wEH0M/1/" scrolling="no" frameborder="0" style="border: none;" width="400" height="600" data-external="1"></iframe>
+    </div>
+
+    
+    </script>
     
       
           
@@ -108,24 +130,35 @@
         <script>
             const ctx = document.getElementById('myChart');
 
+            
             new Chart(ctx, {
                 type: 'bar',
                 data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: ['9-15 år', '16-24 år', '25-44 år', '45-66 år', '67-79 år'],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    borderWidth: 1
+                    
+                    label: 'Andel av befolkningen', 
+                    
+                    data: [28, 65, 83, 91, 98],
+                    borderWidth: 3
                 }]
                 },
-                options: {
+                options: { 
+                aspectRatio: 2.5,
                 scales: {
                     y: {
                     beginAtZero: true
                     }
+                }, 
+                plugins: {
+                    title: {
+                        display: true, 
+                        text: 'hello' 
+                    }
                 }
                 }
-            });
+            }); 
+            
 </script>
 
     

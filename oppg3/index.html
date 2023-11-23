@@ -3,247 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lise Holman</title> 
+    <title>Lise Holman</title>  
+    <link rel="stylesheet" href="style.css">
     <!-- INCLUDE LEAFLET CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
     <!-- INCLUDE LEAFLET SCRIPT LIBRARY -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> 
-    <script src="./leaflet-grayscale-master/TileLayer.Grayscale.js"></script>
-    <style> 
-        
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,400;1,600&family=Rubik:wght@400;600;700&display=swap');
-
-        :root {
-        --white: #fff;  
-        --red: rgba(182, 16, 16, 0.9); 
-        --black: #000;  
-        --bgColor: rgba(54, 59, 69, 0.9); 
-        } 
-
-        html {
-            scroll-behavior: smooth; 
-            background-color: var(--white); 
-            font-family: 'Open Sans', sans-serif;  
-            line-height: 1.5; 
-            box-sizing: border-box;
-        } 
-
-        .art{
-            max-width: 600px; 
-            padding: 1rem; 
-            margin: 3rem auto 3rem auto; 
-            color: var(--black);    
-            
-        }  
-
-        .art #sitat{
-            font-style: italic;
-            font-size: 22px; 
-            
-        }
-        .art img{
-            width: 100%; 
-            max-width: 600px;
-        }
-
-        body {
-            margin: 0;
-            padding: 0; 
-            font-size: 18px;
-        } 
-        #ingress{
-            font-size: 22px;   
-        }
-
-        div, article, section {
-            box-sizing: border-box;
-        }   
-
-        #changingBg{
-            background-size: cover; 
-            background-position: center center; 
-            background-repeat: no-repeat; 
-            background-attachment: fixed;
-        } 
-
-        .scrollContainer1 {
-            width: 100%; 
-            min-height: 60vh; 
-            overflow: hidden;  
-            background-image: url("skoleNY_1.jpg");
-            transition: background-image 2s;
-        }  
-        
-        #scrollHeader{
-            margin: 65vh auto 70vh auto;   
-            padding: 1px 30px;
-            max-width: fit-content; 
-            text-align: center; 
-            font-size: 24px;   
-            font-weight: bold; 
-            background-color: var(--white);  
-        } 
-
-        .scrollText {
-            margin: 80vh auto; 
-            max-width: fit-content;
-            padding: 1rem;  
-            background-color: var(--white);  
-            
-            border: 2px; 
-            font-size: 22px;
-        }    
-
-        #scrollHeader h1, .scrollText p{
-            max-width: 500px;
-        } 
-
-        #mapHeader{
-            text-align: center; 
-            font-size: 24px;
-        }
-        #scrollContainer2{
-            width: 100%;
-            min-height: 80vh;
-            z-index: 5;
-            padding-bottom: 50vh;
-            display: block;    
-            overflow: hidden;
-        }
-
-        #mapContainer {
-            width: 100%;
-            height: 100vh;
-            position: sticky;
-            top: 0; 
-        }
-
-        .scrollBox {
-            position: relative;
-            display: block;
-            margin: 80vh auto 80vh auto;
-            z-index: 10;
-            width: 90vw;
-            max-width: 400px;
-            padding-left: 0;
-            color: var(--white);   
-            border-radius: 15px;  
-            background: var(--bgColor);  
-            overflow: hidden;
-        }    
-
-        .scrollBox img{
-            width: 100%;  
-            height: auto;
-            border-radius: 0 0 15px 15px;  
-            vertical-align: bottom; 
-            
-        } 
-       
-        article h3{
-            border-bottom: 3px solid var(--red); 
-            display: inline-block; 
-            padding: 0 .4rem; 
-            margin-bottom: 0;
-        } 
-
-        .scrollDiv{
-            padding: 0 1rem; 
-            display: inline-block
-        }
-        
-        #topBtn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 99;
-            border: 2px solid var(--red);
-            background-color: var(--red);
-            color: var(--white);
-            padding: 0 17px 5px 17px;
-            border-radius: 50%;
-            font-size: 32px;
-            text-decoration: none;
-        }
-         
-        #kilder{  
-            display: none;
-            width: 80%;
-            margin: 0 auto;
-            box-shadow: 0 0px 10px #BABABA;
-            padding: 1rem;
-            margin-bottom: 3rem; 
-            border-radius: 10px;
-         }
-  
-
-        #kildeBtn{ 
-            display: block;
-            cursor: pointer;
-            margin: 2rem auto;
-            font-size: 1rem;
-            padding: 1.2rem 2rem;
-            background-color: #DBDBDB;
-            border: none; 
-        } 
-
-        @media only screen and (min-width: 500px) {  
-        body{
-                font-size: 20px;
-            } 
-
-            .art #sitat, .art #ingress{
-                font-size: 26px;
-            }
-        }   
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>  
+    <!--grayscale plugin-->
+    <script src="plugin/leaflet-grayscale-master/TileLayer.Grayscale.js"></script>
     
-        @media only screen and (min-width: 870px) {  
-
-           
-            #p2, #p4, #p6, #p8, #p10, #p12, #p14{
-                /*venstre*/ 
-                margin: 0 0 80vh 2rem;
-            } 
-
-            #p1, #p3, #p5, #p7, #p9, #p11, #p13, #p15{
-                /*høyre*/ 
-                margin: 0 2rem 80vh auto;     
-            }  
-             
-            .scrollBox{
-            max-width: 400px; 
-
-            } 
-            #topBtn{
-                right: 40px; 
-                bottom: 40px;
-            } 
-            #kilder {
-                width: 50%;
-            }
-        } 
-
-
-        @media only screen and (min-width: 1200px){  
-
-            .scrollBox{
-            max-width: 560px; 
-            } 
-            #topBtn{
-                right: 100px; 
-                bottom: 50px;
-            }
-            #topBtn:hover {
-                color: var(--red); 
-                background-color: var(--white);
-            } 
-            #kilder {
-                width: 40%;
-            }
-        }  
-    </style>
 </head>
 <body>  
     <header> 
@@ -270,17 +40,18 @@
             <p>
                 For å finansiere det hele, valgte hun å pantsette det flotteste hun eide, flygelet sitt. Slik fikk hun råd til aksjekapitalen. I 2003 ble hennes mann Fredrik med på notene, og sammen har de utviklet et lite eventyr innen gründervirksomhet, - alltid med musikk og språk i fokus. Fra barnehager i nærområdet Østfold, gikk ferden til Sør-Afrika, hvor Fredrik og broren Håvard brettet opp ermene og satte spaden i jorda. En afrikansk Do Re Mi barnehage ble født. 
             </p>  
-            <img src="IMG_5291.jpg">
+            <img src="img/IMG_5291.jpg">
             <p id="sitat">
                 «Læring og lek går hånd i hånd. Jeg så behovet for mer opplegg for barn i ung alder, og hvordan de tidlig kan bli gode i språk. Jeg visste også at å lære et musikkinstrument er med på å utvikle den kreative delen av hjernen». 
             </p>  
             <p>
                 Siden har det gått slag i slag. Seks barnehager senere, begynte foreldrene fra barnehagen å klage på den offentlige skolen. Etter årene med kreativ utfoldelse og læring i Do Re Mi-barnehagene, kjedet barna seg på skolen, hvor de ikke ble utfordret på samme måte. Samvittighetsfull og driftig som hun er, kastet hun seg ut i et nytt prosjekt; CIS. Children's International School er Lise og Fredriks fortsettelse av barnehagene, med 1.-10. klasse i mye av det samme konseptet - språk og musikk. CIS er også en IB-skole, som innebærer å gjøre elevene gode på kritisk tenkning, undersøkelser og presentasjoner allerede fra 1. klasse, - noe mange elever ikke opplever før på høyere utdanning. 
             </p>  
+            <!--
             <p>
                 Popup (bare et forslag, at man kan trykke på IB-skole, så kommer en liten infoboks opp?)
                 IB-skole - International Baccalaureate. En internasjonal skolelinje som finnes i mer enn 100 land. Det er et mer krevende studie, og all undervisning foregår på engelsk. Det legges vekt på faglig og personlig utvikling.
-            </p>
+            </p> --> 
         </article>  
     
         <div id="mapScroll">  
@@ -299,105 +70,105 @@
                         <h3>1998</h3>
                         <p>Do Re Mi barnehage Greåker</p>  
                     </div>
-                    <img src="Hovedbygget_2.jpeg">
+                    <img src="img/Hovedbygget_2.jpeg">
                 </article>
                 <article class="scrollBox" id="p2">  
                     <div class="scrollDiv">
                         <h3>2003</h3>
                         <p>Do Re Mi barnehage Fredrikstad</p>  
                     </div> 
-                    <img src="trosvik.jpg">
+                    <img src="img/trosvik.jpg">
                 </article>
                 <article class="scrollBox" id="p3">  
                     <div class="scrollDiv">
                         <h3>2005</h3>
                         <p>Do Re Mi barnehage Sør-Afrika</p> 
                     </div> 
-                    <img src="zulu.png">
+                    <img src="img/zulu.png">
                 </article>
                 <article class="scrollBox" id="p4">  
                     <div class="scrollDiv">
                         <h3>2006</h3>
                         <p>Hinkenhopp barnehage Greåker</p>   
                     </div>  
-                    <img src="Hinkenhopp.jpg">
+                    <img src="img/Hinkenhopp.jpg">
                 </article>
                 <article class="scrollBox" id="p5">  
                     <div class="scrollDiv">
                         <h3>2007</h3>
                         <p>Do Re Mi barnehage Begby</p> 
                     </div> 
-                    <img src="fiolin.JPG">
+                    <img src="img/fiolin.JPG">
                 </article> 
                 <article class="scrollBox" id="p6">  
                     <div class="scrollDiv">
                         <h3>2009</h3>
                         <p>Do Re Mi barnehage Halden</p>  
                     </div> 
-                    <img src="drmhalden.jpg">
+                    <img src="img/drmhalden.jpg">
                 </article> 
                 <article class="scrollBox" id="p7">  
                     <div class="scrollDiv">
                         <h3>2010</h3>
                         <p>Do Re Mi barnehage Våler</p>  
                     </div> 
-                    <img src="drm_trosvik.jpg">
+                    <img src="img/drm_trosvik.jpg">
                 </article> 
                 <article class="scrollBox" id="p8">  
                     <div class="scrollDiv">
                         <h3>2011</h3>
                         <p>Barnas Kulturhus Fredrikstad</p>  
                     </div> 
-                    <img src="barna.png">
+                    <img src="img/barna.png">
                 </article> 
                 <article class="scrollBox" id="p9">  
                     <div class="scrollDiv">
                         <h3>2012</h3>
                         <p>Childrens international school Fredrikstad</p>  
                     </div> 
-                    <img src="Mellombygget.jpeg">
+                    <img src="img/Mellombygget.jpeg">
                 </article> 
                 <article class="scrollBox" id="p10">  
                     <div class="scrollDiv">
                         <h3>2015</h3>
                         <p>Childrens international school Moss</p>  
                     </div> 
-                    <img src="moss4.jpeg">
+                    <img src="img/moss4.jpeg">
                 </article> 
                 <article class="scrollBox" id="p11">  
                     <div class="scrollDiv">
                         <h3>2018</h3>
                         <p>Dibber International, Sollentuna</p> 
                     </div> 
-                    <img src="Cis05.jpg">
+                    <img src="img/Cis05.jpg">
                 </article> 
                 <article class="scrollBox" id="p12">  
                     <div class="scrollDiv">
                         <h3>2018</h3>
                         <p>Dibber international, Rydebak</p> 
                     </div> 
-                    <img src="skoleNY_1.jpg">
+                    <img src="img/skoleNY_1.jpg">
                 </article> 
                 <article class="scrollBox" id="p13">  
                     <div class="scrollDiv">
                         <h3>2019</h3>
                         <p>Children's international school Sarpsborg</p> 
                     </div> 
-                    <img src="cis_sarpsborg.jpg">
+                    <img src="img/cis_sarpsborg.jpg">
                 </article> 
                 <article class="scrollBox" id="p14">  
                     <div class="scrollDiv">
                         <h3>2019</h3>
                         <p>Philini Instituttet Privatist skole</p>  
                     </div> 
-                    <img src="PI-06682.jpeg">
+                    <img src="img/PI-06682.jpeg">
                 </article> 
                 <article class="scrollBox" id="p15">  
                     <div class="scrollDiv">
                         <h3>2022</h3>
                         <p>Christianslund barnehage Fredrikstad</p>  
                     </div> 
-                    <img src="Vis_nylige_bilder.png">
+                    <img src="img/Vis_nylige_bilder.png">
                 </article>
             </section>  
         </div>
@@ -416,8 +187,9 @@
             Vis kilder brukt i denne artikkelen
         </button>
         <section id="kilder">
-            <h4>Kilder</h4> 
+            <h4>Kilder</h4>  
             <p>Alle bilder benyttet i denne saken er tilsendt av Lise Holman og godkjent til bruk i denne saken</p> 
+            
 
         </section>
     </main>
@@ -452,10 +224,10 @@
         //hentet fra forelesnignmateriell
         document.addEventListener('scroll', function () {
                 if (isInViewport(document.getElementById("scrollHeader"))){
-                    document.getElementById("changingBg").style.backgroundImage = "url(skoleNY_1.jpg)"
+                    document.getElementById("changingBg").style.backgroundImage = "url(img/skoleNY_1.jpg)"
                 } 
                 if(isInViewport(document.getElementById("txt1"))) {
-                    document.getElementById("changingBg").style.backgroundImage = "url(Cis12.JPG)"
+                    document.getElementById("changingBg").style.backgroundImage = "url(img/Cis12.JPG)"
                 }
             }, {
                 passive: true
@@ -549,7 +321,7 @@
         //SET MARKERS MAP 
         //ikon hentet fra https://freeicons.io/web-application-v.1-3/pin-web-app-gps-location-marker-icon-104645
         const markerIcon = L.icon({
-            iconUrl: 'marker.png',
+            iconUrl: 'img/marker.png',
             iconSize: [40,40],
             iconAnchor: [20,40],
             popupAnchor: [0, -20]
