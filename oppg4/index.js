@@ -116,34 +116,58 @@ rect.left >= 0 &&
 rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
 rect.right <= (window.innerWidth || document.documentElement.clientWidth)
 );
-} 
+}  
+
+document.addEventListener('scroll', function () {
+  if(isInViewport(document.getElementById("htxt1"))) {
+    document.getElementById("changingBg1").style.backgroundImage = "url(elingaardimg.jpg)"
+  } 
+  if(isInViewport(document.getElementById("htxt2"))) {
+   document.getElementById("changingBg1").style.backgroundImage = "url(IMG_5465.jpg)"
+  } 
+  }, {
+   passive: true
+  }); 
 
 //Scroll Jens 
 document.addEventListener('scroll', function () {
-if(isInViewport(document.getElementById("jtxt1"))) {
-  document.getElementById("changingBg1").style.backgroundImage = "url(closeup.jpg)"
-} 
-if(isInViewport(document.getElementById("jtxt2"))) {
- document.getElementById("changingBg1").style.backgroundImage = "url(1closeup.jpg)"
-} 
-if(isInViewport(document.getElementById("jtxt3"))) {
-  document.getElementById("changingBg1").style.backgroundImage = "url(2closeup.jpg)"
-}
-}, {
- passive: true
-});
+  if(isInViewport(document.getElementById("jtxt1"))) {
+    document.getElementById("changingBg2").style.backgroundImage = "url(closeup.jpg)"
+  } 
+  if(isInViewport(document.getElementById("jtxt2"))) {
+   document.getElementById("changingBg2").style.backgroundImage = "url(1closeup.jpg)"
+  } 
+  if(isInViewport(document.getElementById("jtxt3"))) {
+    document.getElementById("changingBg2").style.backgroundImage = "url(2closeup.jpg)"
+  }
+  }, {
+   passive: true
+  });  
 
-//Scroll Birte 
+  //Scroll Birte
 document.addEventListener('scroll', function () {
-if(isInViewport(document.getElementById("txt1"))) {
-  document.getElementById("changingBg2").style.backgroundImage = "url(closeup.jpg)"
+  if(isInViewport(document.getElementById("btxt1"))) {
+    document.getElementById("changingBg3").style.backgroundImage = "url(closeup.jpg)"
+  } 
+  if(isInViewport(document.getElementById("btxt2"))) {
+   document.getElementById("changingBg3").style.backgroundImage = "url(1closeup.jpg)"
+  } 
+  if(isInViewport(document.getElementById("btxt3"))) {
+    document.getElementById("changingBg3").style.backgroundImage = "url(2closeup.jpg)"
+  }
+  }, {
+   passive: true
+  }); 
+
+
+
+  document.addEventListener('scroll', function () {
+if(isInViewport(document.getElementById("etxt1"))) {
+  document.getElementById("changingBg4").style.backgroundImage = "url(elingaardimg.jpg)"
 } 
-if(isInViewport(document.getElementById("txt2"))) {
- document.getElementById("changingBg2").style.backgroundImage = "url(1closeup.jpg)"
+if(isInViewport(document.getElementById("etxt2"))) {
+ document.getElementById("changingBg4").style.backgroundImage = "url(IMG_5465.jpg)"
 } 
-if(isInViewport(document.getElementById("txt3"))) {
-  document.getElementById("changingBg2").style.backgroundImage = "url(2closeup.jpg)"
-}
 }, {
  passive: true
 });
