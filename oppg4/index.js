@@ -16,7 +16,7 @@
 
 
   //Funkjson for å vise boks ved trykk på knapp 
-  function visBoks() { 
+  function showTimeline() { 
     const faktabutton = document.getElementById("timelineBtn");
     const timeline = document.getElementById("timeline");
     if (timeline.style.display === "block") {
@@ -26,7 +26,19 @@
       timeline.style.display = "block";
       faktabutton.innerHTML = "Lukk tidslinje over noe";
     }
-    }
+    } 
+
+    function showContent() { 
+      const kildeBtn = document.getElementById("kildeBtn");
+      const kilder = document.getElementById("kilder");
+      if (kilder.style.display === "block") { 
+          kilder.style.display = "none";
+          kildeBtn.innerHTML = "Vis kilder brukt i artikkelen";
+      } else {
+          kilder.style.display = "block";
+          kildeBtn.innerHTML = "Lukk kilder brukt i artikkelen";
+      }
+      } 
   
 
   //INITIATE MAP

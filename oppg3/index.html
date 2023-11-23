@@ -188,9 +188,7 @@
         </button>
         <section id="kilder">
             <h4>Kilder</h4>  
-            <p>Alle bilder benyttet i denne saken er tilsendt av Lise Holman og godkjent til bruk i denne saken</p> 
-            
-
+            <p>Alle bilder benyttet i denne saken er tilsendt av Lise Holman og godkjent til bruk i denne saken</p>
         </section>
     </main>
     <script>   
@@ -198,12 +196,12 @@
         function showContent() { 
         const kildeBtn = document.getElementById("kildeBtn");
         const kilder = document.getElementById("kilder");
-        if (kilder.style.display === "none" || kilder.style.display === "") {
-            kilder.style.display = "block";
-            kildeBtn.innerHTML = "Lukk kilder brukt i artikkelen";
-        } else {
+        if (kilder.style.display === "block") { 
             kilder.style.display = "none";
             kildeBtn.innerHTML = "Vis kilder brukt i artikkelen";
+        } else {
+            kilder.style.display = "block";
+            kildeBtn.innerHTML = "Lukk kilder brukt i artikkelen";
         }
         } 
 

@@ -71,7 +71,7 @@ font-size: 16px;
   background-color: var(--white); 
   color: var(--darkblue); 
   border: 1px solid var(--darkblue);
-}
+} 
 
 /*header mobil*/
 @media (max-width: 800px) {
@@ -288,6 +288,29 @@ align-content: center;
   margin: 60vh auto 0 auto; 
   padding: 1rem; 
   text-align: center;
+}  
+
+#kilder{  
+  display: none;
+  width: 80%;
+  margin: 0 auto; 
+  background-color: var(--white); 
+  color: var(--black);
+  padding: 1rem;
+  margin-bottom: 3rem; 
+  border-radius: 10px; 
+  max-width: 500px;
+}
+
+
+#kildeBtn{ 
+  display: block;
+  cursor: pointer;
+  margin: 2rem auto;
+  font-size: 1rem;
+  padding: 1.2rem 2rem;
+  background-color: #DBDBDB;
+  border: none; 
 } 
 
 

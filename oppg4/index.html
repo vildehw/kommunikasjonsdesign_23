@@ -69,7 +69,7 @@
              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
           </p> 
       </article> 
-      <button type="button" id="timelineBtn" onclick="visBoks()">
+      <button type="button" id="timelineBtn" onclick="showTimeline()">
         Klikk for tidslinje over noe
       </button> 
       <!--kode til tidsline hentet fra: https://www.w3schools.com/howto/howto_css_timeline.asp-->
@@ -200,17 +200,24 @@
           <p class="sitat">«Jeg verken tror på gjenferd eller fanden. Jeg tror det spøker indenfor panden».</p> 
         </div> 
       </section> 
-        <div class="videoContainer">  
-          <video id="video2" class="background-video" autoplay loop muted poster="img/elingaardnatt.png"> 
+      <div class="videoContainer">  
+        <video id="video2" class="background-video" autoplay loop muted poster="img/elingaardnatt.png"> 
             <source src="img/headerVid.MOV" type="video/mp4"> 
-          </video> 
-          <button id="btn2" class="videoBtn" onclick="pauseVid('video2', 'btn2')">Pause</button>
-          <article id="vidTxt">
-            <p>
-              Med et kaldt gufs over ryggen, kjører jeg hjem. 
-            </p>
-          </article>  
-        </div> 
+        </video> 
+        <button id="btn2" class="videoBtn" onclick="pauseVid('video2', 'btn2')">Pause</button>
+        <article id="vidTxt">
+          <p>
+            Med et kaldt gufs over ryggen, kjører jeg hjem. 
+          </p>
+        </article>  
+      </div>  
+      <button type="button" id="kildeBtn" onclick="showContent()">
+        Vis kilder brukt i denne artikkelen
+      </button>
+      <section id="kilder">
+        <h4>Kilder</h4>  
+        <p>Alle bilder benyttet i denne saken er tilsendt av Lise Holman og godkjent til bruk i denne saken</p>
+      </section>
    </main> 
    <script src="index.js"></script>
 </body>
