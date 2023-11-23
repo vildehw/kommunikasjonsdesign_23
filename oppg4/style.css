@@ -1,6 +1,6 @@
 
 
-  @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,600;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,600;1,500&display=swap');
 
 
 :root {
@@ -31,19 +31,18 @@ font-family: 'Arimo', sans-serif;
 font-size: 16px;
 } 
 
-h2{
-  font-size: 28px; 
-  margin-bottom: 1rem;
-}
 
 
+/*header*/ 
+
+
+/*kilde brukt til videoheader: https://blog.hubspot.com/website/video-background-css*/
 .videoContainer{
   position: relative;
   width: 100%;
   height: 100vh; 
   overflow: hidden;
 }
-
 
 .background-video {
   object-fit: cover;
@@ -74,12 +73,13 @@ h2{
   border: 1px solid var(--darkblue);
 }
 
+/*header mobil*/
 @media (max-width: 800px) {
   .background-video{ display: none; } 
   .videoBtn{display: none;}
   .videoContainer{ 
       position: relative;
-      background-image: url('elingaardnatt.png'); 
+      background-image: url('img/elingaardnatt.png'); 
       background-size: cover; 
       background-position: center;
       background-repeat: no-repeat;  
@@ -116,6 +116,18 @@ h2{
   margin: 0 auto;
 } 
 
+
+/*main*/ 
+
+h2{
+  font-size: 28px; 
+  margin-bottom: 1rem;
+}  
+
+h3{
+  font-size: 26px;
+}
+
 article{  
   padding: 1.5rem;
   max-width: 900px; 
@@ -131,6 +143,8 @@ article img{
   margin: 1rem 0;
 }
 
+/*nav*/ 
+
 #navSection{ 
   display: block;
   background-color: var(--grey);  
@@ -142,7 +156,6 @@ article img{
   justify-content: center;
   margin: 0 auto;
 }
-
 #navDiv { 
   display: inline-block;
   width: 100%;  
@@ -150,7 +163,6 @@ article img{
   grid-template-columns: repeat(3, minmax(0, 1fr)); 
   place-items: center;
   padding-top: 2.5rem; 
-  ;
 } 
 
 #navDiv a img{
@@ -188,10 +200,7 @@ li a {
   text-decoration: none;  
 } 
 
-#hest{
-  width: 100%; 
-  height: 100vh;
-} 
+/*scrollbokser*/
 
 #changingBg1, #changingBg2, #changingBg3, #changingBg4{
   background-size: cover; 
@@ -211,21 +220,21 @@ li a {
 } 
 
 .scrollContainer1{
-  background-image: url("elingaardimg.jpg");
+  background-image: url("img/elingaardimg.jpg");
 }
 
 .scrollContainer2 {
-  background-image: url("closeup.jpg"); 
+  background-image: url("img/closeup.jpg"); 
   transition: background-image 2s;
 }    
 
 .scrollContainer3 {
-  background-image: url("hest.png"); 
+  background-image: url("img/elingaardimg.jpg"); 
   transition: background-image 2s;
 }  
 
 .scrollContainer4 {
-  background-image: url("map2.png");
+  background-image: url("img/map2.png");
 } 
 
 .scrollText {
@@ -237,6 +246,7 @@ li a {
   background-color: rgba(12, 24, 33, 0.9);
   box-shadow: 0px 0px 20px 35px rgba(12, 24, 33, 0.9);
 }  
+
 
 #timelineBtn{
   border: none;  
@@ -251,15 +261,10 @@ li a {
   margin: 3rem auto;
 }    
 
-
-
 #birtevid{
 width: 70%;
 } 
 
-h3{
-  font-size: 26px;
-}
 
 #mapSection{  
 text-align: center;
@@ -273,20 +278,6 @@ align-content: center;
   height: 60vh;
   margin: 1rem auto 5rem auto;    
   z-index: 50;   
-} 
-#btnContainer{ 
-  width: 100%; 
-  max-width: 600px; 
-  margin: 0 auto;
-  display: flex; 
-  justify-content: center; 
-  gap: 1rem;
-} 
-#mapBtn{
-  width: 7rem; 
-  height: 3rem; 
-  background-color: var(--grey); 
-  
 } 
 
 #vidTxt{
@@ -302,54 +293,54 @@ align-content: center;
 
 @media screen and (min-width: 800px) { 
 
-#tittel{
+  body{
+    font-size: 18px; 
+    line-height: 1.8;
+  } 
+
+  #tittel{
   font-size: 34px;
-}  
+  }  
 
-#navDiv a {
-  width: 70%;  
-} 
+  #navDiv a {
+    width: 70%;  
+  } 
 
-#navDiv a:hover{
-  transform: scale(1.1);
-  transition: 1s ease;
-}  
-nav ul li a{
-  font-size: 20px; 
-}  
-nav ul li a:hover{
-  text-decoration: underline;
-} 
-#mapContainer{ 
-  width: 70%; 
-  height: 70vh;
-} 
+  #navDiv a:hover{
+    transform: scale(1.1);
+    transition: 1s ease;
+  }  
+  nav ul li a{
+    font-size: 20px; 
+  }  
+  nav ul li a:hover{
+    text-decoration: underline;
+  } 
+  #mapContainer{ 
+    width: 70%; 
+    height: 70vh;
+  } 
 
-article{
-  max-width: 650px; 
-} 
-
-body{
-  font-size: 18px; 
-  line-height: 1.8;
-}  
-.sitat{
-  font-size: 26px;
-}
-h2{
-  font-size: 32px;
-} 
-h3{
-  font-size: 30px;
-} 
-
-
-
+  article{
+    max-width: 650px; 
+  } 
+  
+  .sitat{
+    font-size: 26px;
+  }
+  h2{
+    font-size: 32px;
+  } 
+  h3{
+    font-size: 30px;
+  } 
 }
 
-/*timeline styling*/
+/*tidslinje*/ 
 
-#faktaboks{ 
+/*kode til tidsline hentet fra: https://www.w3schools.com/howto/howto_css_timeline.asp*/
+
+#timeline{ 
   display: none;
   margin-bottom: 10vh;
 }

@@ -11,176 +11,179 @@
     crossorigin=""/>
    <!-- INCLUDE LEAFLET SCRIPT LIBRARY -->
    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>   
-   
 </head>
+
 <body>
    <header class="video-header"> 
-      <div class="videoContainer">
-      <video id="video1" class="background-video" autoplay loop muted poster="elingaardnatt.png"> 
-         <!--playsinline ?-->
-         <source src="headerVid.MOV" type="video/mp4">
-      </video>    
-      <button id="btn1" class="videoBtn" onclick="pauseVid('video1', 'btn1')">Pause</button> 
-      <div id="headerTxt">
-        <h1 id="tittel"> Enhver herregård med respekt for seg selv, har minst ett gjenferd</h1>
-        <h2 id="undertittel">-Sven G. Eliassen, direktør, Borgarsyssel Museum</h2> 
-      </div>
-    </div> 
+      <div class="videoContainer"> 
+        <!--kilde brukt til videoheader: https://blog.hubspot.com/website/video-background-css-->
+        <video id="video1" class="background-video" autoplay loop muted poster="img/elingaardnatt.png"> 
+          <source src="img/headerVid.MOV" type="video/mp4">
+        </video>    
+        <button id="btn1" class="videoBtn" onclick="pauseVid('video1', 'btn1')">Pause</button> 
+        <div id="headerTxt">
+          <h1 id="tittel"> Enhver herregård med respekt for seg selv, har minst ett gjenferd</h1>
+          <h2 id="undertittel">-Sven G. Eliassen, direktør, Borgarsyssel Museum</h2> 
+        </div>
+      </div> 
     </header>   
     <main> 
       <section id="changingBg1" class="scrollContainer1"> 
         <div id="htxt1" class="scrollText">
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p> 
         </div>
-        
         <div id="htxt2" class="scrollText">
-            <p>lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p> 
+            <p>
+              lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            </p> 
         </div> 
-        
-      </section> 
+      </section>  
+      <!--intro-->
       <article> 
         <p>
-           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
         </p> 
       </article>   
+      <!--nav--> 
       <section id="navSection"> 
         <h2>Sporene</h2>
         <p>Klikk på sporene for å finne ut mer</p>
-      <div id="navDiv">  
-        <a href="#jens"><img src="bjelke.png"></a>
-        <a href="#birte"><img src="birtheiramme-01.png"></a>
-        <a href="#pettersen"><img src="vaktmesterenpettersen-03.png"></a>
-      </div>  
-    </section>
-        <nav> 
+        <div id="navDiv">  
+          <a href="#jens"><img src="img/bjelke.png"></a>
+          <a href="#birte"><img src="img/birtheiramme-01.png"></a>
+          <a href="#pettersen"><img src="img/vaktmesterenpettersen-03.png"></a>
+        </div>  
+      </section>
+      <nav> 
         <ul>
           <li><a href="#jens">Jens Bjelke</a></li> 
           <li><a href="#birte">Birgitte Kaas</a></li> 
           <li><a href="#pettersen">Vaktmester Pettersen</a></li> 
         </ul>
-        </nav>
-      
-        <article> 
+      </nav>
+      <!--historie og tidslinje-->
+      <article> 
           <p>
              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
           </p> 
-        </article> 
-        <button type="button" id="timelineBtn" onclick="visBoks()">
-          Klikk for tidslinje over noe
-        </button>
-        <section id="faktaboks">
-         <div class="timeline">
-             <div class="container left">
-               <div class="content">
-                 <h4>1300-tallet</h4>
-                 <p>Eies av Jon Havtoreson. Lite kilder fra denne tiden, men sannsynligvis arvet han Elin fra sine foreldre. Jon's morfar var Kong Håkon 5. Magnusson. </p> 
-                 <img src="skjold5.png">
-               </div>
-             </div>
-             <div class="container right">
-               <div class="content">
-                 <h4>1400-tallet</h4>
-                 <p>Elin eies av Åsa Ulfsdatter og Olav Torsteinson. Deres slekt kalles Gyldenhorn, etter deres våpenskjold.</p>
-                 <img src="skjold4.png">
-                </div>
-             </div>
-             <div class="container left">
-               <div class="content">
-                 <h4>1500-tallet</h4>
-                 <p>Henrik Brockenhuus og hans kone Dorthe Nilsdatter Juel. De får ett barn, Sophie, som senere tar over Elin. Dorthe er en mektig kvinne, som etter Henriks død bor med sin datter på Elin. </p>
-                <img src="skjold3.png">
-                </div>
-             </div>
-             <div class="container right">
-               <div class="content">
-                 <h4>1600-tallet</h4>
-                 <p>Elingaard eies av Jens Bjelke og Sophie Brockenhuus, de flytter inn i 1609 som nygifte. Øverste sjikt av norsk adel, og blant de rikeste i Norge. Sammen fikk de 14 barn. </p>
-                  <img src="skjold2.png">
-                </div>
-             </div>
-             <div class="container left">
-               <div class="content">
-                 <h4>1700-tallet</h4>
-                 <p>Elingaard eies av Henrik Jørgen Huitfeldt, Jens Bjelkes oldebarn. Gift med Birgitte Christine Kaas, som også var Jens Bjelkes oldebarn. </p>
-                  <img src="skjold1.png">
-                </div>
-              </div>
-           </div>
-        </section> 
- 
-        <article>  
-          <!--tekst jens --> 
-          <h2 id="jens">Rikskansler Jens</h2>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-          </p> 
-        </article> 
-        <!--scrollbokser jens-->    
-        <section id="changingBg2" class="scrollContainer2"> 
-          <div id="jtxt1" class="scrollText">
-              <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p> 
-          </div>
-          
-          <div id="jtxt2" class="scrollText">
-              <p>lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p> 
-          </div> 
-          <div id="jtxt3" class="scrollText">
-            <p>lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p> 
-        </div>
-        </section> 
-
-        <article>
-          <p> 
-            <!--avslutning jens -->
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>  
-        </article>
-      
-        <article>
-        <h2 id="birte">General Birte</h2>  
-      
-      <p> 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>  
-      <img src="hovedhusm.png">
-      <p class="sitat">
-        lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-      </p>
-
-      <p> 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>  
-    </article>
-    <section id="changingBg3" class="scrollContainer3"> 
-      <div id="btxt1" class="scrollText">
-          <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p> 
-      </div>
-      
-      <div id="btxt2" class="scrollText">
-          <p>lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p> 
-      </div> 
-      <div id="btxt3" class="scrollText">
-        <p>lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p> 
-    </div>
-    </section> 
-     <article>  
-      <h2 id="pettersen">Vaktmester Pettersen</h2>
-      <p>
-         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-      </p>  
       </article> 
-       <article> 
+      <button type="button" id="timelineBtn" onclick="visBoks()">
+        Klikk for tidslinje over noe
+      </button> 
+      <!--kode til tidsline hentet fra: https://www.w3schools.com/howto/howto_css_timeline.asp-->
+      <section id="timeline">
+        <div class="timeline">
+          <div class="container left">
+            <div class="content">
+              <h4>1300-tallet</h4>
+              <p>Eies av Jon Havtoreson. Lite kilder fra denne tiden, men sannsynligvis arvet han Elin fra sine foreldre. Jon's morfar var Kong Håkon 5. Magnusson. </p> 
+              <img src="img/skjold5.png">
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h4>1400-tallet</h4>
+              <p>Elin eies av Åsa Ulfsdatter og Olav Torsteinson. Deres slekt kalles Gyldenhorn, etter deres våpenskjold.</p>
+              <img src="img/skjold4.png">
+            </div>
+          </div>
+          <div class="container left">
+            <div class="content">
+              <h4>1500-tallet</h4>
+              <p>Henrik Brockenhuus og hans kone Dorthe Nilsdatter Juel. De får ett barn, Sophie, som senere tar over Elin. Dorthe er en mektig kvinne, som etter Henriks død bor med sin datter på Elin. </p>
+              <img src="img/skjold3.png">
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h4>1600-tallet</h4>
+              <p>Elingaard eies av Jens Bjelke og Sophie Brockenhuus, de flytter inn i 1609 som nygifte. Øverste sjikt av norsk adel, og blant de rikeste i Norge. Sammen fikk de 14 barn. </p>
+              <img src="img/skjold2.png">
+            </div>
+          </div>
+          <div class="container left">
+            <div class="content">
+              <h4>1700-tallet</h4>
+              <p>Elingaard eies av Henrik Jørgen Huitfeldt, Jens Bjelkes oldebarn. Gift med Birgitte Christine Kaas, som også var Jens Bjelkes oldebarn. </p>
+              <img src="img/skjold1.png">
+            </div>
+          </div>
+        </div>
+      </section> 
+      <!--tekst jens --> 
+      <article> 
+        <h2 id="jens">Rikskansler Jens</h2>
         <p>
-           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </p> 
+      </article> 
+      <!--scrollbokser jens-->    
+      <section id="changingBg2" class="scrollContainer2"> 
+        <div id="jtxt1" class="scrollText">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p> 
+        </div>
+        <div id="jtxt2" class="scrollText">
+          <p>
+            lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+          </p> 
+        </div> 
+        <div id="jtxt3" class="scrollText">
+          <p>
+            lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+          </p> 
+        </div>
+      </section>  
+      <!--avslutning jens -->
+      <article>
+          <p> 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>  
+      </article>
+      <article>
+        <h2 id="birte">General Birte</h2>  
+        <p> 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>  
+        <img src="img/hovedhusm.png">
+        <p class="sitat">
+          lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        </p>
+        <p> 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>  
+      </article>
+      <section id="changingBg3" class="scrollContainer3"> 
+        <div id="btxt1" class="scrollText">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p> 
+        </div>
+        <div id="btxt2" class="scrollText">
+          <p>
+            lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+          </p> 
+        </div> 
+        <div id="btxt3" class="scrollText">
+          <p>
+            lorem ipsumm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+          </p> 
+        </div>
+      </section> 
+      <article>  
+        <h2 id="pettersen">Vaktmester Pettersen</h2>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </p>  
+      </article> 
+      <article> 
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
         </p> 
       </article>    
-      
       <section id="mapSection"> 
         <h3>Kart over noe</h3> 
         <p>Utforsk Elingård</p> 
@@ -189,202 +192,26 @@
       </section> 
       <section id="changingBg4" class="scrollContainer4"> 
         <div id="etxt1" class="scrollText">
-            <p>
-              Med ryggen til gården føles det som om øynene stirrer meg i nakken. Er det general Birthe som står i vinduet, eller er det kanskje gården selv - som ser alt?
-              Jeg velger å tenke som Henrik Wergeland;
-            </p> 
+          <p>
+            Med ryggen til gården føles det som om øynene stirrer meg i nakken. Er det general Birthe som står i vinduet, eller er det kanskje gården selv - som ser alt? Jeg velger å tenke som Henrik Wergeland;
+          </p> 
         </div>
-        
         <div id="etxt2" class="scrollText">
-            <p class="sitat">«Jeg verken tror på gjenferd eller fanden. Jeg tror det spøker indenfor panden».</p> 
+          <p class="sitat">«Jeg verken tror på gjenferd eller fanden. Jeg tror det spøker indenfor panden».</p> 
         </div> 
-        
       </section> 
-      <div class="videoContainer">  
-        <video id="video2" class="background-video" autoplay loop muted poster="elingaardnatt.png"> 
-          <!--playsinline ?-->
-          <source src="headerVid.MOV" type="video/mp4"> 
-        </video> 
-        <button id="btn2" class="videoBtn" onclick="pauseVid('video2', 'btn2')">Pause</button>
-        
-        <article id="vidTxt">
-        <p>
-          Med et kaldt gufs over ryggen, kjører jeg hjem. 
-        </p>
-      </article>  
-        
-      </div> 
+        <div class="videoContainer">  
+          <video id="video2" class="background-video" autoplay loop muted poster="img/elingaardnatt.png"> 
+            <source src="img/headerVid.MOV" type="video/mp4"> 
+          </video> 
+          <button id="btn2" class="videoBtn" onclick="pauseVid('video2', 'btn2')">Pause</button>
+          <article id="vidTxt">
+            <p>
+              Med et kaldt gufs over ryggen, kjører jeg hjem. 
+            </p>
+          </article>  
+        </div> 
    </main> 
-   <script src="index.js"> 
-
-     //kilde brukt til pauseknapp https://www.w3schools.com/tags/av_met_pause.asp
-  function pauseVid(videoId, btnId) {  
-    const video = document.getElementById(videoId);  
-    const videoBtn =  document.getElementById(btnId);
-      if (video.paused) {
-      video.play();
-      videoBtn.innerHTML = "Pause";
-    } else {
-      video.pause();
-      videoBtn.innerHTML = "Start";
-    }
-  }  
-  
-
-  //INITIATE MAP
-    const centerLat = 59.2523923
-    const centerLong = 10.7986503
-    //let map = L.map('map').setView([centerLat, centerLong], 13);
-   /* let map = L.map('mapContainer', {
-        center: [centerLat, centerLong],
-        zoom: 10,
-        scrollWheelZoom: false,
-        interactive: true 
-   
-    })*/
-    //SET MAP CONSTRUCTOR
-    /*L.tileLayer('https://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart_graatone&zoom={z}&x={x}&y={y}', {
-        attribution: '<a href="http://www.kartverket.no/">Kartverket</a>'
-    }).addTo(map) */
-/*
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { 
-
-        maxZoom: 46, minZoom: 7,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
-
-  */  
-  let map = L.map('mapContainer', {
-    minZoom: 0,
-    maxZoom: 5,
-    center: [-100, 180],
-    zoom: 2,
-    crs: L.CRS.Simple, 
-    scrollWheelZoom: false
-  });
-
-    const w = 5692;
-    const h = 3200;
-    const url = 'elingaardmap.png';
-    const southWest = map.unproject([ 0, h], map.getMaxZoom()-1);
-    const northEast = map.unproject([ w, 0], map.getMaxZoom()-1);
-    const bounds = new L.LatLngBounds( southWest, northEast);
-
-    L.imageOverlay( url, bounds).addTo(map);
-
-    map.setMaxBounds(bounds);
-
-/*
-    var imageUrl = 'map2.png',
-   imageBounds = [[59.25391379679315, 10.797237818503786], [59.254396, 10.797226]];
-    L.imageOverlay(imageUrl).addTo(map);
-
-*/   
-
-
-const places = [
-        {name: "-50 50", year: "2016", lat: -50, long: 50,},
-        {name: "0 0", year: "2016", lat: 0, long: 0,},
-        {name: "-100 180", year: "2016", lat:-100, long: 180,},
-]
-console.log(places)
-
-const markerIcon = L.icon({
-        iconUrl: 'marker.svg',
-        iconSize: [40,40],
-        iconAnchor: [20,40],
-        popupAnchor: [0, -20]
-    })
-
-    function fly() {
-    L.marker[place.lat, place.long].openPopup();
-    map.flyTo([place.lat,place.long],4);
-    };
-
-    let navHTML = ""
- 
-    places.map((place) => {
-        
-        L.marker([place.lat, place.long], {icon: markerIcon}).addTo(map).bindPopup(`${place.name}`)
-        
-        navHTML += `<button id="mapBtn" onclick="map.flyTo([${place.lat},${place.long}],2)">${place.name}</button>` 
-        console.log("p" + place)
-    })
-    
-    document.getElementById("btnContainer").innerHTML = navHTML 
-
-
-function visBoks() { 
-const faktabutton = document.getElementById("timelineBtn");
-const faktaboks = document.getElementById("faktaboks");
-if (faktaboks.style.display === "none" || faktaboks.style.display === "") {
-faktaboks.style.display = "block";
-faktabutton.innerHTML = "Lukk tidslinje over noe";
-} else {
-faktaboks.style.display = "none";
-faktabutton.innerHTML = "Klikk for tidslinje over noe";
-}
-}
-
-
-function isInViewport(el) {
-const rect = el.getBoundingClientRect();
-return (
-rect.top >= 0 &&
-rect.left >= 0 &&
-rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-);
-}  
-
-document.addEventListener('scroll', function () {
-  if(isInViewport(document.getElementById("htxt1"))) {
-    document.getElementById("changingBg1").style.backgroundImage = "url(closeup.jpg)"
-  } 
-  if(isInViewport(document.getElementById("htxt2"))) {
-   document.getElementById("changingBg1").style.backgroundImage = "url(1closeup.jpg)"
-  } 
-  if(isInViewport(document.getElementById("htxt3"))) {
-    document.getElementById("changingBg1").style.backgroundImage = "url(2closeup.jpg)"
-  }
-  }, {
-   passive: true
-  }); 
-
-//Scroll Jens 
-document.addEventListener('scroll', function () {
-if(isInViewport(document.getElementById("jtxt1"))) {
-  document.getElementById("changingBg2").style.backgroundImage = "url(closeup.jpg)"
-} 
-if(isInViewport(document.getElementById("jtxt2"))) {
- document.getElementById("changingBg2").style.backgroundImage = "url(1closeup.jpg)"
-} 
-if(isInViewport(document.getElementById("jtxt3"))) {
-  document.getElementById("changingBg2").style.backgroundImage = "url(2closeup.jpg)"
-}
-}, {
- passive: true
-});
-
-//Scroll Birte 
-document.addEventListener('scroll', function () {
-if(isInViewport(document.getElementById("btxt1"))) {
-  document.getElementById("changingBg3").style.backgroundImage = "url(closeup.jpg)"
-} 
-if(isInViewport(document.getElementById("btxt2"))) {
- document.getElementById("changingBg3").style.backgroundImage = "url(1closeup.jpg)"
-} 
-if(isInViewport(document.getElementById("btxt3"))) {
-  document.getElementById("changingBg3").style.backgroundImage = "url(2closeup.jpg)"
-}
-}, {
- passive: true
-});
-
-
-
-      
-    
-   </script>
+   <script src="index.js"></script>
 </body>
 </html>
