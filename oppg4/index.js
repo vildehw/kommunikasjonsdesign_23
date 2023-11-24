@@ -134,7 +134,8 @@ document.addEventListener('scroll', function () {
    passive: true
   }); 
 
-//Scroll Jens 
+//Scroll Jens  
+/*
 document.addEventListener('scroll', function () {
   if(isInViewport(document.getElementById("jtxt1"))) {
     document.getElementById("changingBg2").style.backgroundImage = "url(img/closeup.jpg)"
@@ -148,6 +149,7 @@ document.addEventListener('scroll', function () {
   }, {
    passive: true
   });  
+  */ 
 
   //Scroll Birte
 document.addEventListener('scroll', function () {
