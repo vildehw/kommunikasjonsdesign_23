@@ -21,10 +21,10 @@
     const timeline = document.getElementById("timeline");
     if (timeline.style.display === "block") {
       timeline.style.display = "none";
-      faktabutton.innerHTML = "Klikk for tidslinje over noe"; 
+      faktabutton.innerHTML = "Klikk for tidslinje over gårdseiere"; 
     } else {
       timeline.style.display = "block";
-      faktabutton.innerHTML = "Lukk tidslinje over noe";
+      faktabutton.innerHTML = "Lukk tidslinje over gårdseiere";
     }
     } 
 
@@ -45,7 +45,7 @@
   let map = L.map('mapContainer', {
     minZoom: 0,
     maxZoom: 5,
-    center: [-100, 180],
+    center: [-90, 230],
     zoom: 2,
     crs: L.CRS.Simple, 
     scrollWheelZoom: false,
@@ -122,34 +122,21 @@
   }  
 
 
-//scrollheader
-document.addEventListener('scroll', function () {
-  if(isInViewport(document.getElementById("htxt1"))) {
-    document.getElementById("changingBg1").style.backgroundImage = "url(img/elingaardimg.jpg)"
-  } 
-  if(isInViewport(document.getElementById("htxt2"))) {
-   document.getElementById("changingBg1").style.backgroundImage = "url(img/IMG_5465.jpg)"
-  } 
-  }, {
-   passive: true
-  }); 
 
 //Scroll Jens  
-/*
+
 document.addEventListener('scroll', function () {
   if(isInViewport(document.getElementById("jtxt1"))) {
-    document.getElementById("changingBg2").style.backgroundImage = "url(img/closeup.jpg)"
+    document.getElementById("changingBg2").style.backgroundImage = "url(img/kjellern.png)"
   } 
   if(isInViewport(document.getElementById("jtxt2"))) {
-   document.getElementById("changingBg2").style.backgroundImage = "url(img/1closeup.jpg)"
+   document.getElementById("changingBg2").style.backgroundImage = "url(img/kjelleren2.png)"
   } 
-  if(isInViewport(document.getElementById("jtxt3"))) {
-    document.getElementById("changingBg2").style.backgroundImage = "url(img/2closeup.jpg)"
-  }
+  
   }, {
    passive: true
   });  
-  */ 
+  
 
   //Scroll Birte
 document.addEventListener('scroll', function () {
@@ -167,14 +154,5 @@ document.addEventListener('scroll', function () {
   }); 
 
 
-//scrollend
-  document.addEventListener('scroll', function () {
-if(isInViewport(document.getElementById("etxt1"))) {
-  document.getElementById("changingBg4").style.backgroundImage = "url(img/elingaardimg.jpg)"
-} 
-if(isInViewport(document.getElementById("etxt2"))) {
- document.getElementById("changingBg4").style.backgroundImage = "url(img/IMG_5465.jpg)"
-} 
-}, {
- passive: true
-});
+
+ 

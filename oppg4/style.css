@@ -130,24 +130,33 @@ h3{
 
 article{  
   padding: 1.5rem;
-  max-width: 900px; 
+  max-width: 600px; 
   margin: 2rem auto;
 }   
 article img{
   width: 100%; 
-  max-width: 600px;
+  max-width: 600px; 
+  margin: 1rem auto;
 } 
 .sitat{
   font-style: italic; 
   font-size: 24px; 
-  margin: 1rem 0;
-} 
+  margin: 1rem 0; 
+  max-width: 500px; 
+  text-align: center; 
+  margin: 0 auto;
+}  
 
 p{
   padding-bottom: 1rem;
 } 
 .center{
   text-align: center;
+} 
+#link{
+  font-weight: bolder;
+  color: white; 
+  
 }
 
 /*nav*/ 
@@ -157,7 +166,11 @@ p{
   background-color: var(--grey);  
   color: var(--black);  
   padding-top: 1rem;
-} 
+}  
+
+#navSection p{
+padding: 0 1rem;
+}
 #navSection h2, #navSection p{ 
   display: flex; 
   justify-content: center;
@@ -169,7 +182,7 @@ p{
   display: grid; 
   grid-template-columns: repeat(3, minmax(0, 1fr)); 
   place-items: center;
-  padding-top: 2.5rem; 
+  padding-top: 2.5rem;  
 } 
 
 #navDiv a img{
@@ -216,8 +229,8 @@ li a {
   background-attachment: fixed;
 }  
 
-#changingBg1{
-  background-position: center center; 
+#changingBg3{
+  background-position: center bottom; 
 }
 
 .scrollContainer1, .scrollContainer2, .scrollContainer3, .scrollContainer4 {
@@ -227,15 +240,16 @@ li a {
 } 
 
 .scrollContainer1{
-  background-image: url("img/elingaardimg.jpg");
+  background-image: url("img/egfront.jpg"); 
+  background-position: left center;
 }
 
 .scrollContainer2 {
-  background-image: url("img/kjelleren2.png"); 
+  background-image: url("img/kjellern.png"); 
 }    
 
 .scrollContainer3 {
-  background-image: url("img/elingaardimg.jpg"); 
+  background-image: url("img/closeup.jpg"); 
   transition: background-image 2s;
 }  
 
@@ -254,45 +268,60 @@ li a {
 }  
 
 
-#timelineBtn{
+.btnStyle{
   border: none;  
   border-radius: 2px;
-  border: 1.5px solid #0D1B2A;
+  border: 2px solid var(--darkred);
   background: var(--darkred); 
   color: var(--white);
-  padding: 0.8rem;  
-  font-size: 18px; 
-  margin-top: .2rem;  
-  display: flex;  
-  margin: 3rem auto;
+  height: 3rem; 
+  width: 16rem; 
+  font-size: 16px; 
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
 }    
 
-#birtevid{
-width: 70%;
-} 
+#kildeBtn{
+  margin: 3rem auto 1rem auto;
+}
+
+.btnStyle:hover{
+  background-color: var(--white); 
+  color: var(--darkred); 
+  
+}
+
+
 
 
 #mapSection{  
-text-align: center;
-max-width: 1400px; 
+
+max-width: 900px; 
 margin: 0 auto; 
-align-content: center;
+text-align: center;
 }
 
 #mapContainer{
-  width: 90%;
+  width: 90%; 
+  max-width: 600px;
   height: 60vh;
   margin: 1rem auto 5rem auto;    
   z-index: 50;   
-} 
+}  
+
+.leaflet-popup-content{ 
+  color: var(--black); 
+  line-height: 1.5; 
+  
+}
 
 #vidTxt{
   background-color: rgba(12, 24, 33, 0.8);
   box-shadow: 0px 0px 20px 35px rgba(12, 24, 33, 0.8); 
-  width: 80%;  
-  max-width: 900px;
-  margin: 60vh auto 0 auto; 
-  padding: 1rem; 
+  max-width: 600px;
+  margin: 47vh auto 0 auto; 
+  padding: 0 1rem; 
   text-align: center;
 }  
 
@@ -309,15 +338,7 @@ align-content: center;
 }
 
 
-#kildeBtn{ 
-  display: block;
-  cursor: pointer;
-  margin: 2rem auto;
-  font-size: 1rem;
-  padding: 1.2rem 2rem;
-  background-color: #DBDBDB;
-  border: none; 
-} 
+
 
 
 @media screen and (min-width: 800px) { 
@@ -346,7 +367,7 @@ align-content: center;
     text-decoration: underline;
   } 
   #mapContainer{ 
-    width: 70%; 
+    max-width: 900px;
     height: 70vh;
   } 
 
@@ -363,6 +384,9 @@ align-content: center;
 
   .scrollText{
     padding: 2rem 2rem 0 2rem; 
+    font-size: 20px;
+  } 
+  #endTxt{
     font-size: 20px;
   }
   h2{
