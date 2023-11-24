@@ -1,27 +1,65 @@
-
-h1{
-    width: 100%; 
-    text-align: center; 
+h1 {
+    width: 100%;
+    text-align: center;
     font-size: 52px;
 }
-main{
-display: flex; 
-flex-wrap: nowrap; 
-max-width: 1500px;
+
+body {
+    margin: 0;
+    padding: 0;
 }
-article{ 
+
+main {
+    width: 100%;
+    height: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+article {
     display: block;
-    width: 100%; 
-    max-width: 500px; 
-    margin: 30vh auto 0 auto; 
-    
-} 
-img{
-    width: 100%; 
-    max-width: 500px; 
+    max-width: 500px;
+}
+
+
+img {
+    max-width: 500px;
     height: auto;
-}  
- 
+    object-fit: contain;
+    margin: auto;
+}
+
+.ingress {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+}
+
+.bilde-seksjon {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+/* Reverser annenhver .bilde-seksjon */
+.bilde-seksjon:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.bilde-seksjon > article {
+    margin: auto;
+    flex: 1;
+}
+
+.bilde-seksjon > img {
+    object-fit: contain;
+    flex: 1;
+}
+
 
 /*
 #bgDiv{  
@@ -33,20 +71,23 @@ img{
     background-repeat: no-repeat; 
     background-attachment: fixed;
 }  
-*/ 
+*/
 
 #nyDiv {
-width: 50%;
-position: relative; 
-
-
-
+    width: 50%;
+    position: relative;
 }
 
 
 
-@media screen and (min-width: 1000px){
-    
+@media screen and (max-width: 1000px) {
 
+    .bilde-seksjon {
+        flex-direction: column;
+    }
+
+    .bilde-seksjon:nth-child(odd) {
+        flex-direction: column;
+    }
 
 }
