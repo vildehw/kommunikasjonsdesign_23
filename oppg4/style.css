@@ -141,6 +141,10 @@ article img{
   font-style: italic; 
   font-size: 24px; 
   margin: 1rem 0;
+} 
+
+p{
+  padding-bottom: 1rem;
 }
 
 /*nav*/ 
@@ -234,14 +238,14 @@ li a {
 }  
 
 .scrollContainer4 {
-  background-image: url("img/map2.png");
+  background-image: url("img/elingaardimg.jpg");
 } 
 
 .scrollText {
   margin: 70vh auto; 
   width: 85%; 
   max-width: 600px;
-  padding: 1rem;  
+  padding:  1rem 1rem 0 1rem;  
   color: #fff;  
   background-color: rgba(12, 24, 33, 0.9);
   box-shadow: 0px 0px 20px 35px rgba(12, 24, 33, 0.9);
@@ -350,6 +354,13 @@ align-content: center;
   
   .sitat{
     font-size: 26px;
+  } 
+  p{
+    padding-bottom: 2rem; 
+  } 
+
+  .scrollText{
+    padding: 2rem 2rem 0 2rem;
   }
   h2{
     font-size: 32px;
