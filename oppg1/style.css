@@ -1,213 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,400;1,600&family=Rubik:wght@400;600;700&display=swap');
-
-:root {
---white: #fff;  
---red: rgba(182, 16, 16, 0.9); 
---black: #000;  
---bgColor: rgba(54, 59, 69, 0.9); 
-} 
-
-html {
-    scroll-behavior: smooth; 
-    background-color: var(--white); 
-    font-family: 'Open Sans', sans-serif;  
-    line-height: 1.5; 
-    box-sizing: border-box;
-} 
-
-.art{
-    max-width: 600px; 
-    padding: 1rem; 
-    margin: 3rem auto 3rem auto; 
-    color: var(--black);   
-}  
-
-.art #sitat{
-    font-style: italic;
-    font-size: 26px;
-}
-
 body {
-    margin: 0;
-    padding: 0; 
-    font-size: 20px;
-} 
-#ingress{
-    font-size: 26px;
+  background-color: yellow;
 }
-
-div, article, section {
-    box-sizing: border-box;
-}   
-
-#changingBg{
-    background-size: cover; 
-    background-position: center center; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-} 
-
+main {
+  background-color: white;
+}
 .scrollContainer1 {
     width: 100%; 
     min-height: 60vh; 
     overflow: hidden;  
-    background-image: url("Cis05.JPG");
+    background-image: url("img/pineappleface.png"); 
     transition: background-image 2s;
 }  
 
-#scrollHeader{
-    margin: 65vh auto 70vh auto;   
-    padding: 1px 30px;
-    max-width: fit-content; 
-    text-align: center; 
-    font-size: 24px;   
-    background-color: var(--white); 
-     
-}
-
-.scrollText {
-    margin: 80vh auto; 
-    max-width: fit-content;
-    padding: 1rem;  
-    background-color: var(--white);  
-    
-    border: 2px; 
-    font-size: 22px;
-}    
-
-#scrollHeader h1, .scrollText p{
-    max-width: 500px;
-} 
-
-#mapHeader{
-    text-align: center; 
-    font-size: 24px;
-}
-#scrollContainer2{
-    width: 100%;
-    min-height: 80vh;
-    z-index: 5;
-    padding-bottom: 50vh;
-    display: block;    
-    overflow: hidden;
-}
-
-#mapContainer {
-    width: 100%;
-    height: 100vh;
-    position: sticky;
-    top: 0; 
-}
-
-.scrollBox {
-    position: relative;
-    display: block;
-    margin: 80vh auto 80vh auto;
-    z-index: 10;
-    width: 90vw;
-    max-width: 400px;
-    padding-left: 0;
-    color: var(--white);   
-    border-radius: 15px;  
-    background: var(--bgColor); 
-}    
-
-.scrollBox img{
+/*.scrollContainer2 {
     width: 100%; 
-    border-radius: 0 0 15px 15px;  
-    vertical-align: bottom;
-} 
+    min-height: 60vh; 
+    overflow: hidden;  
+    background-image: url("img/pineappleringprosent.png"); 
+    transition: background-image 2s;
+}  */
 
-article h3{
-    border-bottom: 3px solid var(--red); 
-    display: inline-block; 
-    padding: 0 .4rem; 
-    margin-bottom: 0;
-} 
-
-.scrollDiv{
-    padding: 0 1rem; 
-    display: inline-block
+.scrollText img {
+  width: 100%;
 }
 
-#topBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    border: 2px solid var(--red);
-    background-color: var(--red);
-    color: var(--white);
-    padding: 0 17px 5px 17px;
-    border-radius: 50%;
-    font-size: 32px;
-    text-decoration: none;
-}
- 
-
-
-#kilder{  
-    display: none;
-    width: 80%;
-    margin: 0 auto;
-    box-shadow: 0 0px 10px #BABABA;
-    padding: 1rem;
-    margin-bottom: 3rem; 
-    border-radius: 10px;
- }
-
-
-#kildeBtn{ 
-    display: block;
-    cursor: pointer;
-    margin: 2rem auto;
-    font-size: 1rem;
-    padding: 1.2rem 2rem;
-    background-color: #DBDBDB;
-    border: none; 
-}
-
-@media only screen and (min-width: 800px) { 
-    
-    #p2, #p4, #p6, #p8, #p10, #p12, #p14{
-        /*venstre*/ 
-        margin: 0 0 80vh 2rem;
-    } 
-
-    #p1, #p3, #p5, #p7, #p9, #p11, #p13, #p15{
-        /*høyre*/ 
-        margin: 0 2rem 80vh auto;     
-    }  
-     
-    .scrollBox{
-    max-width: 500px; 
-
-    } 
-    #topBtn{
-        right: 40px; 
-        bottom: 40px;
-    } 
-    #kilder {
-        width: 50%;
-    }
-} 
-
-
-@media only screen and (min-width: 1200px){ 
-
-    .scrollBox{
-    max-width: 560px; 
-    } 
-    #topBtn{
-        right: 100px; 
-        bottom: 50px;
-    }
-    #topBtn:hover {
-        color: var(--red); 
-        background-color: var(--white);
-    } 
-    #kilder {
-        width: 40%;
-    }
+.scrollContainer3 {
+    width: 100%; 
+    min-height: 60vh; 
+    overflow: hidden;  
+    background-image: url("img/plainpineapple.png"); 
+    transition: background-image 2s;
 }  
 
+.scrollContainer4 {
+    width: 100%; 
+    min-height: 60vh; 
+    overflow: hidden;  
+    background-image: url("img/tmspiser.png"); 
+    transition: background-image 2s;
+}  
+
+.scrollContainer5 {
+    width: 100%; 
+    min-height: 60vh; 
+    overflow: hidden;  
+    background-image: url("img/skli.png"); 
+    transition: background-image 2s;
+}  
+
+.scrollContainer6 {
+    width: 100%; 
+    min-height: 60vh; 
+    overflow: hidden;  
+    background-image: url("img/magesekk-06.png"); 
+    transition: background-image 2s;
+}  
+
+.scrollContainer7 {
+    width: 100%; 
+    min-height: 60vh; 
+    overflow: hidden;  
+    background-image: url("img/pineappleslice.png"); 
+    transition: background-image 2s;
+}  
+
+.scrollText {
+    margin: 70vh auto; 
+    width: 85%; 
+    max-width: 600px;
+    padding: 1rem;  
+    color: #000000; 
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px 35px rgba(238, 238, 238, 0.8);
+    font-size: 1.4rem;
+  }  
+
+  .scrollImage {
+    margin: 70vh auto; 
+    width: 85%; 
+    max-width: 600px;
+    padding: 0rem;  
+    align-items: center;
+    color: #fff; 
+  }
+
+
+#changingBg{
+    background-size: auto; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+} 
+
+  #headerTxt{
+    background-color: rgba(197, 193, 193, 0.8);
+    box-shadow: 0px 0px 20px 35px rgba(238, 238, 238, 0.8);
+    width: 80%;  
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto;
+  } 
+
+  #tittel{
+    margin-top: 40vh; 
+    padding: 2rem;
+    font-size: 1.8rem;
+  } 
