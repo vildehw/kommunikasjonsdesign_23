@@ -145,6 +145,9 @@ article img{
 
 p{
   padding-bottom: 1rem;
+} 
+.center{
+  text-align: center;
 }
 
 /*nav*/ 
@@ -360,7 +363,8 @@ align-content: center;
   } 
 
   .scrollText{
-    padding: 2rem 2rem 0 2rem;
+    padding: 2rem 2rem 0 2rem; 
+    font-size: 20px;
   }
   h2{
     font-size: 32px;
