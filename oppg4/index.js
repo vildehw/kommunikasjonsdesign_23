@@ -67,9 +67,9 @@
 
   //kilde for resterende kode for kart er hentet fra forelesningsmateriell
   const places = [
-    {name: "Kjelleren", lat: -87, long: 230, description: "Jens Bjelkes kjeller ble oppført i 1645. Benyttet som fengsel under Bjelkes tid, i Huitfeldt-Kaas tid benyttet som lagring av øl og vin til selskapeligheter (som det var mye av)."},
-    {name: "Likkammeret", lat: -93, long: 154, description: "Det Huitfeldtske likkammer. Dette kammeret er det eneste rommet på gården som fremdeles innehar sitt opprinnelige utseende. Det ble oppført på kommando fra Birgitte og Henrik Jørgen. De originale veggdekorasjonene er bevart, og viser ulike deler av den adelige eie og maktstilling. Likkammeret er laget for å gi adelen ære i døden, hvor den avdøde ble omkranset av sin medfødte rett. På veggene ser vi kirken, jorder, eiketrær og industri. Symboler på velstand. Likkammeret ble mye brukt, da Birgitte og Henrik Jørgen fikk ni barn, der kun fire av de nådde voksen alder. Birgitte mente det var standsmessig forskjell på mennesker også i himmelen, fattige var fremdeles fattige, og de adelige likedan. Over døren står det «CH» med gullskrift, noe som antas å være til ære for Birgittes sønn Christian Huitfeldt."},
-    {name: "Presteværelset", lat:-88, long: 147, description: "Det var gammel skikk at kirkens prest hadde eget rom på herregårdene. Presten i Onsøy Kirke hadde god kontakt med familien Huitfeldt-Kaas. På veggene henger bilder av medlemmene av prestefamilien, og møbler som ble gitt i gaver fra familien Apenes."},
+    {name: "Kjelleren", lat: -87, long: 230, description: " til Jens Bjelkes ble oppført i 1645. Benyttet som fengsel under Bjelkes tid, i Huitfeldt-Kaas tid benyttet som lagring av øl og vin til selskapeligheter (som det var mye av)."},
+    {name: "Likkammeret", lat: -93, long: 154, description: "til familien Huitfeldt er eneste rommet på gården som fremdeles innehar sitt opprinnelige utseende. Det ble oppført på kommando fra Birgitte og Henrik Jørgen. Likkammeret er laget for å gi adelen ære i døden, hvor den avdøde ble omkranset av sin medfødte rett. Birgitte mente det var standsmessig forskjell på mennesker også i himmelen, fattige var fremdeles fattige, og de adelige likedan."},
+    {name: "Presteværelset", lat:-88, long: 147, description: " var en gammel skikk, kirkens prest skulle ha eget rom på herregårdene. Presten i Onsøy Kirke hadde god kontakt med familien Huitfeldt-Kaas. På veggene henger bilder av medlemmene av prestefamilien, og møbler som ble gitt i gaver fra familien Apenes."},
   ]   
   console.log(places)
 
