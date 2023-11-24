@@ -6,118 +6,124 @@
     <title>Oppgave 2</title>  
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <style>
+    <style> 
+
+        h1{
+            width: 100%; 
+            text-align: center; 
+            font-size: 52px;
+        }
+    main{
+        display: flex; 
+        flex-wrap: wrap;
+    }
         article{ 
             display: block;
             width: 100%; 
-            max-width: 1000px; 
-            margin: 0 auto; 
-            display: flex;
-            flex-wrap: wrap; 
-            gap: 6rem;
-        } 
-        article img{
-            width: 40%; 
-            height: auto;
-        } 
-        article p{
-            width: 30%;
-        }  
-
-        #bgDiv{  
-
-            width: 100%; 
+            max-width: 500px; 
+            margin: 30vh auto 0 auto; 
             
-            min-height: 90vh; 
+        } 
+        img{
+            width: 100%; 
+            max-width: 500px; 
+            height: auto;
+        }  
+         
 
+        /*
+        #bgDiv{  
+            width: 100%; 
+            min-height: 90vh; 
             background-image: url(birtheiramme-01.png); 
             background-size: cover;  
             background-position: center center; 
             background-repeat: no-repeat; 
             background-attachment: fixed;
         }  
+        */ 
 
         #nyDiv {
     width: 50%;
-    position: relative;
-}
-
-#nyDiv img {
-    width: 100%;
-    height: auto;
-}
+    position: relative; 
 
 
-
-#myChart{
-    .grid {
- display: grid;
- gap: 1em;
- grid-template-rows: min-content minmax(0, 1fr) min-content;
- grid-template-columns: 1fr minmax(0, 3fr);
- grid-template-areas: "a h"
-                      "a c"
-                      "a f";
- height: calc(100vh - 2em);
- width: calc(100vw - 2em); /* not necessary, but just to be explicit */
- margin: 1em;
-}
+    
 }
 
 
 
-        @media screen and (min-width: 800px){
-            #bgDiv{
-                width: 50%;
-            }
+
+
+
+
+
+        @media screen and (min-width: 1000px){
+            
+
+
         }
     </style>
 </head>
 <body> 
-    
-    <article> 
-        
+    <main>  
+
+        <h1> Veldig stor overskrift</h1>
         <img src="birtheiramme-01.png">
+    <article > 
+        <h2>liten overskrift</h2>
         <p>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
         </p> 
         
     </article> 
-    <article>
-        <img src="birtheiramme-01.png"> 
+    <article> 
+        <h2>liten overskrift</h2>
         <p>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
         </p>  
-    </article>   
+    </article>  
+    <img src="birtheiramme-01.png">   
+    
+    <img src="birtheiramme-01.png">
+    <article > 
+        <h2>liten overskrift</h2>
+        <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </p> 
+        
+    </article> 
+    <article> 
+        <h2>liten overskrift</h2>
+        <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </p>  
+    </article>  
+    <img src="birtheiramme-01.png">  
+
+    <!--
     <div id="nyDiv"> 
         <img src="birtheiramme-01.png">  
         <canvas id="myChart"></canvas>
+    </div> -->
 
-    </div> 
-    <div id="bgDiv">
-        <p>dette er en div</p>
-    
-    <div> 
-   
-        
-      </div> 
-    </div>  
+    <!--
     <article>
         <img src="birtheiramme-01.png">  
         <iframe title="Andel av befolkningen som bruker tradisjonelle medier" aria-label="Column Chart" id="datawrapper-chart-wEH0M" src="https://datawrapper.dwcdn.net/wEH0M/1/" scrolling="no" frameborder="0" style="border: none;" width="400" height="600" data-external="1"></iframe>
         <p>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
         </p>  
-    </article>   
+    </article>    
+    -->
+    <!--
     <div id="nyDiv">
         <img src="birtheiramme-01.png">  
         <iframe title="Andel av befolkningen som bruker tradisjonelle medier" aria-label="Column Chart" id="myChart" src="https://datawrapper.dwcdn.net/wEH0M/1/" scrolling="no" frameborder="0" style="border: none;" width="400" height="600" data-external="1"></iframe>
     </div>
-
+    -->
     
-    </script>
-    
-      
+</main> 
           
     
         <script>
