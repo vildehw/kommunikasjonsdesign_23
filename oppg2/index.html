@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oppgave 2</title>
+    <title>Nyheter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,7 +20,7 @@
         </section>
 
         <section class="bilde-seksjon">
-            <img src="img/NyheterAvis_Avis.png">
+            <img src="img/NyheterAvis_Avis.png" alt="siden 2015 har antall lesere av papiraviser blitt halvert">
             <article>
                 <h2>AVIS</h2>
                 <p>
@@ -33,7 +33,7 @@
 
 
         <section class="bilde-seksjon">
-            <img src="img/RadioNyheter-01.png">
+            <img src="img/RadioNyheter-01.png" alt="tre av fire syttiåringer hører på radio hver dag">
             <article>
                 <h2>RADIO</h2>
                 <p>
@@ -46,7 +46,7 @@
         </section>
 
         <section class="bilde-seksjon">
-            <img src="img/NyheterTV_Tv_Tv.png">
+            <img src="img/NyheterTV_Tv_Tv.png" alt="antall tv-seere har sunket 20% på åtte år">
             <article>
                 <h2>TV</h2>
                 <p>
@@ -59,7 +59,7 @@
         </section>
 
         <section class="bilde-seksjon">
-            <img src="img/TiktokMobil.png"> 
+            <img src="img/TiktokMobil.png" alt="fire av ti 16-19 åringer leser nyheter på tiktok"> 
             <article>
                 <h2>MOBIL</h2>
                 <p>
@@ -70,8 +70,6 @@
                 </p>
             </article>
         </section>
-
-
         <section class="bilde-seksjon">
             <canvas id="myChart"></canvas>
             <article>
@@ -83,29 +81,22 @@
                 </p>
             </article>
         </section>
-
-               
-        
-     
-    
-
-    <button type="button" id="kildeBtn" onclick="showContent()">
-        Vis kilder brukt i denne artikkelen
-    </button>
-    <section id="kilder">
-        <h4>Kilder</h4>  
-        <p>Fordal, J. A. (2020, 17. august).<a href="https://www.nrk.no/organisasjon/fjernsynets-historie-1.6512060"> Fjernsynets historie.</a> NRK. </p>
-        <p>Fordal, J. A. (2021, 5. januar).<a href="https://www.nrk.no/organisasjon/radioens-historie-1.6512029"> Radioens historie.</a> NRK.</p>
-        <p>Solheim, J. & Syvertsen, T. (2023,20. november).<a href="https://snl.no/norsk_presses_historie "> Norsk presses historie. </a> SNL.</p>
-        <p>Ice. (2022, 28. september).<a href="https://www.ice.no/ice-magasinet/mobiltelefonens-historie/"> Mobiltelefonens historie.</a> </p>
-        <p>Foss, E. (2022, 26. april).<a href="https://www.ssb.no/kultur-og-fritid/tids-og-mediebruk/statistikk/norsk-mediebarometer/artikler/1-av-3-unge-voksne-folger-ikke-med-pa-nyheter-i-tradisjonelle-medier"> 1 av 3 unge voksne følger ikke med på nyheter i tradisjonelle medier.</a> Statistisk Sentralbyrå.</p>
-    </section>
-
-
-    </main>
+        <button type="button" id="kildeBtn" onclick="showContent()">
+            Vis kilder brukt i denne artikkelen
+        </button>
+        <section id="kilder">
+            <h4>Kilder</h4>  
+            <p>Fordal, J. A. (2020, 17. august).<a href="https://www.nrk.no/organisasjon/fjernsynets-historie-1.6512060"> Fjernsynets historie.</a> NRK. </p>
+            <p>Fordal, J. A. (2021, 5. januar).<a href="https://www.nrk.no/organisasjon/radioens-historie-1.6512029"> Radioens historie.</a> NRK.</p>
+            <p>Solheim, J. & Syvertsen, T. (2023,20. november).<a href="https://snl.no/norsk_presses_historie "> Norsk presses historie. </a> SNL.</p>
+            <p>Ice. (2022, 28. september).<a href="https://www.ice.no/ice-magasinet/mobiltelefonens-historie/"> Mobiltelefonens historie.</a> </p>
+            <p>Foss, E. (2022, 26. april).<a href="https://www.ssb.no/kultur-og-fritid/tids-og-mediebruk/statistikk/norsk-mediebarometer/artikler/1-av-3-unge-voksne-folger-ikke-med-pa-nyheter-i-tradisjonelle-medier"> 1 av 3 unge voksne følger ikke med på nyheter i tradisjonelle medier.</a> Statistisk Sentralbyrå.</p>
+        </section>
+        </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        // Første graf
+        // kode for graf 
+        //kilde for kode https://www.chartjs.org/docs/latest/getting-started/
         const ctx = document.getElementById('myChart');
         new Chart(ctx, {
             type: 'bar',
@@ -113,31 +104,56 @@
                 labels: ['9-15 år', '16-24 år', '25-44 år', '45-66 år', '67-79 år'],
                 datasets: [
                     {
-                        label: 'Antall beregnet i prosent',
+                        label: 'Antall beregnet i prosent', 
                         data: [72, 35, 17, 9, 2],
-                        borderWidth: 3,
-                        backgroundColor: [
-                            'rgba(54, 162, 235, 0.8)', // Blue
-                        ]
+                        borderWidth: 1, 
+                        borderColor: '#000', 
+                        color: '#000',
+                        backgroundColor: 'rgba(54, 162, 235, 0.8)', 
+                        
                     }
                 ]
             },
-            options: {
+            options: { 
+                legend: {
+                labels: {
+                    fontColor: "blue",
+                    fontSize: 18
+                }
+            },
                 responsive: true,
-                aspectRatio: 2.5,
+                aspectRatio: 0.5,  
                 scales: {
+                   //kilde brukt for å bytte farger på akse-labels: https://stackoverflow.com/questions/37292423/chart-js-label-color
                     y: {
-                        beginAtZero: true
+                        ticks: { 
+                            color: 'black', 
+                            beginAtZero: true 
+                        }
+                    },
+                    x: {
+                        ticks: { 
+                            color: 'black', 
+                        }
                     }
-                },
+                        },
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Andel av befolkningen som ikke bruker tradisjonelle medier for nyheter'
-                    }
+                        text: 'Andel av befolkningen som ikke bruker tradisjonelle medier for nyheter',   
+                        font: {
+                            size: 16,
+                            color: '#000'
+                        }
+                    }, 
+                    
                 }
             }
         });
+        
+        //bytter farge på tittel i chart
+        //kilde: https://stackoverflow.com/questions/28546677/chart-js-text-color
+        Chart.defaults.color = "#000"; 
 
 
         //funksjon for å vise kilder
@@ -154,9 +170,5 @@
         } 
 
     </script>
-
-
-
 </body>
-
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oppgave 1</title>
+    <title>Ananas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,10 +12,6 @@
         <h1 id="tittel">EN BITTERSØT HISTORIE</h1>
     </header>
     <main>
-  
-        
-       
-        
         <section class="intro"> 
             <p>
                 Vi nordmenn tok i 2017 verdensrekord i antall pizza konsumert per innbyggertall per år, med i snitt 
@@ -38,7 +34,7 @@
             <p>
                 En undersøkelse viser tydelig at publikum er delt i denne saken: 
             </p>
-            <img src="img/pineappleringprosent.png">
+            <img src="img/pineappleringprosent.png" alt="ananasring kuttet i to deler, 41% og 59%">
             <p>41% liker ikke, 59% liker</p>
         </section>
 
@@ -58,9 +54,7 @@
         </section> 
 
         <section class="textSection padding">
-            
-                <p>De seirende 59% kan kose seg med bittersursøt pizzaglede...</p>
-            
+            <p>De seirende 59% kan kose seg med bittersursøt pizzaglede...</p>
         </section>
 
         <section id="scrollContainer2"> 
@@ -87,7 +81,7 @@
                     Hvem hadde gjettet på 1800-tallet at den skulle bo i kalde Norge, og sole seg på en
                     pizzabunn for et kranglende publikum?
             </p>  
-            <img src="img/pineappleslice.png">  
+            <img src="img/pineappleslice.png" alt="smilende ananasbit med armer og bein">  
             <button type="button" id="kildeBtn" onclick="showContent()">
                 Vis kilder brukt i denne artikkelen
             </button>
@@ -103,8 +97,8 @@
     
     </main>
     <script> 
-
-
+        //kode for å bytte bakgrunnsbilde 
+        //kode hentet fra forelesningsmateirale
         function isInViewport(el) {
             const rect = el.getBoundingClientRect();
             return (
@@ -115,7 +109,6 @@
                 rect.right <= (window.innerWidth || document.documentElement.clientWidth))
             );
         }   
-
 
          document.addEventListener('scroll', function () {
                 if (isInViewport(document.getElementById("txt1"))){
@@ -131,6 +124,7 @@
                 passive: true
             }); 
             
+        //funksjon for å vise kilder ved knappetrykk    
         function showContent() { 
             const kildeBtn = document.getElementById("kildeBtn");
             const kilder = document.getElementById("kilder");

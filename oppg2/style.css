@@ -10,8 +10,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arimo', sans-serif;
-    background-color: #bcc7d0;
-    
+    background-color: #bcc7d0; 
+    line-height: 1.5;
 }
 
 main {
@@ -26,21 +26,18 @@ article {
     max-width: 500px;
 }
 
-#myChart {
-    max-width: 500px;
+#myChart { 
     width: 100%;
+    max-width: 500px; 
+    margin: 2rem 2rem 2rem 5rem; 
+    max-height: 400px;
 }
-
 
 img {
     max-width: 500px;
     height: auto;
     object-fit: contain;
     margin: auto;
-}
-
-video {
-    width: 150px;
 }
 
 .ingress {
@@ -76,9 +73,6 @@ video {
     object-fit: contain;
     flex: 1;
 }
-
-
-
 
 #kilder{  
     display: none;

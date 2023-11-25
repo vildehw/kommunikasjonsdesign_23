@@ -120,13 +120,13 @@ document.addEventListener('scroll', function () {
   //Scroll Birte
 document.addEventListener('scroll', function () {
   if(isInViewport(document.getElementById("btxt1"))) {
-    document.getElementById("scrollbox3").style.backgroundImage = "url(img/closeup.jpg)"
+    document.getElementById("scrollContainer3").style.backgroundImage = "url(img/closeup.jpg)"
   } 
   if(isInViewport(document.getElementById("btxt2"))) {
-   document.getElementById("scrollbox3").style.backgroundImage = "url(img/1closeup.jpg)"
+   document.getElementById("scrollContainer3").style.backgroundImage = "url(img/1closeup.jpg)"
   } 
   if(isInViewport(document.getElementById("btxt3"))) {
-    document.getElementById("scrollbox").style.backgroundImage = "url(img/2closeup.jpg)"
+    document.getElementById("scrollContainer3").style.backgroundImage = "url(img/2closeup.jpg)"
   }
   }, {
    passive: true
