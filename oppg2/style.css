@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,600;1,500&display=swap');
+
 h1 {
     width: 100%;
     text-align: center;
@@ -7,6 +9,9 @@ h1 {
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Arimo', sans-serif;
+    background-color: #bcc7d0;
+    
 }
 
 main {
@@ -44,6 +49,7 @@ video {
     display: flex;
     flex-direction: column;
     max-width: 800px;
+    font-size: 1.2rem;
 }
 
 .bilde-seksjon {
@@ -52,6 +58,8 @@ video {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    border-bottom: 1px solid;
+    font-size: 1.2rem;
 }
 
 /* Reverser annenhver .bilde-seksjon */
@@ -81,6 +89,7 @@ video {
     padding: 1rem;
     margin-bottom: 6rem; 
     border-radius: 10px;
+    background-color: #ffffff;
  }
 
 
@@ -90,16 +99,17 @@ video {
     font-size: 15px;
     width: 15rem; 
     height: 3rem;
-    background-color: #DBDBDB;
+    background-color: #ffffff;
     border: none;  
 }
 
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
 
     .bilde-seksjon {
         flex-direction: column;
+        border-bottom: none;
 
     }
 
@@ -115,4 +125,13 @@ video {
         margin: 50px;
     }
 
+    .ingress {
+        margin: 50px;
+    }
+
+    #myChart {
+        margin: 30px;
+    }
+
+   
 }
