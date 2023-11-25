@@ -70,7 +70,9 @@
     {name: "Kjelleren", lat: -87, long: 230, description: " til Jens Bjelkes ble oppført i 1645. Benyttet som fengsel under Bjelkes tid, i Huitfeldt-Kaas tid benyttet som lagring av øl og vin til selskapeligheter (som det var mye av)."},
     {name: "Likkammeret", lat: -93, long: 154, description: "til familien Huitfeldt er eneste rommet på gården som fremdeles innehar sitt opprinnelige utseende. Det ble oppført på kommando fra Birgitte og Henrik Jørgen. Likkammeret er laget for å gi adelen ære i døden, hvor den avdøde ble omkranset av sin medfødte rett. Birgitte mente det var standsmessig forskjell på mennesker også i himmelen, fattige var fremdeles fattige, og de adelige likedan."},
     {name: "Presteværelset", lat:-88, long: 147, description: " var en gammel skikk, kirkens prest skulle ha eget rom på herregårdene. Presten i Onsøy Kirke hadde god kontakt med familien Huitfeldt-Kaas. På veggene henger bilder av medlemmene av prestefamilien, og møbler som ble gitt i gaver fra familien Apenes."}, 
-    {name: "Stabburet", lat:-88, long: 147, description: " var en gammel skikk, kirkens prest skulle ha eget rom på herregårdene. Presten i Onsøy Kirke hadde god kontakt med familien Huitfeldt-Kaas. På veggene henger bilder av medlemmene av prestefamilien, og møbler som ble gitt i gaver fra familien Apenes."},
+    {name: "Stabburet", lat:-140, long: 220, description: " var hvor gjestene måtte overnatte da de ikke fikk sove i 2. etasje i hovedbygget. Stabburet ble i sin tid benyttet til matoppbevaring, men er i dag innredet med soverom."},
+    {name: "Storstuen", lat:-80, long: 214, description: " er husets største og flotteste rom. Dette var innredet for å fungere som representasjonsrom på Huitfeldt-Kaas sin tid, og er utsmykket med stukkatur, lysekroner og flotte møbler. "}, 
+    {name: "Det røde kammer.", lat:-80, long: 200, description: " Da rommet i 1805 skulle pusses opp, dukket det opp gamle tapeter bak den ytterste. En bit av dette tapetet ble bevart, og står i dag utstilt på gården. Vi kan se alle de ulike stilene det røde kammeret har hatt oppgjennom årene."}
   ]   
   console.log(places)
 
