@@ -12,7 +12,8 @@
   body{
     font-family: 'Arimo', sans-serif;
     font-size: 16px; 
-    line-height: 1.5;
+    line-height: 1.5; 
+    background-color: whitesmoke;
   }
 
   header{ 
@@ -24,10 +25,6 @@
 
   main{
     margin: 2rem auto;
-  }
-
-  body {
-    background-color: whitesmoke;
   }
 
   #scrollContainer1, #scrollContainer2, #scrollContainer3{
@@ -56,9 +53,8 @@
   .scrollText {
     margin: 70vh auto; 
     width: 100%; 
-    
     padding: 2rem 1rem;  
-    background-color: #fff;
+    background-color: whitesmoke;
     }   
 
     p{
@@ -91,7 +87,8 @@
       min-height: 80vh;  
       margin: 3rem auto; 
       text-align: center; 
-      padding: 1rem;
+      padding: 1rem; 
+      background-color: whitesmoke;
     }    
 
     .textSection img{
