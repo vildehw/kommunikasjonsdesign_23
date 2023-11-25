@@ -109,7 +109,8 @@
       box-shadow: 0 0px 10px #BABABA;
       padding: 1rem;
       margin-bottom: 6rem; 
-      border-radius: 10px;
+      border-radius: 10px; 
+      text-align: left;
    }
   
   
