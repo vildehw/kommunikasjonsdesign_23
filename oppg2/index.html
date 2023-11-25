@@ -92,7 +92,15 @@
         <iframe title="Andel av befolkningen som bruker tradisjonelle medier" aria-label="Column Chart" id="myChart" src="https://datawrapper.dwcdn.net/wEH0M/1/" scrolling="no" frameborder="0" style="border: none;" width="400" height="600" data-external="1"></iframe>
     </div>
     -->
-    <canvas id="myChart2"></canvas>
+    <canvas id="myChart2"></canvas> 
+
+    <button type="button" id="kildeBtn" onclick="showContent()">
+        Vis kilder brukt i denne artikkelen
+    </button>
+    <section id="kilder">
+        <h4>Kilder</h4>  
+        <p>Alle bilder benyttet i denne saken er tilsendt av Lise Holman og godkjent til bruk i denne saken</p>
+    </section>
 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -170,7 +178,21 @@
                     }
                 }
             }
-        });
+        }); 
+
+
+        //funksjon for å vise kilder
+        function showContent() { 
+            const kildeBtn = document.getElementById("kildeBtn");
+            const kilder = document.getElementById("kilder");
+            if (kilder.style.display === "block") { 
+                kilder.style.display = "none";
+                kildeBtn.innerHTML = "Vis kilder brukt i artikkelen";
+            } else {
+                kilder.style.display = "block";
+                kildeBtn.innerHTML = "Lukk kilder brukt i artikkelen";
+            }
+        } 
 
     </script>
 

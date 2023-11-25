@@ -82,8 +82,16 @@
                     Hvem hadde gjettet på 1800-tallet at den skulle bo i kalde Norge, og sole seg på en
                     pizzabunn for et kranglende publikum?
             </p>  
-            <img src="img/pineappleslice.png">
+            <img src="img/pineappleslice.png"> 
+        </section> 
+        <button type="button" id="kildeBtn" onclick="showContent()">
+            Vis kilder brukt i denne artikkelen
+        </button>
+        <section id="kilder">
+            <h4>Kilder</h4>  
+            <p>Alle bilder benyttet i denne saken er tilsendt av Lise Holman og godkjent til bruk i denne saken</p>
         </section>
+    
     </main>
     <script> 
 
@@ -113,6 +121,18 @@
             }, {
                 passive: true
             }); 
+            
+        function showContent() { 
+            const kildeBtn = document.getElementById("kildeBtn");
+            const kilder = document.getElementById("kilder");
+            if (kilder.style.display === "block") { 
+                kilder.style.display = "none";
+                kildeBtn.innerHTML = "Vis kilder brukt i artikkelen";
+            } else {
+                kilder.style.display = "block";
+                kildeBtn.innerHTML = "Lukk kilder brukt i artikkelen";
+            }
+        } 
     </script>
 </body>
 </html>

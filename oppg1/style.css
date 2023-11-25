@@ -9,7 +9,7 @@ body {
       width: 100%; 
       min-height: 60vh; 
       overflow: hidden;   
-      background-size: auto; 
+      background-size: contain; 
       background-position: center; 
       background-repeat: no-repeat; 
       background-attachment: fixed; 
@@ -74,23 +74,34 @@ body {
   
     .textSection img{
       width: 80%;
-    }
+    } 
+
+    #kilder{  
+      display: none;
+      width: 90%; 
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0px 10px #BABABA;
+      padding: 1rem;
+      margin-bottom: 6rem; 
+      border-radius: 10px;
+   }
+  
+  
+  #kildeBtn{ 
+      display: block;
+      cursor: pointer;
+      margin: 2rem auto;
+      font-size: 1rem;
+      width: 16rem; 
+      height: 4rem;
+      background-color: #DBDBDB;
+      border: none;  
+  }
   
       @media screen and (max-width: 1000px)   {
   
-          #scrollContainer2 { 
-          background-image: url("img/tmspiser.png"); 
-          background-size: contain;
-          }
-  
-          #scrollContainer3 {
-          background-image: url("img/pineappleface.png"); 
-          background-size: contain;
-          }
-  
-          #scrollContainer1 {
-          background-image: url("img/plainpineapple.png");
-          background-size: contain;
-          }
+         
+        
   
     }
