@@ -76,6 +76,29 @@ img {
 #nyDiv {
     width: 50%;
     position: relative;
+} 
+
+#kilder{  
+    display: none;
+    width: 90%; 
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0px 10px #BABABA;
+    padding: 1rem;
+    margin-bottom: 6rem; 
+    border-radius: 10px;
+ }
+
+
+#kildeBtn{ 
+    display: block;
+    cursor: pointer;
+    margin: 2rem auto;
+    font-size: 1rem;
+    width: 16rem; 
+    height: 4rem;
+    background-color: #DBDBDB;
+    border: none;  
 }
 
 
