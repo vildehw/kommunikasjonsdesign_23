@@ -49,7 +49,7 @@
   .scrollText {
     margin: 70vh auto; 
     width: 100%; 
-    max-width: 600px;
+    max-width: 800px;
     padding: 2rem 1rem;  
     background-color: #fff;
     }  
@@ -75,7 +75,7 @@
     .textSection{
       width: 90%; 
       max-width: 600px; 
-      min-height: 75vh;  
+      min-height: 90vh;  
       margin: 3rem auto; 
       text-align: center; 
       padding: 1rem;
