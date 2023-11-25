@@ -222,38 +222,34 @@ li a {
 
 /*scrollbokser*/
 
-#changingBg1, #changingBg2, #changingBg3, #changingBg4{
+
+
+#scrollContainer1, #scrollContainer2, #scrollContainer3 {
+  width: 100%; 
+  min-height: 60vh; 
+  overflow: hidden;  
   background-size: cover; 
   background-position: center center; 
   background-repeat: no-repeat; 
   background-attachment: fixed;
-}  
-
-#changingBg3{
-  background-position: center bottom; 
-}
-
-.scrollContainer1, .scrollContainer2, .scrollContainer3, .scrollContainer4 {
-  width: 100%; 
-  min-height: 60vh; 
-  overflow: hidden;  
 } 
 
-.scrollContainer1{
+#scrollContainer1{
   background-image: url("img/egfront.jpg"); 
   background-position: left center;
 }
 
-.scrollContainer2 {
+#scrollContainer2 {
   background-image: url("img/kjellern.png"); 
 }    
 
-.scrollContainer3 {
+#scrollContainer3 {
   background-image: url("img/closeup.jpg"); 
-  transition: background-image 2s;
+  transition: background-image 2s; 
+  background-position: center bottom; 
 }  
 
-.scrollContainer4 {
+#scrollContainer4 {
   background-image: url("img/elingaardimg.jpg");
 } 
 
@@ -395,6 +391,7 @@ text-align: center;
   h3{
     font-size: 30px;
   } 
+   
 }
 
 /*tidslinje*/ 

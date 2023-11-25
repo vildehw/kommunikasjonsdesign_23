@@ -40,6 +40,7 @@ body {
 } 
 #ingress{
     font-size: 20px;   
+    
 }
 
 div, article, section {
@@ -48,7 +49,7 @@ div, article, section {
 
 #changingBg{
     background-size: cover; 
-    background-position: center center; 
+    background-position: center top; 
     background-repeat: no-repeat; 
     background-attachment: fixed;
 } 
@@ -155,11 +156,12 @@ article h3{
  
 #kilder{  
     display: none;
-    width: 80%;
+    width: 90%; 
+    max-width: 600px;
     margin: 0 auto;
     box-shadow: 0 0px 10px #BABABA;
     padding: 1rem;
-    margin-bottom: 3rem; 
+    margin-bottom: 6rem; 
     border-radius: 10px;
  }
 
@@ -169,7 +171,8 @@ article h3{
     cursor: pointer;
     margin: 2rem auto;
     font-size: 1rem;
-    padding: 1.2rem 2rem;
+    width: 16rem; 
+    height: 4rem;
     background-color: #DBDBDB;
     border: none; 
 } 
