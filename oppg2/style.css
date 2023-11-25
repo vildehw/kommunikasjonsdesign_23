@@ -61,22 +61,7 @@ img {
 }
 
 
-/*
-#bgDiv{  
-    width: 100%; 
-    min-height: 90vh; 
-    background-image: url(birtheiramme-01.png); 
-    background-size: cover;  
-    background-position: center center; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-}  
-*/
 
-#nyDiv {
-    width: 50%;
-    position: relative;
-} 
 
 #kilder{  
     display: none;
@@ -92,11 +77,10 @@ img {
 
 #kildeBtn{ 
     display: block;
-    cursor: pointer;
     margin: 2rem auto;
-    font-size: 1rem;
-    width: 16rem; 
-    height: 4rem;
+    font-size: 15px;
+    width: 15rem; 
+    height: 3rem;
     background-color: #DBDBDB;
     border: none;  
 }
