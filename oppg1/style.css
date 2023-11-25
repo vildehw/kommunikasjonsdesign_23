@@ -1,108 +1,96 @@
 body {
-  background-color: yellow;
-}
-main {
-  background-color: white;
-}
-.scrollContainer1 {
-    width: 100%; 
-    min-height: 60vh; 
-    overflow: hidden;  
-    background-image: url("img/pineappleface.png"); 
-    transition: background-image 2s;
-}  
-
-/*.scrollContainer2 {
-    width: 100%; 
-    min-height: 60vh; 
-    overflow: hidden;  
-    background-image: url("img/pineappleringprosent.png"); 
-    transition: background-image 2s;
-}  */
-
-.scrollText img {
-  width: 100%;
-}
-
-.scrollContainer3 {
-    width: 100%; 
-    min-height: 60vh; 
-    overflow: hidden;  
-    background-image: url("img/plainpineapple.png"); 
-    transition: background-image 2s;
-}  
-
-.scrollContainer4 {
-    width: 100%; 
-    min-height: 60vh; 
-    overflow: hidden;  
-    background-image: url("img/tmspiser.png"); 
-    transition: background-image 2s;
-}  
-
-.scrollContainer5 {
-    width: 100%; 
-    min-height: 60vh; 
-    overflow: hidden;  
-    background-image: url("img/skli.png"); 
-    transition: background-image 2s;
-}  
-
-.scrollContainer6 {
-    width: 100%; 
-    min-height: 60vh; 
-    overflow: hidden;  
-    background-image: url("img/magesekk-06.png"); 
-    transition: background-image 2s;
-}  
-
-.scrollContainer7 {
-    width: 100%; 
-    min-height: 60vh; 
-    overflow: hidden;  
-    background-image: url("img/pineappleslice.png"); 
-    transition: background-image 2s;
-}  
-
-.scrollText {
-    margin: 70vh auto; 
-    width: 85%; 
-    max-width: 600px;
-    padding: 1rem;  
-    color: #000000; 
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 20px 35px rgba(238, 238, 238, 0.8);
-    font-size: 1.4rem;
-  }  
-
-  .scrollImage {
-    margin: 70vh auto; 
-    width: 85%; 
-    max-width: 600px;
-    padding: 0rem;  
-    align-items: center;
-    color: #fff; 
+    background-color: yellow;
   }
-
-
-#changingBg{
-    background-size: auto; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-} 
-
-  #headerTxt{
-    background-color: rgba(197, 193, 193, 0.8);
-    box-shadow: 0px 0px 20px 35px rgba(238, 238, 238, 0.8);
-    width: 80%;  
-    max-width: 900px;
-    text-align: center;
-    margin: 0 auto;
+  main {
+    background-color: white;
   } 
-
-  #tittel{
-    margin-top: 40vh; 
-    padding: 2rem;
-    font-size: 1.8rem;
+  
+  #scrollContainer1, #scrollContainer2, #scrollContainer3{
+      width: 100%; 
+      min-height: 60vh; 
+      overflow: hidden;   
+      background-size: auto; 
+      background-position: center; 
+      background-repeat: no-repeat; 
+      background-attachment: fixed; 
+      transition: background-image 2s; 
   } 
+  
+  #scrollContainer1 {
+      background-image: url("img/plainpineapple.png");
+  }  
+  
+  #scrollContainer2 { 
+      background-image: url("img/tmspiser.png"); 
+  }  
+  
+  #scrollContainer3 {
+      background-image: url("img/pineappleface.png"); 
+  }
+  
+    
+  .scrollText {
+      margin: 70vh auto; 
+      width: 85%; 
+      max-width: 600px;
+      padding: 1rem;  
+      color: #000000; 
+      background-color: rgb(255, 255, 255);
+      /*box-shadow: 0px 0px 20px 35px rgba(238, 238, 238, 0.8);*/
+      font-size: 1.4rem;
+    }  
+  
+    .scrollImage {
+      margin: 70vh auto; 
+      width: 85%; 
+      max-width: 600px;
+      padding: 0rem;  
+      align-items: center;
+      color: #fff; 
+    }
+  
+    .intro{
+      width: 100%; 
+      max-width: 500px; 
+      min-height: 60vh;
+    } 
+  
+    h1, section{ 
+      display: block;
+      margin: 0 auto;
+    } 
+  
+   h1{ 
+      margin-top: 40vh;
+      text-align: center;
+   }
+    .textSection{
+      width: 100%; 
+      max-width: 600px; 
+      min-height: 90vh;  
+      margin: 0 auto; 
+      text-align: center; 
+    } 
+  
+    .textSection img{
+      width: 80%;
+    }
+  
+      @media screen and (max-width: 1000px)   {
+  
+          #scrollContainer2 { 
+          background-image: url("img/tmspiser.png"); 
+          background-size: contain;
+          }
+  
+          #scrollContainer3 {
+          background-image: url("img/pineappleface.png"); 
+          background-size: contain;
+          }
+  
+          #scrollContainer1 {
+          background-image: url("img/plainpineapple.png");
+          background-size: contain;
+          }
+  
+    }
