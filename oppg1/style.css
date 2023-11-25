@@ -26,6 +26,10 @@
     margin: 2rem auto;
   }
 
+  body {
+    background-color: whitesmoke;
+  }
+
   #scrollContainer1, #scrollContainer2, #scrollContainer3{
     width: 100%; 
     min-height: 60vh; 
