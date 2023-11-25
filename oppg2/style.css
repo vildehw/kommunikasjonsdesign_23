@@ -21,12 +21,21 @@ article {
     max-width: 500px;
 }
 
+#myChart {
+    max-width: 500px;
+    width: 100%;
+}
+
 
 img {
     max-width: 500px;
     height: auto;
     object-fit: contain;
     margin: auto;
+}
+
+video {
+    width: 150px;
 }
 
 .ingress {
@@ -91,10 +100,19 @@ img {
 
     .bilde-seksjon {
         flex-direction: column;
+
     }
 
     .bilde-seksjon:nth-child(odd) {
         flex-direction: column;
+    }
+
+    .bilde-seksjon > img {
+        max-width: 100%;
+    }
+
+    .bilde-seksjon > article {
+        margin: 50px;
     }
 
 }
