@@ -1,101 +1,100 @@
 
-body{
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
-  font-size: 20px; 
-  line-height: 1.5;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,600;1,500&display=swap');
 
-header{ 
-  width: 100%;
-  background-color: #F1EE8C;
-  padding: 5rem 0;  
-  min-height: 40vh;
-  
-} 
+  *{ 
+    scroll-behavior: smooth;
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;  
+    font-family: 'Arimo', sans-serif;
+    font-size: 16px; 
+    line-height: 1.5;
+  }
 
-main{
-  margin: 2rem auto;
-}
+  header{ 
+    width: 100%;
+    background-color: #F1EE8C;
+    padding: 4rem 0;  
+    min-height: 30vh;
+  } 
 
-  
-  
+  main{
+    margin: 2rem auto;
+  }
+
   #scrollContainer1, #scrollContainer2, #scrollContainer3{
-      width: 100%; 
-      min-height: 60vh; 
-      overflow: hidden;   
-      background-size: contain; 
-      background-position: center; 
-      background-repeat: no-repeat; 
-      background-attachment: fixed; 
-      transition: background-image 2s; 
+    width: 100%; 
+    min-height: 60vh; 
+    overflow: hidden;   
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    transition: background-image 2s; 
   } 
   
   #scrollContainer1 {
-      background-image: url("img/plainpineapple.png");
+    background-image: url("img/plainpineapple.png");
   }  
   
   #scrollContainer2 { 
-      background-image: url("img/tmspiser.png"); 
+    background-image: url("img/tmspiser.png"); 
   }  
   
   #scrollContainer3 {
-      background-image: url("img/pineappleface.png"); 
+    background-image: url("img/pineappleface.png"); 
   }
   
     
   .scrollText {
-      margin: 70vh auto; 
-      width: 90%; 
-      max-width: 600px;
-      padding: 1rem;  
-      color: #000000; 
-      background-color: rgb(255, 255, 255);
-      /*box-shadow: 0px 0px 20px 35px rgba(238, 238, 238, 0.8);*/
+    margin: 70vh auto; 
+    width: 100%; 
+    max-width: 600px;
+    padding: 2rem 1rem;  
+    background-color: #fff;
     }  
-  
-    .scrollImage {
-      margin: 70vh auto; 
-      width: 85%; 
-      max-width: 600px;
-      padding: 0rem;  
-      align-items: center;
-      color: #fff; 
-    }
   
     .intro{
       width: 90%; 
       max-width: 500px; 
-      margin: 1rem auto;
+      margin: 5rem auto;
 
     } 
   
-    h1, section{ 
-      display: block;
-      margin: 0 auto;
-    } 
   
-   h1{ 
-      margin-top: 10rem;
+   h1{  
+      width: 100%;
+      margin-top: 12rem;
       text-align: center;
       /*color: #74C270;*/ 
       color: #000000;
-      font-size: 3rem; 
+      font-size: 2rem; 
       
 
    }
     .textSection{
       width: 90%; 
       max-width: 600px; 
-      min-height: 50vh;  
+      min-height: 75vh;  
       margin: 3rem auto; 
       text-align: center; 
       padding: 1rem;
-    }  
+    }    
+
+    .textSection img{
+      margin: 1rem auto;
+    }
+
+    .padding{
+      padding-top: 10rem;
+    }
 
     .center{
       text-align: center;
+    } 
+
+    .bold{
+      font-weight: bolder;
     }
   
     .textSection img{
@@ -118,17 +117,29 @@ main{
       display: block;
       cursor: pointer;
       margin: 3rem auto;
-      font-size: 1rem;
-      width: 16rem; 
-      height: 4rem;
+      font-size: 18px; 
+      width: 100%;
+      max-width: 16rem; 
+      height: 3rem; 
+      padding: 0 .3rem;
       background-color: #DBDBDB;
       border: none;  
   }
   
       @media screen and (min-width: 900px)   {
-  
+        header{
+          min-height: 50vh;
+        }
+        h1{
+          margin-top: 9rem; 
+          font-size: 3rem;
+        }
          body{
-          font-size: 22px;
+          font-size: 20px;
+         } 
+
+         .intro{
+          margin: 5rem auto;
          }
         
   
