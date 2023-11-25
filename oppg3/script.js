@@ -1,4 +1,4 @@
- //funkjson for å vise kilder
+ //funksjon for å åpne kildeboks
  function showContent() { 
     const kildeBtn = document.getElementById("kildeBtn");
     const kilder = document.getElementById("kilder");
@@ -113,17 +113,15 @@
         "opacity": 0.5
     }
 
-    //add GeoJson to map
+    
     L.geoJSON(geojson, {
         style: geoJsonStyle,
-        //Adding popups to geometric shapes from GeoJson
         onEachFeature: function (feature, layer) {
             layer.bindPopup(feature.properties.popupContent)
         }
     }).addTo(map)
 
     
-    //SET MARKERS MAP 
     //ikon hentet fra https://freeicons.io/web-application-v.1-3/pin-web-app-gps-location-marker-icon-104645
     const markerIcon = L.icon({
         iconUrl: 'img/marker.png',
@@ -136,7 +134,6 @@
         L.marker([place.lat, place.long], {icon: markerIcon}).addTo(map).bindPopup(`${place.name} startet opp i ${place.year}`)
     }) 
 
-    //SCRIPT FOR CHANGING MAP LOCATION
     document.addEventListener('scroll', function () {
         if(isInViewport(document.getElementById("start"))) {
             map.flyTo([centerLat, centerLong], 10)
