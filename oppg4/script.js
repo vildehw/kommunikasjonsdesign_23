@@ -102,34 +102,33 @@
     );
   }  
 
-//Scroll Jens  
-
-document.addEventListener('scroll', function () {
-  if(isInViewport(document.getElementById("jtxt1"))) {
-    document.getElementById("scrollContainer2").style.backgroundImage = "url(img/kjellern.png)"
-  } 
-  if(isInViewport(document.getElementById("jtxt2"))) {
-   document.getElementById("scrollContainer2").style.backgroundImage = "url(img/kjelleren2.png)"
-  } 
-  
-  }, {
-   passive: true
+  //Scroll Jens  
+  document.addEventListener('scroll', function () {
+    if(isInViewport(document.getElementById("jtxt1"))) {
+      document.getElementById("scrollContainer2").style.backgroundImage = "url(img/kjellern.png)"
+    } 
+    if(isInViewport(document.getElementById("jtxt2"))) {
+    document.getElementById("scrollContainer2").style.backgroundImage = "url(img/kjelleren2.png)"
+    } 
+    
+    }, {
+    passive: true
   });  
-  
+    
 
-  //Scroll Birte
-document.addEventListener('scroll', function () {
-  if(isInViewport(document.getElementById("btxt1"))) {
-    document.getElementById("scrollContainer3").style.backgroundImage = "url(img/closeup.jpg)"
-  } 
-  if(isInViewport(document.getElementById("btxt2"))) {
-   document.getElementById("scrollContainer3").style.backgroundImage = "url(img/1closeup.jpg)"
-  } 
-  if(isInViewport(document.getElementById("btxt3"))) {
-    document.getElementById("scrollContainer3").style.backgroundImage = "url(img/2closeup.jpg)"
-  }
-  }, {
-   passive: true
+    //Scroll Birte
+  document.addEventListener('scroll', function () {
+    if(isInViewport(document.getElementById("btxt1"))) {
+      document.getElementById("scrollContainer3").style.backgroundImage = "url(img/closeup.jpg)"
+    } 
+    if(isInViewport(document.getElementById("btxt2"))) {
+    document.getElementById("scrollContainer3").style.backgroundImage = "url(img/1closeup.jpg)"
+    } 
+    if(isInViewport(document.getElementById("btxt3"))) {
+      document.getElementById("scrollContainer3").style.backgroundImage = "url(img/2closeup.jpg)"
+    }
+    }, {
+    passive: true
   }); 
 
 
